@@ -17,5 +17,9 @@ namespace WindowsFormsApplication1.interfaces
 		 * This way a user can simply call this function and modify the result. 
 		 */ 
 		ArgumentsManager GetArgumentsManager();
+
+		int GetOperatorNeededArguments();
+
+		void Instantiate(IAsciiBaseOperator[] arguments);
 	}
 }

@@ -1,11 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WindowsFormsApplication1.Operators;
+using WindowsFormsApplication1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using WindowsFormsApplication1.interfaces;
 
 namespace WindowsFormsApplication1.Operators.Tests
 {
@@ -25,7 +25,10 @@ namespace WindowsFormsApplication1.Operators.Tests
 
 
 			GreaterThenOperator opr = new GreaterThenOperator(manager);
-			opr.Instantiate(one, zero);
+
+			IAsciiBaseOperator[] arguments = { one, zero };
+			opr.Instantiate(arguments);
+
 			Assert.IsTrue(opr.Result());
 		}
 		public void ResultInvalidSameTest()
@@ -38,7 +41,8 @@ namespace WindowsFormsApplication1.Operators.Tests
 			zero.SetValue(false);
 
 			GreaterThenOperator opr = new GreaterThenOperator(manager);
-			opr.Instantiate(one, zero);
+			IAsciiBaseOperator[] arguments = { one, zero };
+			opr.Instantiate(arguments);
 			Assert.IsTrue(opr.Result());
 		}
 		public void ResultInvalidLowerTest()
@@ -51,7 +55,8 @@ namespace WindowsFormsApplication1.Operators.Tests
 			zero.SetValue(false);
 
 			GreaterThenOperator opr = new GreaterThenOperator(manager);
-			opr.Instantiate(one, zero );
+			IAsciiBaseOperator[] arguments = { one, zero };
+			opr.Instantiate(arguments);
 			Assert.IsTrue(opr.Result());
 		}
 	}

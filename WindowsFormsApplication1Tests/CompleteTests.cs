@@ -86,6 +86,7 @@ namespace WindowsFormsApplication1Tests
 			manager.SetArgumentValue('B', false);
 			Assert.IsFalse(parser.ToOperator().Result());
 		}
+
 		[TestMethod()]
 		public void SimpleAndTestSuccess()
 		{
@@ -96,6 +97,16 @@ namespace WindowsFormsApplication1Tests
 			Assert.IsTrue(parser.ToOperator().Result());
 
 		}
+		[TestMethod()]
+		public void SimpleNotTestSuccess()
+		{
+			StringParser parser = StringParser.Create("~( A )");
+			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			manager.SetArgumentValue('A', false);
+			Assert.IsTrue(parser.ToOperator().Result());
+
+		}
+
 		[TestMethod()]
 		public void SimpleAndTestFail()
 		{
@@ -122,6 +133,15 @@ namespace WindowsFormsApplication1Tests
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
 			Assert.IsTrue(parser.ToOperator().Result());
+		}
+		[TestMethod()]
+		public void NestedLarge2()
+		{
+			StringParser parser = StringParser.Create("=( >(A,B), |( ~(A) ,B) )");
+			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			manager.SetArgumentValue('A', true);
+			manager.SetArgumentValue('B', false);
+			Assert.IsFalse(parser.ToOperator().Result());
 		}
 
 

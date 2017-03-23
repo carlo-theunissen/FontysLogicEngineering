@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
 {
 	class OperatorFactory
 	{
-		public IAsciiDubbleOperator GetOperator(char symbol, ArgumentsManager manager)
+		public IAsciiBaseOperator GetOperator(char symbol, ArgumentsManager manager)
 		{
 			switch (symbol) {
 				case '>':
@@ -26,6 +26,9 @@ namespace WindowsFormsApplication1
 					break;
 				case '|':
 					return new OrOperator(manager);
+					break;
+				case '~':
+					return new NotOperator(manager);
 					break;
 
 			}

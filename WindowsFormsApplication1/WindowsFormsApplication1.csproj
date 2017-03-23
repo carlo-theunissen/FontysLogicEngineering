@@ -61,6 +61,7 @@
     <Compile Include="interfaces\IAsciiBaseOperator.cs" />
     <Compile Include="interfaces\IAsciiDubbleOperator.cs" />
     <Compile Include="OperatorFactory.cs" />
+    <Compile Include="Operators\NotOperator.cs" />
     <Compile Include="Operators\OrOperator.cs" />
     <Compile Include="Operators\GreaterThenOperator.cs" />
     <Compile Include="Operators\AndOperator.cs" />

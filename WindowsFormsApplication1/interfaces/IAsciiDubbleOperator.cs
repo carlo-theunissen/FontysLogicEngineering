@@ -7,8 +7,5 @@ using System.Threading.Tasks;
 namespace WindowsFormsApplication1.interfaces
 {
 	public interface IAsciiDubbleOperator : IAsciiSingleOperator
-	{
-		void Instantiate(IAsciiBaseOperator a, IAsciiBaseOperator b);
-
-	}
+	{}
 }

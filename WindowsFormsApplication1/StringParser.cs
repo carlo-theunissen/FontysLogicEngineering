@@ -16,16 +16,11 @@ namespace WindowsFormsApplication1
 		private Dictionary<String, bool> _variableData;
 		
 		private IAsciiBaseOperator _operator;
-		private IAsciiBaseOperator _firstArgument;
-		private IAsciiBaseOperator _secondArgument;
 
 		private readonly static OperatorFactory _operatorFactory;
 		enum ParserState{
 			Unknown, 
-			FindFirstArgument,
-			HandleFirstArgument,
-			FindSecondArgument,
-			HandleSecondArgument,
+			ParseArguments,
 			Check
 		}
 		/**
@@ -89,27 +84,11 @@ namespace WindowsFormsApplication1
 						break;
 
 					//We are going to search for the first argument
-					case ParserState.FindFirstArgument:
+					case ParserState.ParseArguments:
 
-						if (FindArgument())
-						{
-							_state = ParserState.HandleFirstArgument;
-						}
-
-						break;
-					case ParserState.HandleFirstArgument:
-						
-						_firstArgument = GetArgument();
-						_state = ParserState.HandleSecondArgument;
-						break;
-
-					case ParserState.FindSecondArgument:
-						break;
-
-					case ParserState.HandleSecondArgument:
-						_secondArgument = GetArgument();
-						InstantiateOperator();
+						ParseArguments();
 						_state = ParserState.Check;
+
 						break;
 
 					case ParserState.Check:
@@ -123,30 +102,20 @@ namespace WindowsFormsApplication1
 				
 			} while (true);
 		}
-		private void InstantiateOperator()
+		private void ParseArguments()
 		{
-			IAsciiDubbleOperator dbbl = _operator as IAsciiDubbleOperator;
-			if (dbbl != null)
+			IAsciiBaseOperator[] arguments = new IAsciiBaseOperator[_operator.GetOperatorNeededArguments()];
+			for (int i = 0; i < _operator.GetOperatorNeededArguments(); i++)
 			{
-				dbbl.Instantiate(_firstArgument, _secondArgument);
+				while(!FindArgument()){}
+				arguments[i] =  GetArgument();
 			}
-
-			/*
-			 * We only impliment dubbel operators now
-			IAsciiSingleOperator sngl = _operator as IAsciiSingleOperator;
-			if (sngl != null)
-			{
-				sngl.Instantiate(_firstArgument);
-			}
-			*/
-
-
-
+			_operator.Instantiate(arguments);
 		}
 
 		private bool FindArgument()
 		{
-			if (GetCurrentChar() == '(')
+			if (GetCurrentChar() == '(' || GetCurrentChar() == ',')
 			{
 				GetNextChar();
 				return true;
@@ -160,10 +129,6 @@ namespace WindowsFormsApplication1
 			
 			if ( _ownOffset + _startOffset + 1 >= _data.Length || GetCurrentChar() == ',' || GetCurrentChar() == ')')
 			{
-				if (_ownOffset + _startOffset + 1 < _data.Length)
-				{
-					GetNextChar();
-				}
 				return true;
 			}
 			GetNextChar();
@@ -177,11 +142,11 @@ namespace WindowsFormsApplication1
 			char use = GetCurrentChar();
 			if (FindOperator(use))
 			{
-				_state = ParserState.FindFirstArgument;
+				_state = ParserState.ParseArguments;
 				return true;
 			}
 
-			if (FindArgument(use))
+			if (FindScalar(use))
 			{
 				_state = ParserState.Check;
 				return true;
@@ -198,7 +163,7 @@ namespace WindowsFormsApplication1
 			return (_operator != null);
 		}
 
-		private bool FindArgument(char use)
+		private bool FindScalar(char use)
 		{
 			Regex regex = new Regex(@"[a-zA-Z]");
 			Match match = regex.Match(use.ToString());
@@ -214,6 +179,7 @@ namespace WindowsFormsApplication1
 
 		private IAsciiBaseOperator GetArgument()
 		{
+
 			StringParser searcher = new StringParser(_data, _startOffset + _ownOffset, _argumentManager);
 			_ownOffset += searcher.GetOwnOffset();
 			return searcher.ToOperator();

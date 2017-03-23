@@ -1,6 +1,7 @@
 ﻿using WindowsFormsApplication1.Exception;
 using WindowsFormsApplication1.interfaces;
 using WindowsFormsApplication1.Abstract;
+using System;
 
 namespace WindowsFormsApplication1.Operators
 {
@@ -34,5 +35,12 @@ namespace WindowsFormsApplication1.Operators
 			char[] temp = { _name };
 			return temp;
 		}
+
+		public override int GetOperatorNeededArguments()
+		{
+			return 0;
+		}
+
+		public override void Instantiate(IAsciiBaseOperator[] arguments){}
 	}
 }

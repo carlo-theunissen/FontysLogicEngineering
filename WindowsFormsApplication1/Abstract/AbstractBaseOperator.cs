@@ -27,5 +27,8 @@ namespace WindowsFormsApplication1.Abstract
 		abstract public IAsciiBaseOperator[] GetChilds();
 
 		abstract public char[] GetArguments();
+
+		abstract public int GetOperatorNeededArguments();
+		public abstract void Instantiate(IAsciiBaseOperator[] arguments);
 	}
 }

@@ -14,9 +14,11 @@ namespace WindowsFormsApplication1
 		[STAThread]
 		static void Main()
 		{
-
-
-
+			StringParser parser = StringParser.Create("&( A, B)");
+			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			manager.SetArgumentValue('A', true);
+			manager.SetArgumentValue('B', true);
+			bool result = (parser.ToOperator().Result());
 		}
 	}
 }

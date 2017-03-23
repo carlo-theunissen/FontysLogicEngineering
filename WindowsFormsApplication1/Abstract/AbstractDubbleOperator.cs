@@ -17,10 +17,10 @@ namespace WindowsFormsApplication1.Abstract
 		{
 		}
 
-		public void Instantiate(IAsciiBaseOperator a, IAsciiBaseOperator b)
+		public override void Instantiate(IAsciiBaseOperator[] arg)
 		{
-			_A = a;
-			_B = b;
+			_A = arg[0];
+			_B = arg[1];
 		}
 
 		public override IAsciiBaseOperator[] GetChilds()
@@ -33,6 +33,10 @@ namespace WindowsFormsApplication1.Abstract
 			HashSet<char> list = new HashSet<char>(_A.GetArguments());
 			list.UnionWith(_B.GetArguments());
 			return list.ToArray();
+		}
+		public override int GetOperatorNeededArguments()
+		{
+			return 2;
 		}
 
 	}

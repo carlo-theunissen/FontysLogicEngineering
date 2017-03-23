@@ -16,9 +16,9 @@ namespace WindowsFormsApplication1.Abstract
 		{
 		}
 
-		public virtual void Instantiate(IAsciiBaseOperator a)
+		public override void Instantiate(IAsciiBaseOperator[] arg)
 		{
-			_A = a;
+			_A = arg[0];
 		}
 		public override char[] GetArguments()
 		{
@@ -28,6 +28,10 @@ namespace WindowsFormsApplication1.Abstract
 		{
 			IAsciiBaseOperator[] array = { _A };
 			return array;
+		}
+		public override int GetOperatorNeededArguments()
+		{
+			return 1;
 		}
 	}
 }
