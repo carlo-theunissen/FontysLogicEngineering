@@ -22,23 +22,23 @@ namespace WindowsFormsApplication1.Tests
 		public void SingleScalerReceive()
 		{
 			StringParser parser = StringParser.Create("A");
-			Assert.IsTrue(parser.ToOperator() is ScalarOperator);
+			Assert.IsTrue(parser.ToOuterOperator() is ScalarOperator);
 		}
 
 		[TestMethod()]
 		public void SingleScalerReceiveValueChangeFalse()
 		{
 			StringParser parser = StringParser.Create("A");
-			parser.ToOperator().GetArgumentsManager().SetArgumentValue('A', false);
-			Assert.IsFalse(parser.ToOperator().Result());
+			parser.ToOuterOperator().GetArgumentsManager().SetArgumentValue('A', false);
+			Assert.IsFalse(parser.ToOuterOperator().Result());
 		}
 
 		[TestMethod()]
 		public void SingleScalerReceiveValueChangeTrue()
 		{
 			StringParser parser = StringParser.Create("A");
-			parser.ToOperator().GetArgumentsManager().SetArgumentValue('A', true);
-			Assert.IsTrue(parser.ToOperator().Result());
+			parser.ToOuterOperator().GetArgumentsManager().SetArgumentValue('A', true);
+			Assert.IsTrue(parser.ToOuterOperator().Result());
 		}
 
 		[TestMethod()]
@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1.Tests
 		public void SingleScalerReceiveValueNonChange()
 		{
 			StringParser parser = StringParser.Create("A");
-			parser.ToOperator().Result();
+			parser.ToOuterOperator().Result();
 			Assert.Fail();
 		}
 
@@ -55,10 +55,10 @@ namespace WindowsFormsApplication1.Tests
 		{
 
 			StringParser parser = StringParser.Create(">(A,B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
-			Assert.IsTrue(parser.ToOperator().Result());
+			Assert.IsTrue(parser.ToOuterOperator().Result());
 		}
 
 		[TestMethod()]
@@ -66,10 +66,10 @@ namespace WindowsFormsApplication1.Tests
 		{
 
 			StringParser parser = StringParser.Create(">(A,>(A,B))");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
-			Assert.IsFalse(parser.ToOperator().Result());
+			Assert.IsFalse(parser.ToOuterOperator().Result());
 		}
 
 		[TestMethod()]
@@ -77,10 +77,10 @@ namespace WindowsFormsApplication1.Tests
 		{
 			
 			StringParser parser = StringParser.Create(">(A,B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', false);
 			manager.SetArgumentValue('B', false);
-			Assert.IsFalse(parser.ToOperator().Result());
+			Assert.IsFalse(parser.ToOuterOperator().Result());
 		}
 
 
@@ -89,24 +89,24 @@ namespace WindowsFormsApplication1.Tests
 		{
 			
 			StringParser parser = StringParser.Create(">(A,B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 
 			manager.SetArgumentValue('A', false);
 			manager.SetArgumentValue('B', true);
 
-			bool result = parser.ToOperator().Result();
+			bool result = parser.ToOuterOperator().Result();
 
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
 
-			Assert.IsTrue( result != parser.ToOperator().Result());
+			Assert.IsTrue( result != parser.ToOuterOperator().Result());
 		}
 
 		[TestMethod()]
 		public void GetArgumentsFromOperator()
 		{
 			StringParser parser = StringParser.Create(">(A ,B");
-			IAsciiBaseOperator ope = parser.ToOperator();
+			IAsciiBaseOperator ope = parser.ToOuterOperator();
 
 			List<char> check = new List<char>(ope.GetArguments());
 			Assert.IsTrue(check.Contains('A') && check.Contains('B'));

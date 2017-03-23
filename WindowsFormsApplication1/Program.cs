@@ -15,10 +15,10 @@ namespace WindowsFormsApplication1
 		static void Main()
 		{
 			StringParser parser = StringParser.Create("&( A, B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', true);
-			bool result = (parser.ToOperator().Result());
+			bool result = (parser.ToOuterOperator().Result());
 		}
 	}
 }

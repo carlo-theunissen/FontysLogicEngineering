@@ -182,14 +182,14 @@ namespace WindowsFormsApplication1
 
 			StringParser searcher = new StringParser(_data, _startOffset + _ownOffset, _argumentManager);
 			_ownOffset += searcher.GetOwnOffset();
-			return searcher.ToOperator();
+			return searcher.ToOuterOperator();
 		}
 
 		public override string ToString()
 		{
 			return _data.Substring(_startOffset); ;
 		}
-		public IAsciiBaseOperator ToOperator()
+		public IAsciiBaseOperator ToOuterOperator()
 		{
 			return _operator;
 		}

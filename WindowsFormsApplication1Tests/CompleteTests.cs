@@ -9,10 +9,10 @@ namespace WindowsFormsApplication1Tests
 		public void SimpleBiggerTestSuccess()
 		{
 			StringParser parser = StringParser.Create(">( A, B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
-			Assert.IsTrue(parser.ToOperator().Result());
+			Assert.IsTrue(parser.ToOuterOperator().Result());
 
 		}
 
@@ -20,20 +20,20 @@ namespace WindowsFormsApplication1Tests
 		public void SimpleBiggerTestFail()
 		{
 			StringParser parser = StringParser.Create(">( A, B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', false);
 			manager.SetArgumentValue('B', true);
-			Assert.IsFalse(parser.ToOperator().Result());
+			Assert.IsFalse(parser.ToOuterOperator().Result());
 
 		}
 		[TestMethod()]
 		public void SimpleLessTestSuccess()
 		{
 			StringParser parser = StringParser.Create("<( A, B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', false);
 			manager.SetArgumentValue('B', true);
-			Assert.IsTrue(parser.ToOperator().Result());
+			Assert.IsTrue(parser.ToOuterOperator().Result());
 
 		}
 
@@ -41,69 +41,69 @@ namespace WindowsFormsApplication1Tests
 		public void SimpleLessTestFail()
 		{
 			StringParser parser = StringParser.Create("<( A, B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
-			Assert.IsFalse(parser.ToOperator().Result());
+			Assert.IsFalse(parser.ToOuterOperator().Result());
 
 		}
 		[TestMethod()]
 		public void SimpleSameTestSuccess()
 		{
 			StringParser parser = StringParser.Create("=( A, B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', true);
-			Assert.IsTrue(parser.ToOperator().Result());
+			Assert.IsTrue(parser.ToOuterOperator().Result());
 
 		}
 		[TestMethod()]
 		public void SimpleSameTestFail()
 		{
 			StringParser parser = StringParser.Create("=( A, B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
-			Assert.IsFalse(parser.ToOperator().Result());
+			Assert.IsFalse(parser.ToOuterOperator().Result());
 
 		}
 		[TestMethod()]
 		public void SimpleOrTestSuccess()
 		{
 			StringParser parser = StringParser.Create("|( A, B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
-			Assert.IsTrue(parser.ToOperator().Result());
+			Assert.IsTrue(parser.ToOuterOperator().Result());
 
 		}
 		[TestMethod()]
 		public void SimpleOrTestFail()
 		{
 			StringParser parser = StringParser.Create("|( A, B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', false);
 			manager.SetArgumentValue('B', false);
-			Assert.IsFalse(parser.ToOperator().Result());
+			Assert.IsFalse(parser.ToOuterOperator().Result());
 		}
 
 		[TestMethod()]
 		public void SimpleAndTestSuccess()
 		{
 			StringParser parser = StringParser.Create("&( A, B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', true);
-			Assert.IsTrue(parser.ToOperator().Result());
+			Assert.IsTrue(parser.ToOuterOperator().Result());
 
 		}
 		[TestMethod()]
 		public void SimpleNotTestSuccess()
 		{
 			StringParser parser = StringParser.Create("~( A )");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', false);
-			Assert.IsTrue(parser.ToOperator().Result());
+			Assert.IsTrue(parser.ToOuterOperator().Result());
 
 		}
 
@@ -111,37 +111,37 @@ namespace WindowsFormsApplication1Tests
 		public void SimpleAndTestFail()
 		{
 			StringParser parser = StringParser.Create("&( A, B)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', false);
 			manager.SetArgumentValue('B', false);
-			Assert.IsFalse(parser.ToOperator().Result());
+			Assert.IsFalse(parser.ToOuterOperator().Result());
 		}
 		[TestMethod()]
 		public void NestedAndOr()
 		{
 			StringParser parser = StringParser.Create("&( |( A, B), A)");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
-			Assert.IsTrue(parser.ToOperator().Result());
+			Assert.IsTrue(parser.ToOuterOperator().Result());
 		}
 		[TestMethod()]
 		public void NestedLarge()
 		{
 			StringParser parser = StringParser.Create("=( >(A,B), |(A ,B) ))");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
-			Assert.IsTrue(parser.ToOperator().Result());
+			Assert.IsTrue(parser.ToOuterOperator().Result());
 		}
 		[TestMethod()]
 		public void NestedLarge2()
 		{
 			StringParser parser = StringParser.Create("=( >(A,B), |( ~(A) ,B) )");
-			ArgumentsManager manager = parser.ToOperator().GetArgumentsManager();
+			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
-			Assert.IsFalse(parser.ToOperator().Result());
+			Assert.IsFalse(parser.ToOuterOperator().Result());
 		}
 
 
