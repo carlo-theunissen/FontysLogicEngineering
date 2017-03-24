@@ -19,6 +19,17 @@ namespace WindowsFormsApplication1
 
 		private void kickoff_Click(object sender, EventArgs e)
 		{
+			StringParser parser = StringParser.Create(textBox1.Text);
+			CreateAllTable(ref parser);
+		}
+
+		private void CreateAllTable(ref StringParser parser)
+		{
+			
+		}
+
+		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+		{
 
 		}
 	}

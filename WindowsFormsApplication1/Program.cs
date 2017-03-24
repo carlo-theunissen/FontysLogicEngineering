@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Diagnostics;
 namespace WindowsFormsApplication1
 {
 	static class Program
@@ -14,11 +14,18 @@ namespace WindowsFormsApplication1
 		[STAThread]
 		static void Main()
 		{
-			StringParser parser = StringParser.Create("&( A, B)");
-			ArgumentsManager manager = parser.ToOuterOperator().GetArgumentsManager();
-			manager.SetArgumentValue('A', true);
-			manager.SetArgumentValue('B', true);
-			bool result = (parser.ToOuterOperator().Result());
+			
+			/*
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+			Application.Run(new Form1());
+			*/
+
+			StringParser parser = StringParser.Create("&(|(A,~(B)),C)");
+
+
+			TruthTableCreator table = new TruthTableCreator(parser);
+			table.GetFullTable();
 		}
 	}
 }

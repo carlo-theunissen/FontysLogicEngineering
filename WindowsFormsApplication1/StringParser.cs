@@ -17,6 +17,14 @@ namespace WindowsFormsApplication1
 		
 		private IAsciiBaseOperator _operator;
 
+		public ArgumentsManager ArgumentManager
+		{
+			get
+			{
+				return _argumentManager;
+			}
+		}
+
 		private readonly static OperatorFactory _operatorFactory;
 		enum ParserState{
 			Unknown, 
@@ -182,14 +190,14 @@ namespace WindowsFormsApplication1
 
 			StringParser searcher = new StringParser(_data, _startOffset + _ownOffset, _argumentManager);
 			_ownOffset += searcher.GetOwnOffset();
-			return searcher.ToOuterOperator();
+			return searcher.ToOperator();
 		}
 
 		public override string ToString()
 		{
 			return _data.Substring(_startOffset); ;
 		}
-		public IAsciiBaseOperator ToOuterOperator()
+		public IAsciiBaseOperator ToOperator()
 		{
 			return _operator;
 		}

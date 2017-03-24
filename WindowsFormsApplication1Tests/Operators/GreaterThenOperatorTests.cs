@@ -50,6 +50,7 @@ namespace WindowsFormsApplication1.Operators.Tests
 			ArgumentsManager manager = new ArgumentsManager();
 			ScalarOperator one = new ScalarOperator('o', manager);
 			one.SetValue(true);
+			
 
 			ScalarOperator zero = new ScalarOperator('z', manager);
 			zero.SetValue(false);
