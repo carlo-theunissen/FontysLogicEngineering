@@ -34,13 +34,7 @@ namespace WindowsFormsApplication1
 			}
 			return result.ToArray();
 		}
-		public bool?[][] GetSimpleTable()
-		{
-			bool[][] fullTable = GetFullTable();
-			foreach (bool[] check in fullTable)
-			{
-			}
-		}
+
 		private bool ResultFromOperator(bool?[] data)
 		{
 			char[] names = _operator.GetArguments();
@@ -51,84 +45,7 @@ namespace WindowsFormsApplication1
 			}
 			return _operator.Result();
 		}
-		private bool?[][] CheckRow(bool?[] data, int offset)
-		{
 
-			if (offset + 1 == data.Length)
-			{
-				//i'm the last
-				return LastItemInRow(data, offset);
-			}
-
-
-			//collect all the different values
-			List<bool?[]> calculated = new List<bool?[]> ();
-			for (int i = 0; i < 2; i++)
-			{
-				data[offset] = i > 0;
-				bool?[] copy = new bool?[data.Length];
-				Array.Copy(data, copy, data.Length);
-				bool?[][] outcome = CheckRow(copy, offset + 1);
-				calculated.AddRange(outcome);
-			}
-
-			//store the result of the values in a dictionary
-			Dictionary<bool?[], bool> values = new Dictionary<bool?[], bool>();
-			foreach (bool?[] item in calculated)
-			{
-				values.Add(item, ResultFromOperator(item));
-			}
-
-			
-
-			for (int i = 0; i < 2; i++)
-			{
-				KeyValuePair<bool?[], bool>? firstItem = null;
-
-				foreach (KeyValuePair<bool?[], bool> keyValue in values) {
-					if (keyValue.Value == (i > 0))
-					{
-						if (firstItem == null)
-						{
-							firstItem = keyValue;
-						}
-						else
-						{
-							keyValue.Key[offset] = null;
-							firstItem.Value.Key[offset] = null;
-						}
-					}
-				}
-			}
-
-			return values.Keys.ToArray();
-
-			//lets check for stuff
-
-		}
-		private bool?[][] LastItemInRow(bool?[] data, int offset)
-		{
-			data[offset] = true;
-			bool first = ResultFromOperator(data);
-			data[offset] = false;
-			bool second = ResultFromOperator(data);
-
-			if (first == second)
-			{
-				data[offset] = null;
-				bool?[][] array = { data };
-				return array;
-			}
-
-
-			bool?[] secondResult = new bool?[data.Length];
-			Array.Copy(data, secondResult, data.Length);
-
-			secondResult[offset] = true;
-
-			bool?[][] twoArray = { data, secondResult };
-			return twoArray;
-		}
 
 		private bool[][] GetAllOptions(int length)
 		{
