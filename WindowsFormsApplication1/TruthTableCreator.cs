@@ -31,105 +31,200 @@ namespace WindowsFormsApplication1
 					array[i] = data[i];
 				}
 				array[data.Length] = _operator.Result();
+				result.Add(array);
 			}
 			return result.ToArray();
 		}
-		public bool?[][] GetSimpleTable()
-		{
-			bool[][] fullTable = GetFullTable();
-			foreach (bool[] check in fullTable)
-			{
-			}
-		}
-		private bool ResultFromOperator(bool?[] data)
-		{
-			char[] names = _operator.GetArguments();
-			for (int i = 0; i < data.Length; i++)
-			{
-				data[i] = data[i] == null ? false : data[i];
-				_manager.SetArgumentValue(names[i], data[i]);
-			}
-			return _operator.Result();
-		}
-		private bool?[][] CheckRow(bool?[] data, int offset)
+		/**
+		 * Thanks to http://www.pvladov.com/2012/05/decimal-to-arbitrary-numeral-system.html 
+		 */ 
+		private byte[] DecimalToArbitrarySystem(long decimalNumber, int radix, int length)
 		{
 
-			if (offset + 1 == data.Length)
+			if (radix < 2 || radix > 10)
+				throw new ArgumentException("The radix must be >= 2 and <= 10");
+
+			if (decimalNumber == 0)
 			{
-				//i'm the last
-				return LastItemInRow(data, offset);
-			}
-
-
-			//collect all the different values
-			List<bool?[]> calculated = new List<bool?[]> ();
-			for (int i = 0; i < 2; i++)
-			{
-				data[offset] = i > 0;
-				bool?[] copy = new bool?[data.Length];
-				Array.Copy(data, copy, data.Length);
-				bool?[][] outcome = CheckRow(copy, offset + 1);
-				calculated.AddRange(outcome);
-			}
-
-			//store the result of the values in a dictionary
-			Dictionary<bool?[], bool> values = new Dictionary<bool?[], bool>();
-			foreach (bool?[] item in calculated)
-			{
-				values.Add(item, ResultFromOperator(item));
-			}
-
 			
+				return new byte[length];
+			}
 
-			for (int i = 0; i < 2; i++)
+
+			long currentNumber = Math.Abs(decimalNumber);
+			int index = 0;
+			byte[] output = new byte[length];
+
+			while (currentNumber != 0 && index < length)
 			{
-				KeyValuePair<bool?[], bool>? firstItem = null;
+				int remainder = (int)(currentNumber % radix);
+				output[index++] = (byte) remainder;
+				currentNumber = currentNumber / radix;
+			}
 
-				foreach (KeyValuePair<bool?[], bool> keyValue in values) {
-					if (keyValue.Value == (i > 0))
+			return output;
+		}
+		private byte[][] GetThirthBaseOptions(int length)
+		{
+			int num = (int)Math.Pow(3, length) - 1;
+			byte[][] output = new byte[num + 1][];
+			for (int i = 0; i <= num; i++)
+			{
+				output[i] = DecimalToArbitrarySystem(i, 3, length);
+			}
+			return output;
+		}
+		private bool? GetResults(ref byte[] row)
+		{
+			bool? result = null;
+			bool clean = true;
+			for (int i = 0; i < row.Length; i++)
+			{
+				if (row[i] == 2)
+				{
+					clean = false;
+					for (int x = 0; x < 2; x++)
 					{
-						if (firstItem == null)
+						row[i] = (byte) x;
+						byte[] clone = (byte[])row.Clone();
+						bool? outcome = GetResults(ref clone);
+						if (outcome == null || (result != null && result != outcome))
 						{
-							firstItem = keyValue;
+							return null;
 						}
-						else
-						{
-							keyValue.Key[offset] = null;
-							firstItem.Value.Key[offset] = null;
-						}
+						result = outcome.Value;
 					}
 				}
 			}
 
-			return values.Keys.ToArray();
-
-			//lets check for stuff
-
-		}
-		private bool?[][] LastItemInRow(bool?[] data, int offset)
-		{
-			data[offset] = true;
-			bool first = ResultFromOperator(data);
-			data[offset] = false;
-			bool second = ResultFromOperator(data);
-
-			if (first == second)
+			if (!clean)
 			{
-				data[offset] = null;
-				bool?[][] array = { data };
-				return array;
+				return result;
 			}
 
-
-			bool?[] secondResult = new bool?[data.Length];
-			Array.Copy(data, secondResult, data.Length);
-
-			secondResult[offset] = true;
-
-			bool?[][] twoArray = { data, secondResult };
-			return twoArray;
+			char[] names = _operator.GetArguments();
+			for (int i = 0; i < row.Length; i++)
+			{
+				_manager.SetArgumentValue(names[i], row[i] != 0);
+			}
+			return _operator.Result();
 		}
+		private void GetSuccessFailList(out ICollection<byte[]> success, out ICollection<byte[]> fail, ref byte[][] data)
+		{
+			success = new List<byte[]>();
+			fail = new List<byte[]>();
+			foreach (byte[] items in data)
+			{
+				byte[] clone = (byte[])items.Clone();
+				bool? outcome = GetResults(ref clone);
+				if (outcome != null) {
+					if (outcome.Value)
+					{
+						success.Add(items);
+					}
+					else
+					{
+						fail.Add(items);
+					}
+				}
+			}
+		}
+		private int[] GetDifferIndexes(byte[] array1, byte[] array2)
+		{
+			List<int> indexes = new List<int>();
+			for (int i = 0; i < array1.Length; i++)
+			{
+				if (!array1[i].Equals(array2[i]))
+				{
+					indexes.Add(i);
+				}
+			}
+			return indexes.ToArray();
+		}
+		private bool ContainsItemInList<T>(T[] item, ref ICollection<T[]> collection)
+		{
+			foreach (T[] check in collection)
+			{
+				bool found = true;
+				for (int i = 0; i < item.Length; i++)
+				{
+					if (!item[i].Equals(check.ElementAt(i)))
+					{
+						found = false;
+						break;
+					}
+				}
 
+				if (found)
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+		
+		private byte[][] SimplfyList(byte[][] data) {
+			ICollection<byte[]> newData = new List<byte[]>();
+			ICollection<byte[]> used = new List<byte[]>(); 
+			foreach (byte[] current in data)
+			{
+				if (!ContainsItemInList(current, ref used))
+				{
+					foreach (byte[] check in data)
+					{
+						if (!ContainsItemInList(check, ref used))
+						{
+							int[] differ = GetDifferIndexes(current, check);
+							if (differ.Length == 1)
+							{
+								current[differ[0]] = 2;
+								newData.Add(current);
+								used.Add(current);
+								used.Add(check);
+								break;
+							}
+						}
+					}
+				}
+			}
+			foreach (byte[] current in data)
+			{
+				if (!ContainsItemInList(current, ref used))
+				{
+					newData.Add(current);
+				}
+			}
+			if (data.Length == newData.Count)
+			{
+				return newData.ToArray();
+			}
+			return SimplfyList(newData.ToArray());
+		}
+		public byte[][] GetSimpleTable()
+		{
+			ICollection<byte[]> success;
+			ICollection<byte[]> fail;
+
+			byte[][] data = GetThirthBaseOptions(_operator.GetArguments().Length);
+
+			GetSuccessFailList(out success, out fail, ref data);
+
+			List<byte[]> result = new List<byte[]>();
+			for (int i = 0; i < 2; i++)
+			{
+
+				foreach (byte[] items in SimplfyList(i == 0 ? fail.ToArray() : success.ToArray()))
+				{
+					byte[] array = new byte[items.Length + 1];
+					Array.Copy(items, array, items.Length);
+					array[items.Length] = (byte) i;
+					result.Add(array);
+				}
+			}
+
+			return result.ToArray();
+
+		}
 		private bool[][] GetAllOptions(int length)
 		{
 			List<bool[]> result = new List<bool[]>();

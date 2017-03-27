@@ -21,11 +21,18 @@ namespace WindowsFormsApplication1
 			Application.Run(new Form1());
 			*/
 
-			StringParser parser = StringParser.Create("&(|(A,~(B)),C)");
+			StringParser parser = StringParser.Create(">(A,B)");
 
 
 			TruthTableCreator table = new TruthTableCreator(parser);
-			table.GetFullTable();
+			foreach (byte[] result in table.GetSimpleTable())
+			{
+				foreach (byte single in result)
+				{
+					Debug.Write(single);
+				}
+				Debug.WriteLine("");
+			}
 		}
 	}
 }
