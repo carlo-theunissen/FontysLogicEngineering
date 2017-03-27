@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
 			Application.Run(new Form1());
 			*/
 
-			StringParser parser = StringParser.Create(">(A,B)");
+			StringParser parser = StringParser.Create("|(|(A,B), C)");
 
 
 			TruthTableCreator table = new TruthTableCreator(parser);

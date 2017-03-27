@@ -72,6 +72,7 @@
     <Compile Include="Operators\ScalarOperator.cs" />
     <Compile Include="StringParser.cs" />
     <Compile Include="TruthTableCreator.cs" />
+    <Compile Include="Utils\ArrayUtils.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
