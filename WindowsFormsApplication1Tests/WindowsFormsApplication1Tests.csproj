@@ -58,6 +58,7 @@
     <Compile Include="ScalarOperatorTests.cs" />
     <Compile Include="StringParserTests.cs" />
     <Compile Include="CompleteTests.cs" />
+    <Compile Include="TruthTableCreatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WindowsFormsApplication1\WindowsFormsApplication1.csproj">

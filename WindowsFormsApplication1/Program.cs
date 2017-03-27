@@ -14,18 +14,20 @@ namespace WindowsFormsApplication1
 		[STAThread]
 		static void Main()
 		{
-			
+
 			/*
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1());
 			*/
 
-			StringParser parser = StringParser.Create("|(|(A,B), C)");
+			StringParser parser = StringParser.Create("=( A, &(|(B, C) , =(~(A),C) )");
 
 
-			TruthTableCreator table = new TruthTableCreator(parser);
-			foreach (byte[] result in table.GetSimpleTable())
+			SimplifiedTruthTableCreator table = new SimplifiedTruthTableCreator();
+			table.Instantiate(parser);
+
+			foreach (byte[] result in table.GetTable())
 			{
 				foreach (byte single in result)
 				{

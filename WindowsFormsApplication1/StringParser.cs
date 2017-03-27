@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 using WindowsFormsApplication1.interfaces;
 namespace WindowsFormsApplication1
 {
-	public class StringParser
+	public class StringParser : IParser
 	{
 
 		private readonly int _startOffset = 0;
@@ -16,13 +16,9 @@ namespace WindowsFormsApplication1
 		private Dictionary<String, bool> _variableData;
 		
 		private IAsciiBaseOperator _operator;
-
-		public ArgumentsManager ArgumentManager
+		public IArgumentController GetArgumentController()
 		{
-			get
-			{
-				return _argumentManager;
-			}
+			return _argumentManager;
 		}
 
 		private readonly static OperatorFactory _operatorFactory;
@@ -190,14 +186,14 @@ namespace WindowsFormsApplication1
 
 			StringParser searcher = new StringParser(_data, _startOffset + _ownOffset, _argumentManager);
 			_ownOffset += searcher.GetOwnOffset();
-			return searcher.ToOperator();
+			return searcher.GetOperator();
 		}
 
 		public override string ToString()
 		{
 			return _data.Substring(_startOffset); ;
 		}
-		public IAsciiBaseOperator ToOperator()
+		public IAsciiBaseOperator GetOperator()
 		{
 			return _operator;
 		}
@@ -209,6 +205,7 @@ namespace WindowsFormsApplication1
 		{
 			_variableData = data;
 		}
+
 
 	}
 }

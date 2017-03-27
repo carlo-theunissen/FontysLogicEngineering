@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApplication1.interfaces;
 using WindowsFormsApplication1.Operators;
 
 namespace WindowsFormsApplication1
 {
-	public class ArgumentsManager
+	public class ArgumentsManager : IArgumentController
 	{
 		private Dictionary<char, ScalarOperator> _requestedArguments;
 
