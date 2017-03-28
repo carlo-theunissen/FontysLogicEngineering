@@ -10,7 +10,6 @@ namespace WindowsFormsApplication1.Abstract
 	{
 		
 
-		protected IAsciiBaseOperator _A;
 		protected IAsciiBaseOperator _B;
 
 		public AbstractDubbleOperator(ArgumentsManager manager) : base(manager)
@@ -37,6 +36,10 @@ namespace WindowsFormsApplication1.Abstract
 		public override int GetOperatorNeededArguments()
 		{
 			return 2;
+		}
+		public override string ToString()
+		{
+			return String.Format("{0}( {1}, {2} )", GetSymbol(), _A, _B);
 		}
 
 	}

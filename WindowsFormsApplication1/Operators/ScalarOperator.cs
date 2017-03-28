@@ -42,5 +42,9 @@ namespace WindowsFormsApplication1.Operators
 		}
 
 		public override void Instantiate(IAsciiBaseOperator[] arguments){}
+		public override string ToString()
+		{
+			return _name.ToString().ToUpper();
+		}
 	}
 }

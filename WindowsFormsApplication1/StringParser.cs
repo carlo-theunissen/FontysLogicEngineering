@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using WindowsFormsApplication1.Abstract;
 using WindowsFormsApplication1.interfaces;
 namespace WindowsFormsApplication1
 {
-	public class StringParser : IParser
+	public class StringParser : AbstractParser
 	{
 
 		private readonly int _startOffset = 0;
@@ -16,26 +17,18 @@ namespace WindowsFormsApplication1
 		private Dictionary<String, bool> _variableData;
 		
 		private IAsciiBaseOperator _operator;
-		public IArgumentController GetArgumentController()
+		public override IArgumentController  GetArgumentController()
 		{
 			return _argumentManager;
 		}
 
-		private readonly static OperatorFactory _operatorFactory;
-		enum ParserState{
-			Unknown, 
+
+		enum ParserState
+		{
+			Unknown,
 			ParseArguments,
 			Check
 		}
-		/**
-		 * Static constructor
-		 */ 
-		static StringParser()
-		{
-			_operatorFactory = new OperatorFactory();
-		}
-
-
 		/**
 		 * Use this function to create an instance of StringParser.
 		 */
@@ -193,7 +186,7 @@ namespace WindowsFormsApplication1
 		{
 			return _data.Substring(_startOffset); ;
 		}
-		public IAsciiBaseOperator GetOperator()
+		public override IAsciiBaseOperator GetOperator()
 		{
 			return _operator;
 		}

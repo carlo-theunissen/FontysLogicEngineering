@@ -4,19 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WindowsFormsApplication1.Abstract;
-using WindowsFormsApplication1.interfaces;
 
 namespace WindowsFormsApplication1.Operators
 {
-	public class GreaterThenOperator : AbstractDubbleOperator
+	class NotAndOperator : AbstractDubbleOperator
 	{
-		public GreaterThenOperator(ArgumentsManager manager) : base(manager)
+		public NotAndOperator(ArgumentsManager manager) : base(manager)
 		{
+		}
+
+		public override char GetSymbol()
+		{
+			return '%';
 		}
 
 		public override bool Result()
 		{
-			return _A.Result() && !_B.Result();
+			return !(_A.Result() && _B.Result());
 		}
 	}
 }

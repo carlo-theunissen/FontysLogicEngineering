@@ -12,6 +12,9 @@ namespace WindowsFormsApplication1
 {
 	public class TruthTableCreator : AbstractTrueTable
 	{
+		public TruthTableCreator(IParser parser) : base(parser)
+		{
+		}
 
 		public override byte[][] GetTable()
 		{

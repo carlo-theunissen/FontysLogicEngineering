@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1.Operators.Tests
 
 
 
-			GreaterThenOperator opr = new GreaterThenOperator(manager);
+			IfThenOperator opr = new IfThenOperator(manager);
 
 			IAsciiBaseOperator[] arguments = { one, zero };
 			opr.Instantiate(arguments);
@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1.Operators.Tests
 			ScalarOperator zero = new ScalarOperator('z', manager);
 			zero.SetValue(false);
 
-			GreaterThenOperator opr = new GreaterThenOperator(manager);
+			IfThenOperator opr = new IfThenOperator(manager);
 			IAsciiBaseOperator[] arguments = { one, zero };
 			opr.Instantiate(arguments);
 			Assert.IsTrue(opr.Result());
@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1.Operators.Tests
 			ScalarOperator zero = new ScalarOperator('z', manager);
 			zero.SetValue(false);
 
-			GreaterThenOperator opr = new GreaterThenOperator(manager);
+			IfThenOperator opr = new IfThenOperator(manager);
 			IAsciiBaseOperator[] arguments = { one, zero };
 			opr.Instantiate(arguments);
 			Assert.IsTrue(opr.Result());

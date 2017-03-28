@@ -11,6 +11,9 @@ namespace WindowsFormsApplication1
 {
 	public class SimplifiedTruthTableCreator : AbstractTrueTable
 	{
+		public SimplifiedTruthTableCreator(IParser parser) : base(parser)
+		{
+		}
 
 		private void GetSuccessFailList(out ICollection<bool[]> success, out ICollection<bool[]> fail, ref bool[][] data)
 		{

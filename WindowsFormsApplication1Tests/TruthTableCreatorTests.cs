@@ -16,8 +16,7 @@ namespace WindowsFormsApplication1.Tests
 		private void CheckFullTable(string parse)
 		{
 			StringParser parser = StringParser.Create(parse);
-			TruthTableCreator table = new TruthTableCreator();
-			table.Instantiate(parser);
+			TruthTableCreator table = new TruthTableCreator(parser);
 			IArgumentController manager = parser.GetArgumentController();
 
 			foreach (byte[] data in table.GetTable())
@@ -42,7 +41,7 @@ namespace WindowsFormsApplication1.Tests
 		[TestMethod()]
 		public void GetFullTableTest2()
 		{
-			CheckFullTable("|(|(A,B), ~(C))");
+			CheckFullTable("|(|(A,B), C)");
 
 		}
 

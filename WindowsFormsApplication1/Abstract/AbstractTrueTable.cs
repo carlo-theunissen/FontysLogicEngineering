@@ -14,12 +14,14 @@ namespace WindowsFormsApplication1.Abstract
 	{
 		protected IArgumentController _manager;
 		protected IAsciiBaseOperator _operator;
+		protected IParser _parser;
 
 		public abstract byte[][] GetTable();
-		public void Instantiate(IParser parser)
+		public AbstractTrueTable(IParser parser)
 		{
 			_manager = parser.GetArgumentController();
 			_operator = parser.GetOperator();
+			_parser = parser;
 		}
 		protected bool? GetResults(ref bool[] data)
 		{
@@ -49,5 +51,10 @@ namespace WindowsFormsApplication1.Abstract
 			return result.ToArray();
 		}
 		public abstract string ToHex();
+
+		public IParser GetParser()
+		{
+			return _parser;
+		}
 	}
 }

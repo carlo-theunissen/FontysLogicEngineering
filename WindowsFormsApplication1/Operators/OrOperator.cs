@@ -17,5 +17,9 @@ namespace WindowsFormsApplication1.Operators
 		{
 			return _A.Result() || _B.Result();
 		}
+		public override char GetSymbol()
+		{
+			return '|';
+		}
 	}
 }

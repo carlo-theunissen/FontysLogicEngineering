@@ -8,8 +8,9 @@ namespace WindowsFormsApplication1.interfaces
 {
 	public interface ITruthTable
 	{
-		void Instantiate(IParser parser);
 		byte[][] GetTable();
 		string ToHex();
+
+		IParser GetParser();
 	}
 }

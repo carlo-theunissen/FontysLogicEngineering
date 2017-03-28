@@ -30,5 +30,6 @@ namespace WindowsFormsApplication1.Abstract
 
 		abstract public int GetOperatorNeededArguments();
 		public abstract void Instantiate(IAsciiBaseOperator[] arguments);
+		
 	}
 }

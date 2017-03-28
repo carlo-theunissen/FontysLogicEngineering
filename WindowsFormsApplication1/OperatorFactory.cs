@@ -7,29 +7,23 @@ using WindowsFormsApplication1.interfaces;
 using WindowsFormsApplication1.Operators;
 namespace WindowsFormsApplication1
 {
-	class OperatorFactory
+	public class OperatorFactory
 	{
 		public IAsciiBaseOperator GetOperator(char symbol, ArgumentsManager manager)
 		{
 			switch (symbol) {
 				case '>':
-					return new GreaterThenOperator(manager);
-					break;
-				case '<':
-					return new SmallerThenOperator(manager);
-					break;
+					return new IfThenOperator(manager);
 				case '=':
 					return new SameOperator(manager);
-					break;
 				case '&':
 					return new AndOperator(manager);
-					break;
 				case '|':
 					return new OrOperator(manager);
-					break;
 				case '~':
 					return new NotOperator(manager);
-					break;
+				case '%':
+					return new NotAndOperator(manager);
 
 			}
 			return null;

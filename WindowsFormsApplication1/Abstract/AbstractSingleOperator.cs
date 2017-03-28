@@ -33,5 +33,10 @@ namespace WindowsFormsApplication1.Abstract
 		{
 			return 1;
 		}
+		public override string ToString()
+		{
+			return String.Format("{0}({1})", GetSymbol(), _A);
+		}
+		public abstract char GetSymbol();
 	}
 }

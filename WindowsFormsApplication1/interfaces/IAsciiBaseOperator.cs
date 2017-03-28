@@ -8,6 +8,7 @@ namespace WindowsFormsApplication1.interfaces
 {
 	public interface IAsciiBaseOperator
 	{
+	
 		char[] GetArguments();
 		bool Result();
 		IAsciiBaseOperator[] GetChilds();

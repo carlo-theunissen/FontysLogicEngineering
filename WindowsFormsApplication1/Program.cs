@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using WindowsFormsApplication1.Decorators;
+
 namespace WindowsFormsApplication1
 {
 	static class Program
@@ -21,20 +23,44 @@ namespace WindowsFormsApplication1
 			Application.Run(new Form1());
 			*/
 
-			StringParser parser = StringParser.Create("=( A, &(|(B, C) , =(~(A),C) )");
+
+			//TESTING CODE
+			StringParser parser = StringParser.Create(">(A, B)");
 
 
-			SimplifiedTruthTableCreator table = new SimplifiedTruthTableCreator();
-			table.Instantiate(parser);
 
-			foreach (byte[] result in table.GetTable())
+			TruthTableCreator table = new TruthTableCreator(parser);
+
+
+			DisjunctiveNormalDecorator decorator = new DisjunctiveNormalDecorator(table);
+
+
+			TruthTableCreator processed = new TruthTableCreator(decorator);
+
+			
+			foreach (byte[] row in table.GetTable())
 			{
-				foreach (byte single in result)
+				foreach (byte colomn in row)
 				{
-					Debug.Write(single);
+					Debug.Write(colomn);
 				}
 				Debug.WriteLine("");
 			}
+
+			Debug.WriteLine("================");
+
+			foreach (byte[] row in processed.GetTable())
+			{
+				foreach (byte colomn in row)
+				{
+					Debug.Write(colomn);
+				}
+				Debug.WriteLine("");
+			}
+
+			Debug.WriteLine(decorator.GetOperator().ToString());
+
+	
 		}
 	}
 }
