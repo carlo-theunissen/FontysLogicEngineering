@@ -24,18 +24,18 @@ namespace WindowsFormsApplication1
 			*/
 
 
-			//TESTING CODE
-			StringParser parser = StringParser.Create(">(A, B)");
+			//DEBUG CODE
+			StringParser parser = StringParser.Create(">(A,&(>(B,=(A,E)),~(D)))");
 
 
 
-			TruthTableCreator table = new TruthTableCreator(parser);
+			SimplifiedTruthTableCreator table = new SimplifiedTruthTableCreator(parser);
 
 
-			DisjunctiveNormalDecorator decorator = new DisjunctiveNormalDecorator(table);
+			NandifyDecorator decorator = new NandifyDecorator(parser.GetOperator());
 
 
-			TruthTableCreator processed = new TruthTableCreator(decorator);
+			SimplifiedTruthTableCreator processed = new SimplifiedTruthTableCreator(decorator);
 
 			
 			foreach (byte[] row in table.GetTable())

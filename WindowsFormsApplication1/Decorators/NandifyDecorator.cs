@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ using WindowsFormsApplication1.Operators;
 
 namespace WindowsFormsApplication1.Decorators
 {
-	class NandifyDecorator : AbstractParser
+	public class NandifyDecorator : AbstractParser
 	{
 		private ArgumentsManager _manager;
 		private IAsciiBaseOperator _operator;
@@ -53,19 +54,24 @@ namespace WindowsFormsApplication1.Decorators
 				}
 			}
 
-			return work;
+			ScalarOperator scalar = work as ScalarOperator;
+			if (scalar != null)
+			{
+				return _manager.RequestOperator(scalar.GetName());
+			}
+			throw new System.Exception("Operator not found");
 
 		}
 
 		private IAsciiBaseOperator OrToNand(IAsciiBaseOperator oper1, IAsciiBaseOperator oper2)
 		{
-			IAsciiBaseOperator nand = new NotAndOperator(_manager);
-			nand.Instantiate(new IAsciiBaseOperator[] { NotToNand(oper1), NotToNand(oper2) });
-			return nand;
+			IAsciiBaseOperator and = AndToNand(NotToNand(oper1), NotToNand(oper2) );
+			return NotToNand(and);
 		}
 
 		private IAsciiBaseOperator NotToNand(IAsciiBaseOperator oper1)
 		{
+			
 			IAsciiBaseOperator nand = new NotAndOperator(_manager);
 			nand.Instantiate(new IAsciiBaseOperator[] { Process(oper1), Process(oper1) });
 			return nand;

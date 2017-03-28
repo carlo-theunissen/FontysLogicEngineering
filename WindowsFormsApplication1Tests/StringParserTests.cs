@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1.Tests
 			StringParser parser = StringParser.Create(">(A,B)");
 			ArgumentsManager manager = parser.GetOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
-			manager.SetArgumentValue('B', false);
+			manager.SetArgumentValue('B', true);
 			Assert.IsTrue(parser.GetOperator().Result());
 		}
 
@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1.Tests
 			
 			StringParser parser = StringParser.Create(">(A,B)");
 			ArgumentsManager manager = parser.GetOperator().GetArgumentsManager();
-			manager.SetArgumentValue('A', false);
+			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
 			Assert.IsFalse(parser.GetOperator().Result());
 		}

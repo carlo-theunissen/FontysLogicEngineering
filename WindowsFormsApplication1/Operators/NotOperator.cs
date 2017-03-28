@@ -19,7 +19,7 @@ namespace WindowsFormsApplication1.Operators
 		}
 		public override char GetSymbol()
 		{
-			return '!';
+			return '~';
 		}
 	}
 }

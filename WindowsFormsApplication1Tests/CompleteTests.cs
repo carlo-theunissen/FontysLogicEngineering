@@ -10,8 +10,8 @@ namespace WindowsFormsApplication1Tests
 		{
 			StringParser parser = StringParser.Create(">( A, B)");
 			ArgumentsManager manager = parser.GetOperator().GetArgumentsManager();
-			manager.SetArgumentValue('A', true);
-			manager.SetArgumentValue('B', false);
+			manager.SetArgumentValue('A', false);
+			manager.SetArgumentValue('B', true);
 			Assert.IsTrue(parser.GetOperator().Result());
 
 		}
@@ -21,32 +21,12 @@ namespace WindowsFormsApplication1Tests
 		{
 			StringParser parser = StringParser.Create(">( A, B)");
 			ArgumentsManager manager = parser.GetOperator().GetArgumentsManager();
-			manager.SetArgumentValue('A', false);
-			manager.SetArgumentValue('B', true);
-			Assert.IsFalse(parser.GetOperator().Result());
-
-		}
-		[TestMethod()]
-		public void SimpleLessTestSuccess()
-		{
-			StringParser parser = StringParser.Create("<( A, B)");
-			ArgumentsManager manager = parser.GetOperator().GetArgumentsManager();
-			manager.SetArgumentValue('A', false);
-			manager.SetArgumentValue('B', true);
-			Assert.IsTrue(parser.GetOperator().Result());
-
-		}
-
-		[TestMethod()]
-		public void SimpleLessTestFail()
-		{
-			StringParser parser = StringParser.Create("<( A, B)");
-			ArgumentsManager manager = parser.GetOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
 			Assert.IsFalse(parser.GetOperator().Result());
 
 		}
+
 		[TestMethod()]
 		public void SimpleSameTestSuccess()
 		{
@@ -132,7 +112,7 @@ namespace WindowsFormsApplication1Tests
 			ArgumentsManager manager = parser.GetOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
-			Assert.IsTrue(parser.GetOperator().Result());
+			Assert.IsFalse(parser.GetOperator().Result());
 		}
 		[TestMethod()]
 		public void NestedLarge2()
@@ -141,7 +121,7 @@ namespace WindowsFormsApplication1Tests
 			ArgumentsManager manager = parser.GetOperator().GetArgumentsManager();
 			manager.SetArgumentValue('A', true);
 			manager.SetArgumentValue('B', false);
-			Assert.IsFalse(parser.GetOperator().Result());
+			Assert.IsTrue(parser.GetOperator().Result());
 		}
 
 

@@ -31,8 +31,8 @@ namespace WindowsFormsApplication1.Tests
 					Assert.Fail();
 				}
 			}
-
 		}
+
 		[TestMethod()]
 		public void GetFullTableTest()
 		{

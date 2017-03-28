@@ -21,7 +21,10 @@ namespace WindowsFormsApplication1.Operators
 		{
 			return null;
 		}
-
+		public char GetName()
+		{
+			return _name;
+		}
 		public override bool Result()
 		{
 			if (!_result.HasValue)

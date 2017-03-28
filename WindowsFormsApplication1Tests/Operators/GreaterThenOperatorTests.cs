@@ -10,17 +10,17 @@ using WindowsFormsApplication1.interfaces;
 namespace WindowsFormsApplication1.Operators.Tests
 {
 	[TestClass()]
-	public class GreaterThenOperatorTests
+	public class IfThenOperatorTest
 	{
 		[TestMethod()]
 		public void ResultValidTest()
 		{
 			ArgumentsManager manager = new ArgumentsManager();
 			ScalarOperator one = new ScalarOperator('o', manager);
-			one.SetValue(true);
+			one.SetValue(false);
 
 			ScalarOperator zero = new ScalarOperator('z', manager);
-			zero.SetValue(false);
+			zero.SetValue(true);
 
 
 
@@ -31,6 +31,7 @@ namespace WindowsFormsApplication1.Operators.Tests
 
 			Assert.IsTrue(opr.Result());
 		}
+		[TestMethod()]
 		public void ResultInvalidSameTest()
 		{
 			ArgumentsManager manager = new ArgumentsManager();
@@ -43,8 +44,9 @@ namespace WindowsFormsApplication1.Operators.Tests
 			IfThenOperator opr = new IfThenOperator(manager);
 			IAsciiBaseOperator[] arguments = { one, zero };
 			opr.Instantiate(arguments);
-			Assert.IsTrue(opr.Result());
+			Assert.IsFalse(opr.Result());
 		}
+		[TestMethod()]
 		public void ResultInvalidLowerTest()
 		{
 			ArgumentsManager manager = new ArgumentsManager();
@@ -58,7 +60,7 @@ namespace WindowsFormsApplication1.Operators.Tests
 			IfThenOperator opr = new IfThenOperator(manager);
 			IAsciiBaseOperator[] arguments = { one, zero };
 			opr.Instantiate(arguments);
-			Assert.IsTrue(opr.Result());
+			Assert.IsFalse(opr.Result());
 		}
 	}
 }
