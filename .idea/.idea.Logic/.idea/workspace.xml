@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2ec812d0-5c84-49ce-83b3-4312bf2284a8" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1.sln" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Abstract/AbstractBaseOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Abstract/AbstractDubbleOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Abstract/AbstractParser.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Abstract/AbstractSingleOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Abstract/AbstractTrueTable.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/App.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/ArgumentsManager.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Decorators/DisjunctiveNormalDecorator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Decorators/NandifyDecorator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Exception/ScalarInvalidValue.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Form1.Designer.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Form1.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Form1.resx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/OperatorFactory.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Operators/AndOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Operators/IfThenOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Operators/NotAndOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Operators/NotOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Operators/OrOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Operators/SameOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Operators/ScalarOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Program.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Properties/AssemblyInfo.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Properties/Resources.Designer.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Properties/Resources.resx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Properties/Settings.Designer.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Properties/Settings.settings" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/SimplifiedTruthTableCreator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/StringParser.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/TruthTableCreator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/Utils/ArrayUtils.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/WindowsFormsApplication1.csproj" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/interfaces/IArgumentController.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/interfaces/IAsciiBaseOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/interfaces/IAsciiDubbleOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/interfaces/IAsciiSingleOperator.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/interfaces/IParser.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1/interfaces/ITruthTable.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1Tests/CompleteTests.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1Tests/Decorators/DisjunctiveNormalDecoratorTests.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1Tests/Decorators/NandifyDecoratorTests.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1Tests/Operators/GreaterThenOperatorTests.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1Tests/Properties/AssemblyInfo.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1Tests/ScalarOperatorTests.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1Tests/StringParserTests.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1Tests/TruthTableCreatorTests.cs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WindowsFormsApplication1Tests/WindowsFormsApplication1Tests.csproj" afterPath="" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Debug</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Console</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/LogicTests/ScalarOperatorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/SimplifiedTruthTableCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/CompleteTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/StringParserTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/OperatorFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/TruthTableCreatorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/StringParser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/Decorators/DisjunctiveNormalDecoratorTests.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/LogicTests/ScalarOperatorTests.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication/Program.cs" />
+        <option value="$PROJECT_DIR$/readme.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="40" />
+    <option name="y" value="23" />
+    <option name="width" value="1400" />
+    <option name="height" value="833" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Logic (3 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="CodeCleanupOptionsPage" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/ConsoleApplication/ConsoleApplication.csproj" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.0" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/ConsoleApplication/bin/Debug/netcoreapp2.0/ConsoleApplication.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Production" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
+    <configuration />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2ec812d0-5c84-49ce-83b3-4312bf2284a8" name="Default" comment="" />
+      <created>1506672469476</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1506672469476</updated>
+      <workItem from="1506672470796" duration="1488000" />
+      <workItem from="1506673991355" duration="24000" />
+      <workItem from="1506674027460" duration="71000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1583000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="40" y="23" width="1400" height="833" extended-state="0" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43455496" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/LogicTests/CompleteTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2000">
+          <caret line="126" column="1" lean-forward="false" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+          <folding>
+            <marker date="1506673156000" expanded="false" signature="6:25" ph="..." />
+            <marker date="1506673156000" expanded="true" signature="47:4395" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="80:4393" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="135:445" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="495:812" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="863:1182" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="1238:1543" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="1602:1904" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="1963:2267" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="2329:2632" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="2691:2943" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="2998:3303" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="3361:3664" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="3721:4025" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="4085:4387" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/StringParser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2656">
+          <caret line="170" column="9" lean-forward="true" selection-start-line="170" selection-start-column="9" selection-end-line="170" selection-end-column="9" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:131" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="197:5499" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="529:837" ph="/* Constructor of a string parser ... */" />
+            <marker date="1506672683000" expanded="true" signature="917:1238" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1307:1364" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1374:1457" ph="/* Use this function to create an instance of StringParser. ... */" />
+            <marker date="1506672683000" expanded="true" signature="1512:1637" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1676:1779" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1815:1898" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1935:2693" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2006:2655" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2732:3117" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2911:3061" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2965:3001" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3154:3383" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3232:3320" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3417:3636" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3679:4045" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3764:3874" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3908:4009" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4090:4320" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4363:4667" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4506:4631" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4717:4928" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4971:5055" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5113:5163" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5198:5249" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5317:5371" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5406:5493" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/Decorators/DisjunctiveNormalDecoratorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:49" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="82:784" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="133:782" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="208:776" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApplication/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1506673995000" expanded="false" signature="6:76" ph="..." />
+            <marker date="1506673995000" expanded="true" signature="106:1111" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="126:1109" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="172:1103" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="610:764" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="871:1025" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/ScalarOperatorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <marker date="1506673156000" expanded="false" signature="6:71" ph="..." />
+            <marker date="1506673156000" expanded="true" signature="93:1052" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="132:1050" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="189:359" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="412:607" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="660:860" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="917:1044" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/StringParserTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:105" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="127:3121" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="164:3119" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="229:699" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="762:1012" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1078:1380" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1448:1755" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1820:2120" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2179:2315" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2389:2602" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2675:2886" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2958:3113" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/TruthTableCreatorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:25" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="47:944" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="89:942" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="145:694" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="373:684" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="749:816" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="872:936" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/CompleteTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2000">
+          <caret line="126" column="1" lean-forward="false" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
+          <folding>
+            <marker date="1506673156000" expanded="false" signature="6:25" ph="..." />
+            <marker date="1506673156000" expanded="true" signature="47:4395" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="80:4393" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="135:445" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="495:812" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="863:1182" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="1238:1543" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="1602:1904" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="1963:2267" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="2329:2632" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="2691:2943" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="2998:3303" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="3361:3664" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="3721:4025" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="4085:4387" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/StringParser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2656">
+          <caret line="170" column="9" lean-forward="true" selection-start-line="170" selection-start-column="9" selection-end-line="170" selection-end-column="9" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:131" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="197:5499" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="529:837" ph="/* Constructor of a string parser ... */" />
+            <marker date="1506672683000" expanded="true" signature="917:1238" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1307:1364" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1374:1457" ph="/* Use this function to create an instance of StringParser. ... */" />
+            <marker date="1506672683000" expanded="true" signature="1512:1637" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1676:1779" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1815:1898" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1935:2693" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2006:2655" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2732:3117" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2911:3061" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2965:3001" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3154:3383" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3232:3320" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3417:3636" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3679:4045" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3764:3874" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3908:4009" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4090:4320" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4363:4667" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4506:4631" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4717:4928" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4971:5055" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5113:5163" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5198:5249" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5317:5371" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5406:5493" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/Decorators/DisjunctiveNormalDecoratorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:49" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="82:784" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="133:782" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="208:776" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApplication/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1506673995000" expanded="false" signature="6:76" ph="..." />
+            <marker date="1506673995000" expanded="true" signature="106:1111" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="126:1109" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="172:1103" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="610:764" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="871:1025" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/ScalarOperatorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <marker date="1506673156000" expanded="false" signature="6:71" ph="..." />
+            <marker date="1506673156000" expanded="true" signature="93:1052" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="132:1050" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="189:359" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="412:607" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="660:860" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="917:1044" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/StringParserTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:105" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="127:3121" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="164:3119" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="229:699" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="762:1012" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1078:1380" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1448:1755" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1820:2120" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2179:2315" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2389:2602" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2675:2886" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2958:3113" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/TruthTableCreatorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:25" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="47:944" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="89:942" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="145:694" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="373:684" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="749:816" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="872:936" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/ScalarOperatorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <marker date="1506673156000" expanded="false" signature="6:71" ph="..." />
+            <marker date="1506673156000" expanded="true" signature="93:1052" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="132:1050" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="189:359" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="412:607" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="660:860" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="917:1044" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/StringParserTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:105" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="127:3121" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="164:3119" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="229:699" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="762:1012" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1078:1380" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1448:1755" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1820:2120" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2179:2315" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2389:2602" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2675:2886" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2958:3113" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/TruthTableCreatorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:25" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="47:944" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="89:942" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="145:694" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="373:684" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="749:816" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="872:936" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/Decorators/DisjunctiveNormalDecoratorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:49" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="82:784" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="133:782" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="208:776" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/Program.cs" />
+    <entry file="file://$PROJECT_DIR$/Logic/SimplifiedTruthTableCreator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="94" column="21" lean-forward="false" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConsoleApplication/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1506673995000" expanded="false" signature="6:76" ph="..." />
+            <marker date="1506673995000" expanded="true" signature="106:1111" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="126:1109" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="172:1103" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="610:764" ph="{...}" />
+            <marker date="1506673995000" expanded="true" signature="871:1025" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/OperatorFactory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/StringParser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2656">
+          <caret line="170" column="9" lean-forward="false" selection-start-line="170" selection-start-column="9" selection-end-line="170" selection-end-column="9" />
+          <folding>
+            <marker date="1506672683000" expanded="false" signature="6:131" ph="..." />
+            <marker date="1506672683000" expanded="true" signature="197:5499" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="529:837" ph="/* Constructor of a string parser ... */" />
+            <marker date="1506672683000" expanded="true" signature="917:1238" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1307:1364" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1374:1457" ph="/* Use this function to create an instance of StringParser. ... */" />
+            <marker date="1506672683000" expanded="true" signature="1512:1637" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1676:1779" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1815:1898" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="1935:2693" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2006:2655" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2732:3117" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2911:3061" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="2965:3001" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3154:3383" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3232:3320" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3417:3636" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3679:4045" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3764:3874" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="3908:4009" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4090:4320" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4363:4667" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4506:4631" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4717:4928" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="4971:5055" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5113:5163" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5198:5249" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5317:5371" ph="{...}" />
+            <marker date="1506672683000" expanded="true" signature="5406:5493" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/CompleteTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <marker date="1506673156000" expanded="false" signature="6:25" ph="..." />
+            <marker date="1506673156000" expanded="true" signature="47:4395" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="80:4393" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="135:445" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="495:812" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="863:1182" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="1238:1543" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="1602:1904" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="1963:2267" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="2329:2632" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="2691:2943" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="2998:3303" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="3361:3664" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="3721:4025" ph="{...}" />
+            <marker date="1506673156000" expanded="true" signature="4085:4387" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="32">
+            <caret line="2" column="46" lean-forward="false" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

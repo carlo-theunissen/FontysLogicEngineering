@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1405e451-e287-4bb8-97c7-a9e93af1d894" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="UnitTest1.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LogicTests/UnitTest1.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="20" />
+              <folding>
+                <marker date="1506671190000" expanded="false" signature="6:26" ph="..." />
+                <marker date="1506671190000" expanded="true" signature="48:154" ph="{...}" />
+                <marker date="1506671190000" expanded="true" signature="77:152" ph="{...}" />
+                <marker date="1506671190000" expanded="true" signature="126:146" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompleteTests.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LogicTests/CompleteTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1477">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="12" />
+              <folding>
+                <marker date="1506671953000" expanded="true" signature="6:25" ph="..." />
+                <marker date="1506671953000" expanded="true" signature="47:3834" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="77:3832" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="129:398" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="445:715" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="763:1031" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="1075:1345" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="1390:1659" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="1701:1971" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="2018:2286" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="2332:2559" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="2603:2873" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="2910:3185" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="3222:3504" ph="{...}" />
+                <marker date="1506671953000" expanded="true" signature="3542:3826" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringParserTests.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LogicTests/StringParserTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="41" column="59" lean-forward="false" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
+              <folding>
+                <marker date="1506672105000" expanded="false" signature="6:129" ph="..." />
+                <marker date="1506672105000" expanded="true" signature="152:2765" ph="{...}" />
+                <marker date="1506672105000" expanded="true" signature="186:2763" ph="{...}" />
+                <marker date="1506672105000" expanded="true" signature="237:352" ph="{...}" />
+                <marker date="1506672105000" expanded="true" signature="414:597" ph="{...}" />
+                <marker date="1506672105000" expanded="true" signature="658:839" ph="{...}" />
+                <marker date="1506672105000" expanded="true" signature="899:1038" ph="{...}" />
+                <marker date="1506672105000" expanded="true" signature="1091:1357" ph="{...}" />
+                <marker date="1506672105000" expanded="true" signature="1413:1686" ph="{...}" />
+                <marker date="1506672105000" expanded="true" signature="1740:2011" ph="{...}" />
+                <marker date="1506672105000" expanded="true" signature="2060:2474" ph="{...}" />
+                <marker date="1506672105000" expanded="true" signature="2525:2758" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScalarOperatorTests.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LogicTests/ScalarOperatorTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+              <folding>
+                <marker date="1506672170000" expanded="true" signature="6:71" ph="..." />
+                <marker date="1506672170000" expanded="true" signature="93:936" ph="{...}" />
+                <marker date="1506672170000" expanded="true" signature="129:934" ph="{...}" />
+                <marker date="1506672170000" expanded="true" signature="176:297" ph="{...}" />
+                <marker date="1506672170000" expanded="true" signature="337:492" ph="{...}" />
+                <marker date="1506672170000" expanded="true" signature="533:709" ph="{...}" />
+                <marker date="1506672170000" expanded="true" signature="750:931" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GreaterThenOperatorTests.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LogicTests/Operators/GreaterThenOperatorTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <folding>
+                <marker date="1506672185000" expanded="true" signature="6:72" ph="..." />
+                <marker date="1506672185000" expanded="true" signature="103:1474" ph="{...}" />
+                <marker date="1506672185000" expanded="true" signature="138:1472" ph="{...}" />
+                <marker date="1506672185000" expanded="true" signature="182:580" ph="{...}" />
+                <marker date="1506672185000" expanded="true" signature="627:1022" ph="{...}" />
+                <marker date="1506672185000" expanded="true" signature="1070:1469" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DisjunctiveNormalDecoratorTests.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LogicTests/Decorators/DisjunctiveNormalDecoratorTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="31" column="76" lean-forward="false" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
+              <folding>
+                <marker date="1506672220000" expanded="true" signature="6:49" ph="..." />
+                <marker date="1506672220000" expanded="true" signature="82:765" ph="{...}" />
+                <marker date="1506672220000" expanded="true" signature="131:763" ph="{...}" />
+                <marker date="1506672220000" expanded="true" signature="192:760" ph="{...}" />
+                <marker date="1506672220000" expanded="true" signature="618:755" ph="{...}" />
+                <marker date="1506672220000" expanded="true" signature="676:750" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NandifyDecoratorTests.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LogicTests/Decorators/NandifyDecoratorTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+              <folding>
+                <marker date="1506672423000" expanded="true" signature="6:49" ph="..." />
+                <marker date="1506672423000" expanded="true" signature="82:1279" ph="{...}" />
+                <marker date="1506672423000" expanded="true" signature="120:1277" ph="{...}" />
+                <marker date="1506672423000" expanded="true" signature="167:730" ph="{...}" />
+                <marker date="1506672423000" expanded="true" signature="601:724" ph="{...}" />
+                <marker date="1506672423000" expanded="true" signature="654:719" ph="{...}" />
+                <marker date="1506672423000" expanded="true" signature="784:839" ph="{...}" />
+                <marker date="1506672423000" expanded="true" signature="887:924" ph="{...}" />
+                <marker date="1506672423000" expanded="true" signature="973:1010" ph="{...}" />
+                <marker date="1506672423000" expanded="true" signature="1060:1097" ph="{...}" />
+                <marker date="1506672423000" expanded="true" signature="1146:1183" ph="{...}" />
+                <marker date="1506672423000" expanded="true" signature="1235:1272" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TruthTableCreatorTests.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LogicTests/TruthTableCreatorTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <marker date="1506671873000" expanded="true" signature="6:49" ph="..." />
+                <marker date="1506671873000" expanded="true" signature="71:830" ph="{...}" />
+                <marker date="1506671873000" expanded="true" signature="110:828" ph="{...}" />
+                <marker date="1506671873000" expanded="true" signature="158:648" ph="{...}" />
+                <marker date="1506671873000" expanded="true" signature="386:644" ph="{...}" />
+                <marker date="1506671873000" expanded="true" signature="490:558" ph="{...}" />
+                <marker date="1506671873000" expanded="true" signature="691:737" ph="{...}" />
+                <marker date="1506671873000" expanded="true" signature="780:824" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>[</find>
+      <find>[T</find>
+      <find>[Te</find>
+      <find>[Test</find>
+      <find>[TestM</find>
+      <find>[TestMet</find>
+      <find>[TestMeth</find>
+      <find>[TestMethod)</find>
+      <find>[TestMethod</find>
+      <find>[TestMethod()]</find>
+      <find>[TestMethod()</find>
+      <find>TestMethod()</find>
+      <find>Assert.True</find>
+      <find>Assert.ITrue</find>
+      <find>Assert.IsTrue</find>
+      <find>Assert.IsF</find>
+      <find>Assert.IsFa</find>
+      <find>Assert.IsFals</find>
+      <find>Assert.IsFalse</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>[Fact]</replace>
+      <replace>Fact</replace>
+      <replace>Assert.True</replace>
+      <replace>Assert.False</replace>
+    </replaceStrings>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/LogicTests/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/ScalarOperatorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/CompleteTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Logic/Exception/ScalarInvalidValue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/StringParserTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/TruthTableCreatorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/Operators/GreaterThenOperatorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/obj/Debug/netcoreapp2.0/LogicTests.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/Decorators/DisjunctiveNormalDecoratorTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LogicTests/Decorators/NandifyDecoratorTests.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/LogicTests/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/WindowsFormsApplication1/WindowsFormsApplication1.csproj" />
+        <option value="$PROJECT_DIR$/WindowsFormsApplication1/Program.cs" />
+        <option value="$PROJECT_DIR$/LogicTests/TruthTableCreatorTests.cs" />
+        <option value="$PROJECT_DIR$/LogicTests/CompleteTests.cs" />
+        <option value="$PROJECT_DIR$/LogicTests/StringParserTests.cs" />
+        <option value="$PROJECT_DIR$/LogicTests/ScalarOperatorTests.cs" />
+        <option value="$PROJECT_DIR$/LogicTests/Operators/GreaterThenOperatorTests.cs" />
+        <option value="$PROJECT_DIR$/LogicTests/Decorators/DisjunctiveNormalDecoratorTests.cs" />
+        <option value="$PROJECT_DIR$/LogicTests/Decorators/NandifyDecoratorTests.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="40" />
+    <option name="y" value="23" />
+    <option name="width" value="1400" />
+    <option name="height" value="833" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WindowsFormsApplication1 (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LogicTests" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WindowsFormsApplication1 (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1405e451-e287-4bb8-97c7-a9e93af1d894" name="Default" comment="" />
+      <created>1506670969051</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1506670969051</updated>
+      <workItem from="1506670970780" duration="1342000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1342000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="40" y="23" width="1400" height="833" extended-state="0" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/WindowsFormsApplication1/Form1.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1296">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WindowsFormsApplication1/Form1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WindowsFormsApplication1/Properties/Settings.settings">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WindowsFormsApplication1/Properties/Settings.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WindowsFormsApplication1/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WindowsFormsApplication1/WindowsFormsApplication1.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/UnitTest1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="20" />
+          <folding>
+            <marker date="1506671190000" expanded="false" signature="6:26" ph="..." />
+            <marker date="1506671190000" expanded="true" signature="48:154" ph="{...}" />
+            <marker date="1506671190000" expanded="true" signature="77:152" ph="{...}" />
+            <marker date="1506671190000" expanded="true" signature="126:146" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/Exception/ScalarInvalidValue.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding>
+            <marker date="1506671625000" expanded="true" signature="25:87" ph="{...}" />
+            <marker date="1506671625000" expanded="true" signature="79:85" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/TruthTableCreatorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <marker date="1506671873000" expanded="true" signature="6:49" ph="..." />
+            <marker date="1506671873000" expanded="true" signature="71:830" ph="{...}" />
+            <marker date="1506671873000" expanded="true" signature="110:828" ph="{...}" />
+            <marker date="1506671873000" expanded="true" signature="158:648" ph="{...}" />
+            <marker date="1506671873000" expanded="true" signature="386:644" ph="{...}" />
+            <marker date="1506671873000" expanded="true" signature="490:558" ph="{...}" />
+            <marker date="1506671873000" expanded="true" signature="691:737" ph="{...}" />
+            <marker date="1506671873000" expanded="true" signature="780:824" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/CompleteTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1477">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="12" />
+          <folding>
+            <marker date="1506671953000" expanded="true" signature="6:25" ph="..." />
+            <marker date="1506671953000" expanded="true" signature="47:3834" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="77:3832" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="129:398" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="445:715" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="763:1031" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="1075:1345" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="1390:1659" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="1701:1971" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="2018:2286" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="2332:2559" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="2603:2873" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="2910:3185" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="3222:3504" ph="{...}" />
+            <marker date="1506671953000" expanded="true" signature="3542:3826" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/StringParserTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="41" column="59" lean-forward="false" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
+          <folding>
+            <marker date="1506672105000" expanded="false" signature="6:129" ph="..." />
+            <marker date="1506672105000" expanded="true" signature="152:2765" ph="{...}" />
+            <marker date="1506672105000" expanded="true" signature="186:2763" ph="{...}" />
+            <marker date="1506672105000" expanded="true" signature="237:352" ph="{...}" />
+            <marker date="1506672105000" expanded="true" signature="414:597" ph="{...}" />
+            <marker date="1506672105000" expanded="true" signature="658:839" ph="{...}" />
+            <marker date="1506672105000" expanded="true" signature="899:1038" ph="{...}" />
+            <marker date="1506672105000" expanded="true" signature="1091:1357" ph="{...}" />
+            <marker date="1506672105000" expanded="true" signature="1413:1686" ph="{...}" />
+            <marker date="1506672105000" expanded="true" signature="1740:2011" ph="{...}" />
+            <marker date="1506672105000" expanded="true" signature="2060:2474" ph="{...}" />
+            <marker date="1506672105000" expanded="true" signature="2525:2758" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/ScalarOperatorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding>
+            <marker date="1506672170000" expanded="true" signature="6:71" ph="..." />
+            <marker date="1506672170000" expanded="true" signature="93:936" ph="{...}" />
+            <marker date="1506672170000" expanded="true" signature="129:934" ph="{...}" />
+            <marker date="1506672170000" expanded="true" signature="176:297" ph="{...}" />
+            <marker date="1506672170000" expanded="true" signature="337:492" ph="{...}" />
+            <marker date="1506672170000" expanded="true" signature="533:709" ph="{...}" />
+            <marker date="1506672170000" expanded="true" signature="750:931" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/Operators/GreaterThenOperatorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <marker date="1506672185000" expanded="true" signature="6:72" ph="..." />
+            <marker date="1506672185000" expanded="true" signature="103:1474" ph="{...}" />
+            <marker date="1506672185000" expanded="true" signature="138:1472" ph="{...}" />
+            <marker date="1506672185000" expanded="true" signature="182:580" ph="{...}" />
+            <marker date="1506672185000" expanded="true" signature="627:1022" ph="{...}" />
+            <marker date="1506672185000" expanded="true" signature="1070:1469" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/Decorators/DisjunctiveNormalDecoratorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="31" column="76" lean-forward="false" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
+          <folding>
+            <marker date="1506672220000" expanded="true" signature="6:49" ph="..." />
+            <marker date="1506672220000" expanded="true" signature="82:765" ph="{...}" />
+            <marker date="1506672220000" expanded="true" signature="131:763" ph="{...}" />
+            <marker date="1506672220000" expanded="true" signature="192:760" ph="{...}" />
+            <marker date="1506672220000" expanded="true" signature="618:755" ph="{...}" />
+            <marker date="1506672220000" expanded="true" signature="676:750" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/obj/Debug/netcoreapp2.0/LogicTests.AssemblyInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <marker date="1506671190000" expanded="true" signature="0:395" ph="/* ------------------------------------------------------------------------------ ... */" />
+            <marker date="1506671190000" expanded="false" signature="403:435" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicTests/Decorators/NandifyDecoratorTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <marker date="1506672423000" expanded="true" signature="6:49" ph="..." />
+            <marker date="1506672423000" expanded="true" signature="82:1279" ph="{...}" />
+            <marker date="1506672423000" expanded="true" signature="120:1277" ph="{...}" />
+            <marker date="1506672423000" expanded="true" signature="167:730" ph="{...}" />
+            <marker date="1506672423000" expanded="true" signature="601:724" ph="{...}" />
+            <marker date="1506672423000" expanded="true" signature="654:719" ph="{...}" />
+            <marker date="1506672423000" expanded="true" signature="784:839" ph="{...}" />
+            <marker date="1506672423000" expanded="true" signature="887:924" ph="{...}" />
+            <marker date="1506672423000" expanded="true" signature="973:1010" ph="{...}" />
+            <marker date="1506672423000" expanded="true" signature="1060:1097" ph="{...}" />
+            <marker date="1506672423000" expanded="true" signature="1146:1183" ph="{...}" />
+            <marker date="1506672423000" expanded="true" signature="1235:1272" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
