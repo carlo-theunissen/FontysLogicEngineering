@@ -21,6 +21,10 @@ namespace Logic
                     return new NotOperator(manager);
                 case '%':
                     return new NotAndOperator(manager);
+                case 'F':
+                    return new FalseOperator(manager);
+                case 'T':
+                    return new TrueOperator(manager);
             }
             return null;
         }

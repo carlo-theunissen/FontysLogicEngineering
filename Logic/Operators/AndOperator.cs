@@ -8,9 +8,14 @@ namespace Logic.Operators
         {
         }
 
-        public override char GetSymbol()
+        public override char GetAsciiSymbol()
         {
             return '&';
+        }
+
+        public override char GetLogicSymbol()
+        {
+            return '∧';
         }
 
         public override bool Result()

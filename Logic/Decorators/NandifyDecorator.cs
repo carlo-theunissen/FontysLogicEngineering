@@ -29,7 +29,7 @@ namespace Logic.Decorators
         {
             var logic = work as IAsciiSingleOperator;
             if (logic != null)
-                switch (logic.GetSymbol())
+                switch (logic.GetAsciiSymbol())
                 {
                     case '>':
                         var not = NotToNand(logic.GetChilds()[0]);
@@ -47,6 +47,11 @@ namespace Logic.Decorators
                         IAsciiBaseOperator nand = new NotAndOperator(_manager);
                         nand.Instantiate(new[] {Process(logic.GetChilds()[0]), Process(logic.GetChilds()[1])});
                         return nand;
+                    case 'F':
+                        return new FalseOperator(_manager);
+                    case 'T':
+                        return new TrueOperator(_manager);                       
+                        
                 }
 
             var scalar = work as ScalarOperator;

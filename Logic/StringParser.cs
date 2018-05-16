@@ -151,7 +151,7 @@ namespace Logic
 
         private bool FindScalar(char use)
         {
-            var regex = new Regex(@"[a-zA-Z]");
+            var regex = new Regex(@"[a-eg-su-zA-EG-SU-Z]");
             var match = regex.Match(use.ToString());
 
             if (match.Success)

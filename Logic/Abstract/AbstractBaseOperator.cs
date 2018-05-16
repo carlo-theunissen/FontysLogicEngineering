@@ -24,6 +24,8 @@ namespace Logic.Abstract
 
         public abstract int GetOperatorNeededArguments();
         public abstract void Instantiate(IAsciiBaseOperator[] arguments);
+        public abstract string ToLogicString();
+        
 
         public virtual bool Equals(IAsciiBaseOperator obj)
         {

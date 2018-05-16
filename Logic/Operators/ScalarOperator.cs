@@ -51,9 +51,15 @@ namespace Logic.Operators
         {
         }
 
+        public override string ToLogicString()
+        {
+            return ToString();
+        }
+
         public override string ToString()
         {
             return _name.ToString().ToUpper();
         }
+        
     }
 }

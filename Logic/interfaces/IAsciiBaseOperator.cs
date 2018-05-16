@@ -15,5 +15,7 @@
         int GetOperatorNeededArguments();
 
         void Instantiate(IAsciiBaseOperator[] arguments);
+
+        string ToLogicString();
     }
 }

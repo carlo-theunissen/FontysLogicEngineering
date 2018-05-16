@@ -2,6 +2,7 @@
 {
     public interface IAsciiSingleOperator : IAsciiBaseOperator
     {
-        char GetSymbol();
+        char GetAsciiSymbol();
+        char GetLogicSymbol();
     }
 }

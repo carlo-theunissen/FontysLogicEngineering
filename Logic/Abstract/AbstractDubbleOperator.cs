@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Logic.interfaces;
+using Logic.Operators;
 
 namespace Logic.Abstract
 {
@@ -38,7 +39,14 @@ namespace Logic.Abstract
 
         public override string ToString()
         {
-            return string.Format("{0}( {1}, {2} )", GetSymbol(), _A, _B);
+            return string.Format("{0}( {1}, {2} )", GetAsciiSymbol(), _A, _B);
+        }
+
+        public override string ToLogicString()
+        {
+            var a = _A is ScalarOperator || !(_A is IAsciiDubbleOperator) ? _A.ToLogicString() : "(" + _A.ToLogicString() + ")";
+            var b = _B is ScalarOperator || !(_B is IAsciiDubbleOperator) ? _B.ToLogicString() : "(" + _B.ToLogicString() + ")";
+            return string.Format("{0} {1} {2}", a, GetLogicSymbol(), b);
         }
     }
 }

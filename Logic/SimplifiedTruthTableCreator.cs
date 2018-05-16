@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using Logic.Abstract;
 using Logic.interfaces;
@@ -47,19 +48,28 @@ namespace Logic
             ICollection<byte[]> newData = new List<byte[]>();
             var clonedData = (byte[][]) data.Clone();
 
-            foreach (var current in data)
-            foreach (var check in data)
+            foreach (byte[] current in data)
             {
-                if (check.Equals(current)) continue;
-
-                var differ = ArrayUtils.GetDifferIndexes(current, check);
-
-                if (differ.Length == 1)
+                var foundMatch = false;
+                foreach (byte[] check in data)
                 {
-                    var temp = (byte[]) check.Clone();
-                    temp[differ[0]] = 2;
-                    if (!ArrayUtils.ContainsArrayInList(temp, ref newData))
-                        newData.Add(temp);
+                    if (check.Equals(current)) continue;
+
+                    var differ = ArrayUtils.GetDifferIndexes(current, check);
+
+                    if (differ.Length == 1)
+                    {
+                        foundMatch = true;
+                        var temp = (byte[]) check.Clone();
+                        temp[differ[0]] = 2;
+                        if (!ArrayUtils.ContainsArrayInList(temp, ref newData))
+                            newData.Add(temp);
+                    }
+                }
+                
+                if (!foundMatch && newData.Any())
+                {
+                    newData.Add(current);
                 }
             }
 

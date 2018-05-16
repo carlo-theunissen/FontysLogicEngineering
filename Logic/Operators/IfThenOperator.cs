@@ -13,9 +13,14 @@ namespace Logic.Operators
             return !_A.Result() || _B.Result();
         }
 
-        public override char GetSymbol()
+        public override char GetAsciiSymbol()
         {
             return '>';
+        }
+
+        public override char GetLogicSymbol()
+        {
+            return '⇒';
         }
     }
 }

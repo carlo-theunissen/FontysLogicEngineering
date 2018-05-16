@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Logic.interfaces;
 
 namespace Logic.Abstract
@@ -44,8 +45,8 @@ namespace Logic.Abstract
             {
                 var array = new bool[length];
                 for (var pos = 0; pos < length; pos++)
-                    array[pos] = (i & (1 << pos)) > 0;
-                result.Add(array);
+                    array[pos] = (i & (1 << pos)) <= 0;
+                result.Add(array.Reverse().ToArray());
             }
             return result.ToArray();
         }

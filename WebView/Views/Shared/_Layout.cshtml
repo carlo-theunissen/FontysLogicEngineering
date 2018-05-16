@@ -1,0 +1,39 @@
+﻿<html>
+<head><title>>Awesome Logic application</title>
+        <link rel="stylesheet" href="~/css/site.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+<div class="formulaContainer">
+        <form method="post" asp-action="Calculate" asp-controller="Home">
+        <div class="form-group">
+                <label for="exampleInputEmail1">Formula</label>
+                <input autofocus type="text" value="@ViewData["input"]" name="formula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter formula">
+                <small id="emailHelp" class="form-text text-muted">Please use ASCII format</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</div>
+@RenderBody()
+
+<div class="formulaContainer">
+        Proudly build by Carlo Theunissen
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+        asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+        asp-fallback-test="window.jQuery"
+        crossorigin="anonymous"
+        integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+</script>
+<script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+        asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+        asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+        crossorigin="anonymous"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+</script>
+</body>
+</html>

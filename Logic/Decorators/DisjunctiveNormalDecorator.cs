@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Logic.Abstract;
 using Logic.interfaces;
 using Logic.Operators;
@@ -40,13 +42,20 @@ namespace Logic.Decorators
             foreach (var row in table)
                 if (row[row.Length - 1] == 1)
                 {
-                    var opers = new IAsciiBaseOperator[_names.Length];
+                    var list = new List<IAsciiBaseOperator>();
                     for (var x = 0; x < _names.Length; x++)
-                        opers[x] = GetOperator(row[x], _names[x]);
-                    outcome.Add(CombineOperators(opers, '&'));
+                    {
+                        if (row[x] < 2)
+                        {
+                            list.Add(GetOperator(row[x], _names[x]));
+                        }
+                    }
+                    outcome.Add(list.Any()
+                        ? CombineOperators(list.ToArray(), '&')
+                        : new TrueOperator(_argumentManager));
                 }
 
-            _operator = CombineOperators(outcome.ToArray(), '|');
+            _operator = outcome.Any() ? CombineOperators(outcome.ToArray(), '|') : new FalseOperator(_argumentManager);
         }
 
         private IAsciiBaseOperator CombineOperators(IAsciiBaseOperator[] opers, char glueName)
@@ -78,15 +87,6 @@ namespace Logic.Decorators
 
                 case 1:
                     return _argumentManager.RequestOperator(name);
-
-                case 2:
-                    IAsciiBaseOperator not = new NotOperator(_argumentManager);
-                    not.Instantiate(new IAsciiBaseOperator[] {_argumentManager.RequestOperator(name)});
-
-                    IAsciiBaseOperator or = new OrOperator(_argumentManager);
-                    or.Instantiate(new[] {_argumentManager.RequestOperator(name), not});
-
-                    return or;
             }
             return null;
         }

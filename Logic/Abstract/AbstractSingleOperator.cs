@@ -1,4 +1,5 @@
 ﻿using Logic.interfaces;
+using Logic.Operators;
 
 namespace Logic.Abstract
 {
@@ -31,11 +32,18 @@ namespace Logic.Abstract
             return 1;
         }
 
-        public abstract char GetSymbol();
+        public abstract char GetAsciiSymbol();
+        public abstract char GetLogicSymbol();
 
         public override string ToString()
         {
-            return string.Format("{0}({1})", GetSymbol(), _A);
+            return string.Format("{0}({1})", GetAsciiSymbol(), _A);
+        }
+
+        public override string ToLogicString()
+        {
+            var a = _A is ScalarOperator || !(_A is IAsciiDubbleOperator)  ? _A.ToLogicString() : "(" + _A.ToLogicString() + ")";
+            return string.Format("{0}{1}", GetLogicSymbol(), a); 
         }
     }
 }
