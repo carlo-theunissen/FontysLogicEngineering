@@ -45,6 +45,7 @@ namespace Logic
 
         private byte[][] SimplfyList(byte[][] data)
         {
+            var oneWasFound = false;
             ICollection<byte[]> newData = new List<byte[]>();
             var clonedData = (byte[][]) data.Clone();
 
@@ -59,23 +60,26 @@ namespace Logic
 
                     if (differ.Length == 1)
                     {
+                        
                         foundMatch = true;
                         var temp = (byte[]) check.Clone();
                         temp[differ[0]] = 2;
                         if (!ArrayUtils.ContainsArrayInList(temp, ref newData))
+                        {
+                            oneWasFound = true;
                             newData.Add(temp);
+                        }
+                            
                     }
                 }
                 
-                if (!foundMatch && newData.Any())
+                if (!foundMatch)
                 {
                     newData.Add(current);
                 }
             }
 
-            if (newData.Count == 0)
-                return data;
-            return SimplfyList(newData.ToArray());
+            return !oneWasFound ? data : SimplfyList(newData.ToArray());
         }
 
 
@@ -105,9 +109,5 @@ namespace Logic
             return result.ToArray();
         }
 
-        public override string ToHex()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

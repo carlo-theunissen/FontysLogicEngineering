@@ -62,8 +62,9 @@ namespace Logic.Decorators
 
         private IAsciiBaseOperator OrToNand(IAsciiBaseOperator oper1, IAsciiBaseOperator oper2)
         {
-            var and = AndToNand(NotToNand(oper1), NotToNand(oper2));
-            return NotToNand(and);
+            IAsciiBaseOperator nand = new NotAndOperator(_manager);
+            nand.Instantiate(new[] {NotToNand(oper1), NotToNand(oper2)});
+            return nand;
         }
 
         private IAsciiBaseOperator NotToNand(IAsciiBaseOperator oper1)

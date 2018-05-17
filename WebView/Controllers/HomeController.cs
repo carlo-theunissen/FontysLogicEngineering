@@ -18,9 +18,13 @@ namespace WebView.Controllers
             return View();
         }
         
-        [HttpPost]
         public IActionResult Calculate(string formula)
         {
+            if (string.IsNullOrEmpty(formula))
+            {
+                return RedirectToAction("Index");
+            }
+            
             var model = new CalculateViewModel();
             
             
@@ -44,6 +48,8 @@ namespace WebView.Controllers
 
             model.SimplifiedNormalize = simplifiedNormal.GetOperator().ToString();
             model.SimplifiedNormalizeLogicFormat = simplifiedNormal.GetOperator().ToLogicString();
+
+            model.Hex = table.ToHex();
             
             return View(model);
         }

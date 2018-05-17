@@ -19,7 +19,11 @@ namespace Logic.Abstract
         }
 
         public abstract byte[][] GetTable();
-        public abstract string ToHex();
+
+        public string ToHex()
+        {
+            return Convert.ToInt32(string.Join("", GetTable().Reverse().Select(x => x.Last())),2).ToString("X");
+        }
 
         public IParser GetParser()
         {
@@ -48,6 +52,7 @@ namespace Logic.Abstract
                     array[pos] = (i & (1 << pos)) <= 0;
                 result.Add(array.Reverse().ToArray());
             }
+            result.Reverse();
             return result.ToArray();
         }
     }

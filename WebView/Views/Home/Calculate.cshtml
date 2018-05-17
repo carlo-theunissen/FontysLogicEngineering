@@ -7,13 +7,12 @@
         <label for="properFormat">Logic Format</label>
         <input disabled="" class="form-control" id="properFormat" value="@Model.Logic">
     </div>
-</div>
-
-<div class="formulaContainer">
-    <div class="form-group">
-        <label for="nandify">Nandify</label>
-        <input disabled="" class="form-control" id="nandify" value="@Model.Nandify">
-    </div>
+    <form method="get" asp-action="Calculate" asp-controller="Home">
+        <div class="form-group">
+            <input type="hidden" value="@Model.OriginalFormula" name="formula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter formula">
+        </div>
+        <button type="submit" class="btn btn-outline-primary small">Run</button>
+    </form>
 </div>
 @if (Model.Arguments.Length > 0)
 {
@@ -23,7 +22,16 @@
             <input disabled="" class="form-control" id="hex" value="@Model.Hex">
         </div>
     </div>
-    
+
+}
+<div class="formulaContainer">
+    <div class="form-group">
+        <label for="nandify">Nandify</label>
+        <input disabled="" class="form-control" id="nandify" value="@Model.Nandify">
+    </div>
+</div>
+@if (Model.Arguments.Length > 0)
+{
     <div id="truthTableContainer">
         <div class="left truthTable">
             <h5>Thruth table</h5>
@@ -88,6 +96,13 @@
             <label for="normalizeLogic">Normalize Logic Format</label>
             <input disabled="" class="form-control" id="normalizeLogic" value="@Model.NormalizeLogicFormat">
         </div>
+        
+        <form method="get" asp-action="Calculate" asp-controller="Home">
+            <div class="form-group">
+                <input type="hidden" value="@Model.Normalize" name="formula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter formula">
+            </div>
+            <button type="submit" class="btn btn-outline-primary small">Run</button>
+        </form>
     </div>
 
 }
@@ -99,4 +114,11 @@
         <label for="normalizeLogic">Simplified Normalize Logic Format</label>
         <input disabled="" class="form-control" id="normalizeLogic" value="@Model.SimplifiedNormalizeLogicFormat">
     </div>
+    
+    <form method="get" asp-action="Calculate" asp-controller="Home">
+        <div class="form-group">
+            <input type="hidden" value="@Model.SimplifiedNormalize" name="formula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter formula">
+        </div>
+        <button type="submit" class="btn btn-outline-primary small">Run</button>
+    </form>
 </div>

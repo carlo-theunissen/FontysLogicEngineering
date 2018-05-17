@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Logic.Abstract;
 using Logic.interfaces;
 
@@ -30,9 +31,5 @@ namespace Logic
             return result.ToArray();
         }
 
-        public override string ToHex()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

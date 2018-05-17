@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="formulaContainer">
-        <form method="post" asp-action="Calculate" asp-controller="Home">
+        <form method="get" asp-action="Calculate" asp-controller="Home">
         <div class="form-group">
                 <label for="exampleInputEmail1">Formula</label>
                 <input autofocus type="text" value="@ViewData["input"]" name="formula" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter formula">
@@ -17,7 +17,7 @@
 @RenderBody()
 
 <div class="formulaContainer">
-        Proudly build by Carlo Theunissen
+        Proudly built by Carlo Theunissen
 </div>
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
