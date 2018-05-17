@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2ec812d0-5c84-49ce-83b3-4312bf2284a8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.Logic/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Logic/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Logic/Abstract/AbstractTrueTable.cs" afterPath="$PROJECT_DIR$/Logic/Abstract/AbstractTrueTable.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Logic/Decorators/NandifyDecorator.cs" afterPath="$PROJECT_DIR$/Logic/Decorators/NandifyDecorator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Logic/SimplifiedTruthTableCreator.cs" afterPath="$PROJECT_DIR$/Logic/SimplifiedTruthTableCreator.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Logic/TruthTableCreator.cs" afterPath="$PROJECT_DIR$/Logic/TruthTableCreator.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Logic/Abstract/AbstractDubbleOperator.cs" afterPath="$PROJECT_DIR$/Logic/Abstract/AbstractDubbleOperator.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebView/Controllers/HomeController.cs" afterPath="$PROJECT_DIR$/WebView/Controllers/HomeController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebView/Views/Home/Calculate.cshtml" afterPath="$PROJECT_DIR$/WebView/Views/Home/Calculate.cshtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebView/Views/Shared/_Layout.cshtml" afterPath="$PROJECT_DIR$/WebView/Views/Shared/_Layout.cshtml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,6 +15,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="StringParser.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Logic/StringParser.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="50" column="37" lean-forward="false" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+              <folding>
+                <marker date="1526477714000" expanded="false" signature="6:131" ph="..." />
+                <marker date="1526477714000" expanded="true" signature="148:5513" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="197:5511" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="529:837" ph="/* Constructor of a string parser ... */" />
+                <marker date="1526477714000" expanded="true" signature="917:1238" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="1307:1364" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="1374:1457" ph="/* Use this function to create an instance of StringParser. ... */" />
+                <marker date="1526477714000" expanded="true" signature="1512:1637" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="1676:1779" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="1815:1898" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="1935:2693" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="2006:2655" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="2732:3117" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="2911:3061" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="2965:3001" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="3154:3383" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="3232:3320" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="3417:3636" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="3679:4045" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="3764:3874" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="3908:4009" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="4090:4320" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="4363:4679" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="4518:4643" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="4729:4940" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="4983:5067" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="5125:5175" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="5210:5261" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="5329:5383" ph="{...}" />
+                <marker date="1526477714000" expanded="true" signature="5418:5505" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArgumentsManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Logic/ArgumentsManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+              <folding>
+                <marker date="1524135706000" expanded="false" signature="6:99" ph="..." />
+                <marker date="1524135706000" expanded="true" signature="116:980" ph="{...}" />
+                <marker date="1524135706000" expanded="true" signature="174:978" ph="{...}" />
+                <marker date="1524135706000" expanded="true" signature="294:388" ph="{...}" />
+                <marker date="1524135706000" expanded="true" signature="450:669" ph="{...}" />
+                <marker date="1524135706000" expanded="true" signature="517:633" ph="{...}" />
+                <marker date="1524135706000" expanded="true" signature="727:972" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="NandifyDecorator.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Logic/Decorators/NandifyDecorator.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,11 +166,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calculate.cshtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Calculate.cshtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebView/Views/Home/Calculate.cshtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+              <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding>
                 <marker date="1526557971000" expanded="true" signature="26:77" ph="@..." />
                 <marker date="1526557971000" expanded="true" signature="78:690" ph="&lt;div.../&gt;" />
@@ -171,91 +225,55 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AbstractBaseOperator.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Logic/Abstract/AbstractBaseOperator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <marker date="1526471461000" expanded="true" signature="49:888" ph="{...}" />
+                <marker date="1526471461000" expanded="true" signature="119:886" ph="{...}" />
+                <marker date="1526471461000" expanded="true" signature="241:301" ph="{...}" />
+                <marker date="1526471461000" expanded="true" signature="356:413" ph="{...}" />
+                <marker date="1526471461000" expanded="true" signature="810:880" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractDubbleOperator.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Logic/Abstract/AbstractDubbleOperator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <marker date="1526560053000" expanded="false" signature="6:99" ph="..." />
+                <marker date="1526560053000" expanded="true" signature="125:1538" ph="{...}" />
+                <marker date="1526560053000" expanded="true" signature="223:1536" ph="{...}" />
+                <marker date="1526560053000" expanded="true" signature="351:371" ph="{...}" />
+                <marker date="1526560053000" expanded="true" signature="439:509" ph="{...}" />
+                <marker date="1526560053000" expanded="true" signature="567:664" ph="{...}" />
+                <marker date="1526560053000" expanded="true" signature="711:889" ph="{...}" />
+                <marker date="1526560053000" expanded="true" signature="947:989" ph="{...}" />
+                <marker date="1526560053000" expanded="true" signature="1032:1131" ph="{...}" />
+                <marker date="1526560053000" expanded="true" signature="1179:1530" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="HomeController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebView/Controllers/HomeController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            <state relative-caret-position="239">
+              <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
               <folding>
-                <marker date="1526555390000" expanded="false" signature="6:213" ph="..." />
-                <marker date="1526555390000" expanded="true" signature="244:1966" ph="{...}" />
-                <marker date="1526555390000" expanded="true" signature="291:1964" ph="{...}" />
-                <marker date="1526555390000" expanded="true" signature="334:433" ph="{...}" />
-                <marker date="1526555390000" expanded="true" signature="497:1957" ph="{...}" />
-                <marker date="1526555390000" expanded="true" signature="554:632" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_Layout.cshtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebView/Views/Shared/_Layout.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-              <folding>
-                <marker date="1526556316000" expanded="true" signature="0:1913" ph="&lt;html.../&gt;" />
-                <marker date="1526556316000" expanded="true" signature="7:341" ph="&lt;head.../&gt;" />
-                <marker date="1526556316000" expanded="true" signature="342:1905" ph="&lt;body.../&gt;" />
-                <marker date="1526556316000" expanded="true" signature="349:946" ph="&lt;div.../&gt;" />
-                <marker date="1526556316000" expanded="true" signature="388:939" ph="&lt;form.../&gt;" />
-                <marker date="1526556316000" expanded="true" signature="461:853" ph="&lt;div.../&gt;" />
-                <marker date="1526556316000" expanded="true" signature="962:1041" ph="&lt;div.../&gt;" />
-                <marker date="1526556316000" expanded="true" signature="1219:1527" ph="&lt;script.../&gt;" />
-                <marker date="1526556316000" expanded="true" signature="1528:1897" ph="&lt;script.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="About.cshtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebView/Views/Home/About.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1526467120000" expanded="true" signature="0:37" ph="@..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrueOperator.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Logic/Operators/TrueOperator.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-              <folding>
-                <marker date="1526484966000" expanded="true" signature="48:478" ph="{...}" />
-                <marker date="1526484966000" expanded="true" signature="107:476" ph="{...}" />
-                <marker date="1526484966000" expanded="true" signature="183:203" ph="{...}" />
-                <marker date="1526484966000" expanded="true" signature="250:294" ph="{...}" />
-                <marker date="1526484966000" expanded="true" signature="341:385" ph="{...}" />
-                <marker date="1526484966000" expanded="true" signature="424:469" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScalarOperator.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Logic/Operators/ScalarOperator.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
-              <folding>
-                <marker date="1526471873000" expanded="false" signature="6:68" ph="..." />
-                <marker date="1526471873000" expanded="true" signature="95:1351" ph="{...}" />
-                <marker date="1526471873000" expanded="true" signature="152:1349" ph="{...}" />
-                <marker date="1526471873000" expanded="true" signature="310:356" ph="{...}" />
-                <marker date="1526471873000" expanded="true" signature="399:448" ph="{...}" />
-                <marker date="1526471873000" expanded="true" signature="506:551" ph="{...}" />
-                <marker date="1526471873000" expanded="true" signature="582:628" ph="{...}" />
-                <marker date="1526471873000" expanded="true" signature="667:804" ph="{...}" />
-                <marker date="1526471873000" expanded="true" signature="851:931" ph="{...}" />
-                <marker date="1526471873000" expanded="true" signature="989:1031" ph="{...}" />
-                <marker date="1526471873000" expanded="true" signature="1105:1125" ph="{...}" />
-                <marker date="1526471873000" expanded="true" signature="1173:1224" ph="{...}" />
-                <marker date="1526471873000" expanded="true" signature="1267:1334" ph="{...}" />
+                <marker date="1526560058000" expanded="true" signature="6:213" ph="..." />
+                <marker date="1526560058000" expanded="true" signature="244:1969" ph="{...}" />
+                <marker date="1526560058000" expanded="true" signature="291:1967" ph="{...}" />
+                <marker date="1526560058000" expanded="true" signature="334:433" ph="{...}" />
+                <marker date="1526560058000" expanded="true" signature="497:1960" ph="{...}" />
+                <marker date="1526560058000" expanded="true" signature="554:632" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -352,17 +370,17 @@
         <option value="$PROJECT_DIR$/Logic/OperatorFactory.cs" />
         <option value="$PROJECT_DIR$/Logic/Operators/FalseOperator.cs" />
         <option value="$PROJECT_DIR$/Logic/Abstract/AbstractConstantOperator.cs" />
-        <option value="$PROJECT_DIR$/Logic/Abstract/AbstractDubbleOperator.cs" />
         <option value="$PROJECT_DIR$/Logic/Abstract/AbstractSingleOperator.cs" />
         <option value="$PROJECT_DIR$/WebView/Models/CalculateViewModel.cs" />
         <option value="$PROJECT_DIR$/Logic/TruthTableCreator.cs" />
         <option value="$PROJECT_DIR$/Logic/Abstract/AbstractTrueTable.cs" />
         <option value="$PROJECT_DIR$/Logic/Operators/TrueOperator.cs" />
-        <option value="$PROJECT_DIR$/WebView/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/WebView/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/Logic/Decorators/NandifyDecorator.cs" />
         <option value="$PROJECT_DIR$/Logic/SimplifiedTruthTableCreator.cs" />
         <option value="$PROJECT_DIR$/WebView/Views/Home/Calculate.cshtml" />
+        <option value="$PROJECT_DIR$/WebView/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/Logic/Abstract/AbstractDubbleOperator.cs" />
       </list>
     </option>
   </component>
@@ -407,11 +425,6 @@
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="ConsoleApplication" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Logic" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
@@ -424,18 +437,7 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Logic" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Decorators" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="LogicTests" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="LogicTests" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Decorators" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Operators" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -447,45 +449,6 @@
               <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="WebView" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Controllers" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="WebView" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Models" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="WebView" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Views" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="WebView" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Views" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Home" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="WebView" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Views" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Shared" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="WebView" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="wwwroot" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Logic (5 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="WebView" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="wwwroot" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="css" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -602,12 +565,12 @@
       <workItem from="1524230125592" duration="549000" />
       <workItem from="1524481197947" duration="11000" />
       <workItem from="1526044933575" duration="665000" />
-      <workItem from="1526466238693" duration="19986000" />
+      <workItem from="1526466238693" duration="21847000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28884000" />
+    <option name="totallyTimeSpent" value="30745000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -620,13 +583,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="63" width="1400" height="833" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14848883" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14848883" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298292" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298292" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -812,20 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/Abstract/AbstractBaseOperator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding>
-            <marker date="1526471461000" expanded="true" signature="49:888" ph="{...}" />
-            <marker date="1526471461000" expanded="true" signature="119:886" ph="{...}" />
-            <marker date="1526471461000" expanded="true" signature="241:301" ph="{...}" />
-            <marker date="1526471461000" expanded="true" signature="356:413" ph="{...}" />
-            <marker date="1526471461000" expanded="true" signature="810:880" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Logic/Operators/AndOperator.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -948,34 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/ArgumentsManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <marker date="1524135706000" expanded="false" signature="6:99" ph="..." />
-            <marker date="1524135706000" expanded="true" signature="116:980" ph="{...}" />
-            <marker date="1524135706000" expanded="true" signature="174:978" ph="{...}" />
-            <marker date="1524135706000" expanded="true" signature="294:388" ph="{...}" />
-            <marker date="1524135706000" expanded="true" signature="450:669" ph="{...}" />
-            <marker date="1524135706000" expanded="true" signature="517:633" ph="{...}" />
-            <marker date="1524135706000" expanded="true" signature="727:972" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/interfaces/IAsciiBaseOperator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding>
-            <marker date="1526471421000" expanded="true" signature="26:533" ph="{...}" />
-            <marker date="1526471421000" expanded="true" signature="68:531" ph="{...}" />
-            <marker date="1526471421000" expanded="true" signature="180:342" ph="/* Every Operator needs the ability to set the arguments. ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebView/wwwroot/css/site.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1027,45 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/StringParser.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-427">
-          <caret line="56" column="28" lean-forward="false" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
-          <folding>
-            <marker date="1526477714000" expanded="false" signature="6:131" ph="..." />
-            <marker date="1526477714000" expanded="true" signature="148:5513" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="197:5511" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="529:837" ph="/* Constructor of a string parser ... */" />
-            <marker date="1526477714000" expanded="true" signature="917:1238" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="1307:1364" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="1374:1457" ph="/* Use this function to create an instance of StringParser. ... */" />
-            <marker date="1526477714000" expanded="true" signature="1512:1637" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="1676:1779" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="1815:1898" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="1935:2693" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="2006:2655" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="2732:3117" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="2911:3061" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="2965:3001" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="3154:3383" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="3232:3320" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="3417:3636" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="3679:4045" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="3764:3874" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="3908:4009" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="4090:4320" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="4363:4679" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="4518:4643" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="4729:4940" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="4983:5067" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="5125:5175" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="5210:5261" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="5329:5383" ph="{...}" />
-            <marker date="1526477714000" expanded="true" signature="5418:5505" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Logic/Operators/FalseOperator.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -1111,44 +992,6 @@
             <marker date="1526471663000" expanded="true" signature="254:298" ph="{...}" />
             <marker date="1526471663000" expanded="true" signature="345:389" ph="{...}" />
             <marker date="1526471663000" expanded="true" signature="428:498" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/Abstract/AbstractDubbleOperator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="74" />
-          <folding>
-            <marker date="1526478730000" expanded="false" signature="6:99" ph="..." />
-            <marker date="1526478730000" expanded="true" signature="125:1523" ph="{...}" />
-            <marker date="1526478730000" expanded="true" signature="223:1521" ph="{...}" />
-            <marker date="1526478730000" expanded="true" signature="351:371" ph="{...}" />
-            <marker date="1526478730000" expanded="true" signature="439:509" ph="{...}" />
-            <marker date="1526478730000" expanded="true" signature="567:664" ph="{...}" />
-            <marker date="1526478730000" expanded="true" signature="711:874" ph="{...}" />
-            <marker date="1526478730000" expanded="true" signature="932:974" ph="{...}" />
-            <marker date="1526478730000" expanded="true" signature="1017:1116" ph="{...}" />
-            <marker date="1526478730000" expanded="true" signature="1164:1515" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logic/Abstract/AbstractSingleOperator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="44" column="74" lean-forward="false" selection-start-line="44" selection-start-column="74" selection-end-line="44" selection-end-column="74" />
-          <folding>
-            <marker date="1526478735000" expanded="false" signature="6:46" ph="..." />
-            <marker date="1526478735000" expanded="true" signature="72:1283" ph="{...}" />
-            <marker date="1526478735000" expanded="true" signature="168:1281" ph="{...}" />
-            <marker date="1526478735000" expanded="true" signature="296:316" ph="{...}" />
-            <marker date="1526478735000" expanded="true" signature="384:429" ph="{...}" />
-            <marker date="1526478735000" expanded="true" signature="476:534" ph="{...}" />
-            <marker date="1526478735000" expanded="true" signature="592:685" ph="{...}" />
-            <marker date="1526478735000" expanded="true" signature="743:785" ph="{...}" />
-            <marker date="1526478735000" expanded="true" signature="923:1011" ph="{...}" />
-            <marker date="1526478735000" expanded="true" signature="1059:1275" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1254,21 +1097,6 @@
             <marker date="1526484966000" expanded="true" signature="250:294" ph="{...}" />
             <marker date="1526484966000" expanded="true" signature="341:385" ph="{...}" />
             <marker date="1526484966000" expanded="true" signature="424:469" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebView/Controllers/HomeController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <marker date="1526555390000" expanded="false" signature="6:213" ph="..." />
-            <marker date="1526555390000" expanded="true" signature="244:1966" ph="{...}" />
-            <marker date="1526555390000" expanded="true" signature="291:1964" ph="{...}" />
-            <marker date="1526555390000" expanded="true" signature="334:433" ph="{...}" />
-            <marker date="1526555390000" expanded="true" signature="497:1957" ph="{...}" />
-            <marker date="1526555390000" expanded="true" signature="554:632" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1388,7 +1216,7 @@
     <entry file="file://$PROJECT_DIR$/WebView/Views/Home/Calculate.cshtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding>
             <marker date="1526557971000" expanded="true" signature="26:77" ph="@..." />
             <marker date="1526557971000" expanded="true" signature="78:690" ph="&lt;div.../&gt;" />
@@ -1438,6 +1266,140 @@
             <marker date="1526557971000" expanded="true" signature="4147:4550" ph="&lt;div.../&gt;" />
             <marker date="1526557971000" expanded="true" signature="4560:4951" ph="&lt;form.../&gt;" />
             <marker date="1526557971000" expanded="true" signature="4633:4858" ph="&lt;div.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/interfaces/IAsciiBaseOperator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <marker date="1526471421000" expanded="true" signature="26:533" ph="{...}" />
+            <marker date="1526471421000" expanded="true" signature="68:531" ph="{...}" />
+            <marker date="1526471421000" expanded="true" signature="180:342" ph="/* Every Operator needs the ability to set the arguments. ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/Abstract/AbstractSingleOperator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="5" column="84" lean-forward="true" selection-start-line="5" selection-start-column="84" selection-end-line="5" selection-end-column="84" />
+          <folding>
+            <marker date="1526478735000" expanded="false" signature="6:46" ph="..." />
+            <marker date="1526478735000" expanded="true" signature="72:1283" ph="{...}" />
+            <marker date="1526478735000" expanded="true" signature="168:1281" ph="{...}" />
+            <marker date="1526478735000" expanded="true" signature="296:316" ph="{...}" />
+            <marker date="1526478735000" expanded="true" signature="384:429" ph="{...}" />
+            <marker date="1526478735000" expanded="true" signature="476:534" ph="{...}" />
+            <marker date="1526478735000" expanded="true" signature="592:685" ph="{...}" />
+            <marker date="1526478735000" expanded="true" signature="743:785" ph="{...}" />
+            <marker date="1526478735000" expanded="true" signature="923:1011" ph="{...}" />
+            <marker date="1526478735000" expanded="true" signature="1059:1275" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebView/Controllers/HomeController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding>
+            <marker date="1526560058000" expanded="true" signature="6:213" ph="..." />
+            <marker date="1526560058000" expanded="true" signature="244:1969" ph="{...}" />
+            <marker date="1526560058000" expanded="true" signature="291:1967" ph="{...}" />
+            <marker date="1526560058000" expanded="true" signature="334:433" ph="{...}" />
+            <marker date="1526560058000" expanded="true" signature="497:1960" ph="{...}" />
+            <marker date="1526560058000" expanded="true" signature="554:632" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/StringParser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="50" column="37" lean-forward="false" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+          <folding>
+            <marker date="1526477714000" expanded="false" signature="6:131" ph="..." />
+            <marker date="1526477714000" expanded="true" signature="148:5513" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="197:5511" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="529:837" ph="/* Constructor of a string parser ... */" />
+            <marker date="1526477714000" expanded="true" signature="917:1238" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="1307:1364" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="1374:1457" ph="/* Use this function to create an instance of StringParser. ... */" />
+            <marker date="1526477714000" expanded="true" signature="1512:1637" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="1676:1779" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="1815:1898" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="1935:2693" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="2006:2655" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="2732:3117" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="2911:3061" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="2965:3001" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="3154:3383" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="3232:3320" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="3417:3636" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="3679:4045" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="3764:3874" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="3908:4009" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="4090:4320" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="4363:4679" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="4518:4643" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="4729:4940" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="4983:5067" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="5125:5175" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="5210:5261" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="5329:5383" ph="{...}" />
+            <marker date="1526477714000" expanded="true" signature="5418:5505" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/ArgumentsManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding>
+            <marker date="1524135706000" expanded="false" signature="6:99" ph="..." />
+            <marker date="1524135706000" expanded="true" signature="116:980" ph="{...}" />
+            <marker date="1524135706000" expanded="true" signature="174:978" ph="{...}" />
+            <marker date="1524135706000" expanded="true" signature="294:388" ph="{...}" />
+            <marker date="1524135706000" expanded="true" signature="450:669" ph="{...}" />
+            <marker date="1524135706000" expanded="true" signature="517:633" ph="{...}" />
+            <marker date="1524135706000" expanded="true" signature="727:972" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/Abstract/AbstractBaseOperator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <marker date="1526471461000" expanded="true" signature="49:888" ph="{...}" />
+            <marker date="1526471461000" expanded="true" signature="119:886" ph="{...}" />
+            <marker date="1526471461000" expanded="true" signature="241:301" ph="{...}" />
+            <marker date="1526471461000" expanded="true" signature="356:413" ph="{...}" />
+            <marker date="1526471461000" expanded="true" signature="810:880" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Logic/Abstract/AbstractDubbleOperator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <marker date="1526560053000" expanded="false" signature="6:99" ph="..." />
+            <marker date="1526560053000" expanded="true" signature="125:1538" ph="{...}" />
+            <marker date="1526560053000" expanded="true" signature="223:1536" ph="{...}" />
+            <marker date="1526560053000" expanded="true" signature="351:371" ph="{...}" />
+            <marker date="1526560053000" expanded="true" signature="439:509" ph="{...}" />
+            <marker date="1526560053000" expanded="true" signature="567:664" ph="{...}" />
+            <marker date="1526560053000" expanded="true" signature="711:889" ph="{...}" />
+            <marker date="1526560053000" expanded="true" signature="947:989" ph="{...}" />
+            <marker date="1526560053000" expanded="true" signature="1032:1131" ph="{...}" />
+            <marker date="1526560053000" expanded="true" signature="1179:1530" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -29,7 +29,7 @@ namespace Logic.Abstract
         {
             var list = new HashSet<char>(_A.GetArguments());
             list.UnionWith(_B.GetArguments());
-            return list.ToArray();
+            return list.OrderBy(x=> x).ToArray();
         }
 
         public override int GetOperatorNeededArguments()

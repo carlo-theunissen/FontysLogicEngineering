@@ -27,7 +27,7 @@ namespace WebView.Controllers
             
             var model = new CalculateViewModel();
             
-            
+               
             var parser = StringParser.Create(formula);
             var calculatedFormula = parser.GetOperator();
             var stable = new SimplifiedTruthTableCreator(parser);
