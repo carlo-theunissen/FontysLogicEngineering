@@ -1,21 +1,21 @@
 ﻿namespace Logic.interfaces
 {
-    public interface IAsciiBaseOperator
+
+
+    public interface IAsciiBasePropositionalOperator
     {
-        char[] GetArguments();
+        bool HasResult();
         bool Result();
-        IAsciiBaseOperator[] GetChilds();
 
         /**
          * Every Operator needs the ability to set the arguments.
          * This way a user can simply call this function and modify the result. 
          */
+        char[] GetArguments();
+        IAsciiBasePropositionalOperator[] GetChilds();
         ArgumentsManager GetArgumentsManager();
-
         int GetOperatorNeededArguments();
-
-        void Instantiate(IAsciiBaseOperator[] arguments);
-
+        void Instantiate(IAsciiBasePropositionalOperator[] arguments);
         string ToLogicString();
     }
 }

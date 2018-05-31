@@ -7,11 +7,11 @@ namespace Logic
 {
     public class ArgumentsManager : IArgumentController
     {
-        private readonly Dictionary<char, ScalarOperator> _requestedArguments;
+        private readonly Dictionary<char, ScalarPropositionalOperator> _requestedArguments;
 
         public ArgumentsManager()
         {
-            _requestedArguments = new Dictionary<char, ScalarOperator>();
+            _requestedArguments = new Dictionary<char, ScalarPropositionalOperator>();
         }
 
         public bool SetArgumentValue(char name, bool? value)
@@ -24,11 +24,11 @@ namespace Logic
             return false;
         }
 
-        public ScalarOperator RequestOperator(char name)
+        public ScalarPropositionalOperator RequestOperator(char name)
         {
             if (_requestedArguments.Keys.Contains(name))
                 return _requestedArguments[name];
-            _requestedArguments[name] = new ScalarOperator(name, this);
+            _requestedArguments[name] = new ScalarPropositionalOperator(name, this);
             return _requestedArguments[name];
         }
     }

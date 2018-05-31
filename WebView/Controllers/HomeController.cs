@@ -30,27 +30,29 @@ namespace WebView.Controllers
                
             var parser = StringParser.Create(formula);
             var calculatedFormula = parser.GetOperator();
-            var stable = new SimplifiedTruthTableCreator(parser);
-            var table = new TruthTableCreator(parser);
             var nandify = new NandifyDecorator(calculatedFormula);
-            var normal = new DisjunctiveNormalDecorator(table);
-            var simplifiedNormal = new DisjunctiveNormalDecorator(stable);
-
             model.OriginalFormula = calculatedFormula.ToString();
             model.Logic = calculatedFormula.ToLogicString();
             model.Nandify = nandify.GetOperator().ToString();
-            model.Normalize = normal.GetOperator().ToString();
-            model.NormalizeLogicFormat = normal.GetOperator().ToLogicString();
+            model.HasResult = calculatedFormula.HasResult();
             
-            model.TruthTable = table.GetTable();
-            model.SimplifiedTruthTable = stable.GetTable();
-            model.Arguments = calculatedFormula.GetArguments();
+            if (calculatedFormula.HasResult())
+            {
+                var stable = new SimplifiedTruthTableCreator(parser);
+                var table = new TruthTableCreator(parser);
+                var normal = new DisjunctiveNormalDecorator(table);
+                var simplifiedNormal = new DisjunctiveNormalDecorator(stable);
+                model.Normalize = normal.GetOperator().ToString();
+                model.NormalizeLogicFormat = normal.GetOperator().ToLogicString();
+                model.TruthTable = table.GetTable();
+                model.SimplifiedTruthTable = stable.GetTable();
+                model.Arguments = calculatedFormula.GetArguments();
 
-            model.SimplifiedNormalize = simplifiedNormal.GetOperator().ToString();
-            model.SimplifiedNormalizeLogicFormat = simplifiedNormal.GetOperator().ToLogicString();
+                model.SimplifiedNormalize = simplifiedNormal.GetOperator().ToString();
+                model.SimplifiedNormalizeLogicFormat = simplifiedNormal.GetOperator().ToLogicString();
 
-            model.Hex = table.ToHex();
-            
+                model.Hex = table.ToHex();
+            }
             return View(model);
         }
 

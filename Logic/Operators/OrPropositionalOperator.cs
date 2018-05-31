@@ -2,25 +2,25 @@
 
 namespace Logic.Operators
 {
-    internal class SameOperator : AbstractDubbleOperator
+    internal class OrPropositionalOperator : AbstractDubblePropositionalOperator
     {
-        public SameOperator(ArgumentsManager manager) : base(manager)
+        public OrPropositionalOperator(ArgumentsManager manager) : base(manager)
         {
         }
 
         public override bool Result()
         {
-            return _A.Result() == _B.Result();
+            return _A.Result() || _B.Result();
         }
 
         public override char GetAsciiSymbol()
         {
-            return '=';
+            return '|';
         }
 
         public override char GetLogicSymbol()
         {
-            return '↔';
+            return '∨';
         }
     }
 }

@@ -15,6 +15,6 @@ namespace Logic.Abstract
         }
 
         public abstract IArgumentController GetArgumentController();
-        public abstract IAsciiBaseOperator GetOperator();
+        public abstract IAsciiBasePropositionalOperator GetOperator();
     }
 }

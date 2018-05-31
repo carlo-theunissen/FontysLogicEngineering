@@ -2,11 +2,11 @@
 
 namespace Logic.Abstract
 {
-    public abstract class AbstractBaseOperator : IAsciiBaseOperator
+    public abstract class AbstractBasePropositionalOperator : IAsciiBasePropositionalOperator
     {
         protected ArgumentsManager _argumentManager;
 
-        public AbstractBaseOperator(ArgumentsManager manager)
+        public AbstractBasePropositionalOperator(ArgumentsManager manager)
         {
             _argumentManager = manager;
         }
@@ -16,18 +16,20 @@ namespace Logic.Abstract
             return _argumentManager;
         }
 
+        public abstract bool HasResult();
+
         public abstract bool Result();
 
-        public abstract IAsciiBaseOperator[] GetChilds();
+        public abstract IAsciiBasePropositionalOperator[] GetChilds();
 
         public abstract char[] GetArguments();
 
         public abstract int GetOperatorNeededArguments();
-        public abstract void Instantiate(IAsciiBaseOperator[] arguments);
+        public abstract void Instantiate(IAsciiBasePropositionalOperator[] arguments);
         public abstract string ToLogicString();
         
 
-        public virtual bool Equals(IAsciiBaseOperator obj)
+        public virtual bool Equals(IAsciiBasePropositionalOperator obj)
         {
             return Result().Equals(obj.Result());
         }

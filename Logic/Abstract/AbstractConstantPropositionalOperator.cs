@@ -3,14 +3,14 @@ using Logic.Operators;
 
 namespace Logic.Abstract
 {
-    public abstract class AbstractConstantOperator : AbstractBaseOperator, IAsciiSingleOperator
+    public abstract class AbstractConstantPropositionalOperator : AbstractBasePropositionalOperator, IAsciiSinglePropositionalOperator
     {
 
-        public AbstractConstantOperator(ArgumentsManager manager) : base(manager)
+        public AbstractConstantPropositionalOperator(ArgumentsManager manager) : base(manager)
         {
         }
 
-        public override void Instantiate(IAsciiBaseOperator[] arg)
+        public override void Instantiate(IAsciiBasePropositionalOperator[] arg)
         {
         }
 
@@ -19,9 +19,9 @@ namespace Logic.Abstract
             return new char[0];
         }
 
-        public override IAsciiBaseOperator[] GetChilds()
+        public override IAsciiBasePropositionalOperator[] GetChilds()
         {
-            return new IAsciiBaseOperator[0];
+            return new IAsciiBasePropositionalOperator[0];
         }
 
         public override int GetOperatorNeededArguments()

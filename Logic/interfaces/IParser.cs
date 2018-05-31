@@ -2,7 +2,7 @@
 {
     public interface IParser
     {
-        IAsciiBaseOperator GetOperator();
+        IAsciiBasePropositionalOperator GetOperator();
         IArgumentController GetArgumentController();
     }
 }

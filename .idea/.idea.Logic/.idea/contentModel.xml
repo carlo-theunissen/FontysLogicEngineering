@@ -36,11 +36,12 @@
       </e>
       <e p="Logic" t="IncludeRecursive">
         <e p="Abstract" t="Include">
-          <e p="AbstractBaseOperator.cs" t="Include" />
-          <e p="AbstractConstantOperator.cs" t="Include" />
-          <e p="AbstractDubbleOperator.cs" t="Include" />
+          <e p="AbstractBasePropositionalOperator.cs" t="Include" />
+          <e p="AbstractConstantPropositionalOperator.cs" t="Include" />
+          <e p="AbstractDubblePropositionalOperator.cs" t="Include" />
           <e p="AbstractParser.cs" t="Include" />
-          <e p="AbstractSingleOperator.cs" t="Include" />
+          <e p="AbstractQuantifierOperator.cs" t="Include" />
+          <e p="AbstractSinglePropositionalOperator.cs" t="Include" />
           <e p="AbstractTrueTable.cs" t="Include" />
         </e>
         <e p="App.config" t="Include" />
@@ -55,9 +56,9 @@
         </e>
         <e p="interfaces" t="Include">
           <e p="IArgumentController.cs" t="Include" />
-          <e p="IAsciiBaseOperator.cs" t="Include" />
-          <e p="IAsciiDubbleOperator.cs" t="Include" />
-          <e p="IAsciiSingleOperator.cs" t="Include" />
+          <e p="IAsciiBasePropositionalOperator.cs" t="Include" />
+          <e p="IAsciiDubblePropositionalOperator.cs" t="Include" />
+          <e p="IAsciiSinglePropositionalOperator.cs" t="Include" />
           <e p="IParser.cs" t="Include" />
           <e p="ITruthTable.cs" t="Include" />
         </e>
@@ -71,15 +72,18 @@
         </e>
         <e p="OperatorFactory.cs" t="Include" />
         <e p="Operators" t="Include">
-          <e p="AndOperator.cs" t="Include" />
-          <e p="FalseOperator.cs" t="Include" />
-          <e p="IfThenOperator.cs" t="Include" />
-          <e p="NotAndOperator.cs" t="Include" />
-          <e p="NotOperator.cs" t="Include" />
-          <e p="OrOperator.cs" t="Include" />
-          <e p="SameOperator.cs" t="Include" />
-          <e p="ScalarOperator.cs" t="Include" />
-          <e p="TrueOperator.cs" t="Include" />
+          <e p="AndPropositionalOperator.cs" t="Include" />
+          <e p="ExtensionalQuantifierOperator.cs" t="Include" />
+          <e p="FalsePropositionalOperator.cs" t="Include" />
+          <e p="IfThenPropositionalOperator.cs" t="Include" />
+          <e p="NotAndPropositionalOperator.cs" t="Include" />
+          <e p="NotPropositionalOperator.cs" t="Include" />
+          <e p="OrPropositionalOperator.cs" t="Include" />
+          <e p="PredicateOperator.cs" t="Include" />
+          <e p="SamePropositionalOperator.cs" t="Include" />
+          <e p="ScalarPropositionalOperator.cs" t="Include" />
+          <e p="TruePropositionalOperator.cs" t="Include" />
+          <e p="UniversalQuantifierOperator.cs" t="Include" />
         </e>
         <e p="SimplifiedTruthTableCreator.cs" t="Include" />
         <e p="StringParser.cs" t="Include" />

@@ -3,15 +3,15 @@ using Logic.Operators;
 
 namespace Logic.Abstract
 {
-    public abstract class AbstractSingleOperator : AbstractBaseOperator, IAsciiSingleOperator
+    public abstract class AbstractSinglePropositionalOperator : AbstractBasePropositionalOperator, IAsciiSinglePropositionalOperator
     {
-        protected IAsciiBaseOperator _A;
+        protected IAsciiBasePropositionalOperator _A;
 
-        public AbstractSingleOperator(ArgumentsManager manager) : base(manager)
+        public AbstractSinglePropositionalOperator(ArgumentsManager manager) : base(manager)
         {
         }
 
-        public override void Instantiate(IAsciiBaseOperator[] arg)
+        public override void Instantiate(IAsciiBasePropositionalOperator[] arg)
         {
             _A = arg[0];
         }
@@ -21,9 +21,9 @@ namespace Logic.Abstract
             return _A.GetArguments();
         }
 
-        public override IAsciiBaseOperator[] GetChilds()
+        public override IAsciiBasePropositionalOperator[] GetChilds()
         {
-            IAsciiBaseOperator[] array = {_A};
+            IAsciiBasePropositionalOperator[] array = {_A};
             return array;
         }
 
@@ -42,8 +42,13 @@ namespace Logic.Abstract
 
         public override string ToLogicString()
         {
-            var a = _A is ScalarOperator || !(_A is IAsciiDubbleOperator)  ? _A.ToLogicString() : "(" + _A.ToLogicString() + ")";
+            var a = _A is ScalarPropositionalOperator || !(_A is IAsciiDubblePropositionalOperator)  ? _A.ToLogicString() : "(" + _A.ToLogicString() + ")";
             return string.Format("{0}{1}", GetLogicSymbol(), a); 
+        }
+
+        public override bool HasResult()
+        {
+            return _A.HasResult();
         }
     }
 }

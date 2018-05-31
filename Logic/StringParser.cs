@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Logic.Abstract;
 using Logic.interfaces;
+using Logic.Operators;
 
 namespace Logic
 {
@@ -13,7 +14,7 @@ namespace Logic
 
         private readonly int _startOffset;
 
-        private IAsciiBaseOperator _operator;
+        private IAsciiBasePropositionalOperator _operator;
 
         private int _ownOffset;
         private ParserState _state;
@@ -87,13 +88,94 @@ namespace Logic
                         if (PostCheck())
                             return;
                         break;
+                        
+                    case ParserState.QuantifierVariable:
+                        ParseQuantifierVariable();
+                        _state = ParserState.ParseArguments;
+                    break;
+                        
+                    case ParserState.PredicateArguments:
+                        ParsePredicateArguments();
+                        if (PostCheck())
+                            return;
+                        break;
+                        
                 }
             } while (true);
         }
 
+        private void ParsePredicateArguments()
+        {
+            while (true)
+            {
+                if (_startOffset + _ownOffset + 1 >= _data.Length)
+                {
+                    return;
+                }
+                var currentChar = GetCurrentChar();
+                if (currentChar == ' ')
+                {
+                    GetNextChar();
+                    continue;
+                }
+                if (currentChar == '(') break;
+                
+                return;
+            }
+            
+            if (!(_operator is PredicateOperator predicate))
+            {
+                return;
+            }
+            char current;
+            while((current = GetCurrentChar()) != ')')
+            {
+                while (!FindArgument())
+                {
+                    if (GetCurrentChar() == ')')
+                    {
+                        return;
+                    }
+                }
+                var argument = GetArgument();
+                predicate.AddChild(argument);
+
+                if (!(argument is ScalarPropositionalOperator))
+                {
+                    GetNextChar();
+                }
+                
+
+            }
+            
+        }
+
+        private void ParseQuantifierVariable()
+        {
+            while (true)
+            {
+                var currentChar = GetCurrentChar();
+                var regex = new Regex(@"[a-eg-su-z]");
+                var match = regex.Match(currentChar.ToString());
+                if (match.Success)
+                {
+                    ((AbstractQuantifierOperator) _operator).SetVariable(currentChar);
+                    break;
+                }
+                GetNextChar();
+                
+            }
+
+            while (GetCurrentChar() != '.')
+            {
+                GetNextChar();
+            }
+            GetNextChar();
+        }
+
         private void ParseArguments()
         {
-            var arguments = new IAsciiBaseOperator[_operator.GetOperatorNeededArguments()];
+            var arguments = new IAsciiBasePropositionalOperator[_operator.GetOperatorNeededArguments()];
             for (var i = 0; i < _operator.GetOperatorNeededArguments(); i++)
             {
                 while (!FindArgument())
@@ -126,6 +208,12 @@ namespace Logic
         private bool HandleUnknownStage()
         {
             var use = GetCurrentChar();
+            if (FindQuantifier(use))
+            {
+                _state = ParserState.QuantifierVariable;
+                return true;
+            }
+            
             if (FindOperator(use))
             {
                 _state = ParserState.ParseArguments;
@@ -135,6 +223,38 @@ namespace Logic
             if (FindScalar(use))
             {
                 _state = ParserState.Check;
+                return true;
+            }
+
+            if (FindPredicate(use))
+            {
+                _state = ParserState.PredicateArguments;
+                return true;
+            }
+            
+            return false;
+        }
+
+        private bool FindPredicate(char use)
+        {
+            var regex = new Regex(@"[A-EG-SU-Z]");
+            var match = regex.Match(use.ToString());
+            if (match.Success)
+            {
+                var predicate = new PredicateOperator(_argumentManager);
+                predicate.SetName(use);
+                _operator = predicate;
+                return true;
+            }
+            return false;
+        }
+
+        private bool FindQuantifier(char use)
+        {
+            if (use =='@' || use == '!')
+            {
+                _operator = _operatorFactory.GetOperator(use, _argumentManager);
+                _ownOffset++;
                 return true;
             }
             return false;
@@ -151,19 +271,18 @@ namespace Logic
 
         private bool FindScalar(char use)
         {
-            var regex = new Regex(@"[a-eg-su-zA-EG-SU-Z]");
+            var regex = new Regex(@"[a-eg-su-z]");
             var match = regex.Match(use.ToString());
 
             if (match.Success)
             {
                 _operator = _argumentManager.RequestOperator(use);
-
                 return true;
             }
             return false;
         }
 
-        private IAsciiBaseOperator GetArgument()
+        private IAsciiBasePropositionalOperator GetArgument()
         {
             var searcher = new StringParser(_data, _startOffset + _ownOffset, _argumentManager);
             _ownOffset += searcher.GetOwnOffset();
@@ -176,7 +295,7 @@ namespace Logic
             ;
         }
 
-        public override IAsciiBaseOperator GetOperator()
+        public override IAsciiBasePropositionalOperator GetOperator()
         {
             return _operator;
         }
@@ -196,7 +315,9 @@ namespace Logic
         {
             Unknown,
             ParseArguments,
-            Check
+            Check,
+            QuantifierVariable,
+            PredicateArguments
         }
     }
 }

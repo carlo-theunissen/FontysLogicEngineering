@@ -7,12 +7,12 @@ namespace Logic.Decorators
     public class NandifyDecorator : AbstractParser
     {
         private readonly ArgumentsManager _manager;
-        private readonly IAsciiBaseOperator _operator;
+        private readonly IAsciiBasePropositionalOperator _propositionalOperator;
 
-        public NandifyDecorator(IAsciiBaseOperator oper)
+        public NandifyDecorator(IAsciiBasePropositionalOperator oper)
         {
             _manager = new ArgumentsManager();
-            _operator = Process(oper);
+            _propositionalOperator = Process(oper);
         }
 
         public override IArgumentController GetArgumentController()
@@ -20,14 +20,14 @@ namespace Logic.Decorators
             return _manager;
         }
 
-        public override IAsciiBaseOperator GetOperator()
+        public override IAsciiBasePropositionalOperator GetOperator()
         {
-            return _operator;
+            return _propositionalOperator;
         }
 
-        private IAsciiBaseOperator Process(IAsciiBaseOperator work)
+        private IAsciiBasePropositionalOperator Process(IAsciiBasePropositionalOperator work)
         {
-            var logic = work as IAsciiSingleOperator;
+            var logic = work as IAsciiSinglePropositionalOperator;
             if (logic != null)
                 switch (logic.GetAsciiSymbol())
                 {
@@ -44,46 +44,75 @@ namespace Logic.Decorators
                     case '~':
                         return NotToNand(logic.GetChilds()[0]);
                     case '%':
-                        IAsciiBaseOperator nand = new NotAndOperator(_manager);
+                        IAsciiBasePropositionalOperator nand = new NotAndPropositionalOperator(_manager);
                         nand.Instantiate(new[] {Process(logic.GetChilds()[0]), Process(logic.GetChilds()[1])});
                         return nand;
                     case 'F':
-                        return new FalseOperator(_manager);
+                        return new FalsePropositionalOperator(_manager);
                     case 'T':
-                        return new TrueOperator(_manager);                       
+                        return new TruePropositionalOperator(_manager);    
+                    case '@':
+                        var universal =  new UniversalQuantifierOperator(_manager);
+                        if (work is UniversalQuantifierOperator workUnversal)
+                        {
+                            universal.SetVariable(workUnversal.GetVariable());
+                            universal.Instantiate(new[] {Process(logic.GetChilds()[0])});
+                            return universal;
+                        }
+                        break;
+                    case '!':
+                        var extensional =  new ExtensionalQuantifierOperator(_manager);
+                        if (work is ExtensionalQuantifierOperator workExtensional)
+                        {
+                            extensional.SetVariable(workExtensional.GetVariable());
+                            extensional.Instantiate(new[] {Process(logic.GetChilds()[0])});
+                            return extensional;
+                        }
+                        break;
                         
                 }
 
-            var scalar = work as ScalarOperator;
+            if (work is PredicateOperator predicate)
+            {
+                var result = new PredicateOperator(_manager);
+                result.SetName(predicate.GetName());
+                foreach (var child in work.GetChilds())
+                {
+                    result.AddChild(Process(child));
+                }
+                return result;
+            }
+            
+            var scalar = work as ScalarPropositionalOperator;
             if (scalar != null)
                 return _manager.RequestOperator(scalar.GetName());
             throw new System.Exception("Operator not found");
         }
 
-        private IAsciiBaseOperator OrToNand(IAsciiBaseOperator oper1, IAsciiBaseOperator oper2)
+        private IAsciiBasePropositionalOperator OrToNand(IAsciiBasePropositionalOperator oper1, IAsciiBasePropositionalOperator oper2)
         {
-            IAsciiBaseOperator nand = new NotAndOperator(_manager);
+            IAsciiBasePropositionalOperator nand = new NotAndPropositionalOperator(_manager);
             nand.Instantiate(new[] {NotToNand(oper1), NotToNand(oper2)});
             return nand;
         }
 
-        private IAsciiBaseOperator NotToNand(IAsciiBaseOperator oper1)
+        private IAsciiBasePropositionalOperator NotToNand(IAsciiBasePropositionalOperator oper1)
         {
-            IAsciiBaseOperator nand = new NotAndOperator(_manager);
+            IAsciiBasePropositionalOperator nand = new NotAndPropositionalOperator(_manager);
             nand.Instantiate(new[] {Process(oper1), Process(oper1)});
             return nand;
         }
 
-        private IAsciiBaseOperator SameToNand(IAsciiBaseOperator oper1, IAsciiBaseOperator oper2)
+        private IAsciiBasePropositionalOperator SameToNand(IAsciiBasePropositionalOperator oper1, IAsciiBasePropositionalOperator oper2)
         {
             var notAnd = AndToNand(NotToNand(oper1), NotToNand(oper2));
             var and = AndToNand(oper1, oper2);
             return OrToNand(notAnd, and);
         }
 
-        private IAsciiBaseOperator AndToNand(IAsciiBaseOperator oper1, IAsciiBaseOperator oper2)
+        private IAsciiBasePropositionalOperator AndToNand(IAsciiBasePropositionalOperator oper1, IAsciiBasePropositionalOperator oper2)
         {
-            IAsciiBaseOperator nand = new NotAndOperator(_manager);
+            IAsciiBasePropositionalOperator nand = new NotAndPropositionalOperator(_manager);
             nand.Instantiate(new[] {Process(oper1), Process(oper2)});
             return NotToNand(nand);
         }

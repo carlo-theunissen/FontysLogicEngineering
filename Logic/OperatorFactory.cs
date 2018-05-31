@@ -5,26 +5,30 @@ namespace Logic
 {
     public class OperatorFactory
     {
-        public IAsciiBaseOperator GetOperator(char symbol, ArgumentsManager manager)
+        public IAsciiBasePropositionalOperator GetOperator(char symbol, ArgumentsManager manager)
         {
             switch (symbol)
             {
                 case '>':
-                    return new IfThenOperator(manager);
+                    return new IfThenPropositionalOperator(manager);
                 case '=':
-                    return new SameOperator(manager);
+                    return new SamePropositionalOperator(manager);
                 case '&':
-                    return new AndOperator(manager);
+                    return new AndPropositionalOperator(manager);
                 case '|':
-                    return new OrOperator(manager);
+                    return new OrPropositionalOperator(manager);
                 case '~':
-                    return new NotOperator(manager);
+                    return new NotPropositionalOperator(manager);
                 case '%':
-                    return new NotAndOperator(manager);
+                    return new NotAndPropositionalOperator(manager);
                 case 'F':
-                    return new FalseOperator(manager);
+                    return new FalsePropositionalOperator(manager);
                 case 'T':
-                    return new TrueOperator(manager);
+                    return new TruePropositionalOperator(manager);
+                case '@':
+                    return new UniversalQuantifierOperator(manager);
+                case '!':
+                    return new ExtensionalQuantifierOperator(manager);
             }
             return null;
         }

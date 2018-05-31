@@ -11,15 +11,15 @@ namespace LogicTests.Operators
         public void ResultInvalidLowerTest()
         {
             var manager = new ArgumentsManager();
-            var one = new ScalarOperator('o', manager);
+            var one = new ScalarPropositionalOperator('o', manager);
             one.SetValue(true);
 
 
-            var zero = new ScalarOperator('z', manager);
+            var zero = new ScalarPropositionalOperator('z', manager);
             zero.SetValue(false);
 
-            var opr = new IfThenOperator(manager);
-            IAsciiBaseOperator[] arguments = {one, zero};
+            var opr = new IfThenPropositionalOperator(manager);
+            IAsciiBasePropositionalOperator[] arguments = {one, zero};
             opr.Instantiate(arguments);
             Assert.False(opr.Result());
         }
@@ -28,14 +28,14 @@ namespace LogicTests.Operators
         public void ResultInvalidSameTest()
         {
             var manager = new ArgumentsManager();
-            var one = new ScalarOperator('o', manager);
+            var one = new ScalarPropositionalOperator('o', manager);
             one.SetValue(true);
 
-            var zero = new ScalarOperator('z', manager);
+            var zero = new ScalarPropositionalOperator('z', manager);
             zero.SetValue(false);
 
-            var opr = new IfThenOperator(manager);
-            IAsciiBaseOperator[] arguments = {one, zero};
+            var opr = new IfThenPropositionalOperator(manager);
+            IAsciiBasePropositionalOperator[] arguments = {one, zero};
             opr.Instantiate(arguments);
             Assert.False(opr.Result());
         }
@@ -44,16 +44,16 @@ namespace LogicTests.Operators
         public void ResultValidTest()
         {
             var manager = new ArgumentsManager();
-            var one = new ScalarOperator('o', manager);
+            var one = new ScalarPropositionalOperator('o', manager);
             one.SetValue(false);
 
-            var zero = new ScalarOperator('z', manager);
+            var zero = new ScalarPropositionalOperator('z', manager);
             zero.SetValue(true);
 
 
-            var opr = new IfThenOperator(manager);
+            var opr = new IfThenPropositionalOperator(manager);
 
-            IAsciiBaseOperator[] arguments = {one, zero};
+            IAsciiBasePropositionalOperator[] arguments = {one, zero};
             opr.Instantiate(arguments);
 
             Assert.True(opr.Result());

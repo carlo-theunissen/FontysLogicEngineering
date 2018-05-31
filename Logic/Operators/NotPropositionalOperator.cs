@@ -2,9 +2,9 @@
 
 namespace Logic.Operators
 {
-    internal class NotOperator : AbstractSingleOperator
+    internal class NotPropositionalOperator : AbstractSinglePropositionalOperator
     {
-        public NotOperator(ArgumentsManager manager) : base(manager)
+        public NotPropositionalOperator(ArgumentsManager manager) : base(manager)
         {
         }
 

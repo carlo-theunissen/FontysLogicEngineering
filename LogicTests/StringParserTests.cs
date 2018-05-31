@@ -70,7 +70,7 @@ namespace LogicTests
         public void SingleScalerReceive()
         {
             var parser = StringParser.Create("A");
-            Assert.True(parser.GetOperator() is ScalarOperator);
+            Assert.True(parser.GetOperator() is ScalarPropositionalOperator);
         }
 
         [Fact]

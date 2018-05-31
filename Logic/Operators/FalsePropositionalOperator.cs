@@ -2,9 +2,9 @@
 
 namespace Logic.Operators
 {
-    public class FalseOperator : AbstractConstantOperator
+    public class FalsePropositionalOperator : AbstractConstantPropositionalOperator
     {
-        public FalseOperator(ArgumentsManager manager) : base(manager)
+        public FalsePropositionalOperator(ArgumentsManager manager) : base(manager)
         {
         }
 
@@ -16,6 +16,11 @@ namespace Logic.Operators
         public override char GetLogicSymbol()
         {
             return 'F';
+        }
+
+        public override bool HasResult()
+        {
+            return true;
         }
 
         public override bool Result()

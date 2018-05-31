@@ -88,7 +88,7 @@ namespace Logic
             ICollection<bool[]> success;
             ICollection<bool[]> fail;
 
-            var data = GetAllOptions(_operator.GetArguments().Length);
+            var data = GetAllOptions(PropositionalOperator.GetArguments().Length);
 
             GetSuccessFailList(out success, out fail, ref data);
 

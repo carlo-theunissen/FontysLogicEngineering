@@ -4,12 +4,12 @@ using Logic.interfaces;
 
 namespace Logic.Operators
 {
-    public class ScalarOperator : AbstractBaseOperator
+    public class ScalarPropositionalOperator : AbstractBasePropositionalOperator
     {
         private readonly char _name;
         private bool? _result;
 
-        public ScalarOperator(char name, ArgumentsManager manager) : base(manager)
+        public ScalarPropositionalOperator(char name, ArgumentsManager manager) : base(manager)
         {
             _name = name;
         }
@@ -19,7 +19,7 @@ namespace Logic.Operators
             _result = value;
         }
 
-        public override IAsciiBaseOperator[] GetChilds()
+        public override IAsciiBasePropositionalOperator[] GetChilds()
         {
             return null;
         }
@@ -27,6 +27,11 @@ namespace Logic.Operators
         public char GetName()
         {
             return _name;
+        }
+
+        public override bool HasResult()
+        {
+            return true;
         }
 
         public override bool Result()
@@ -47,7 +52,7 @@ namespace Logic.Operators
             return 0;
         }
 
-        public override void Instantiate(IAsciiBaseOperator[] arguments)
+        public override void Instantiate(IAsciiBasePropositionalOperator[] arguments)
         {
         }
 
@@ -58,7 +63,7 @@ namespace Logic.Operators
 
         public override string ToString()
         {
-            return _name.ToString().ToUpper();
+            return _name.ToString();
         }
         
     }

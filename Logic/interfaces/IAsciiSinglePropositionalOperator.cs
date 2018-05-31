@@ -1,6 +1,6 @@
 ﻿namespace Logic.interfaces
 {
-    public interface IAsciiSingleOperator : IAsciiBaseOperator
+    public interface IAsciiSinglePropositionalOperator : IAsciiBasePropositionalOperator
     {
         char GetAsciiSymbol();
         char GetLogicSymbol();

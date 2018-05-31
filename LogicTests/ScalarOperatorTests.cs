@@ -11,7 +11,7 @@ namespace LogicTests
         public void GetChildsTest()
         {
             var manager = new ArgumentsManager();
-            var oper = new ScalarOperator('t', manager);
+            var oper = new ScalarPropositionalOperator('t', manager);
             Assert.Null(oper.GetChilds());
         }
 
@@ -19,7 +19,7 @@ namespace LogicTests
         public void ResultNullTest()
         {
             var manager = new ArgumentsManager();
-            var oper = new ScalarOperator('t', manager);
+            var oper = new ScalarPropositionalOperator('t', manager);
             Assert.Throws<ScalarInvalidValue>(() => oper.Result());
         }
 
@@ -27,7 +27,7 @@ namespace LogicTests
         public void ResultTrueTest()
         {
             var manager = new ArgumentsManager();
-            var oper = new ScalarOperator('t', manager);
+            var oper = new ScalarPropositionalOperator('t', manager);
             oper.SetValue(true);
             Assert.True(oper.Result());
         }
@@ -36,7 +36,7 @@ namespace LogicTests
         public void ScalarOperatorTest()
         {
             var manager = new ArgumentsManager();
-            var oper = new ScalarOperator('t', manager);
+            var oper = new ScalarPropositionalOperator('t', manager);
         }
     }
 }

@@ -2,6 +2,7 @@
 {
     public class CalculateViewModel
     {
+        public bool HasResult;
         public string Nandify;
         public string Normalize;
         public string NormalizeLogicFormat;

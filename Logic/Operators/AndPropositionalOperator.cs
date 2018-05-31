@@ -2,9 +2,9 @@
 
 namespace Logic.Operators
 {
-    public class AndOperator : AbstractDubbleOperator
+    public class AndPropositionalOperator : AbstractDubblePropositionalOperator
     {
-        public AndOperator(ArgumentsManager manager) : base(manager)
+        public AndPropositionalOperator(ArgumentsManager manager) : base(manager)
         {
         }
 

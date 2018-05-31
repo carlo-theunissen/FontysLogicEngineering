@@ -2,9 +2,9 @@
 
 namespace Logic.Operators
 {
-    public class TrueOperator : AbstractConstantOperator
+    public class TruePropositionalOperator : AbstractConstantPropositionalOperator
     {
-        public TrueOperator(ArgumentsManager manager) : base(manager)
+        public TruePropositionalOperator(ArgumentsManager manager) : base(manager)
         {
         }
 
@@ -16,6 +16,11 @@ namespace Logic.Operators
         public override char GetLogicSymbol()
         {
             return 'T';
+        }
+
+        public override bool HasResult()
+        {
+            return true;
         }
 
         public override bool Result()
