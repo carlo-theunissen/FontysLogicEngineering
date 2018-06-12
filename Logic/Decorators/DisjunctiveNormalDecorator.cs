@@ -20,7 +20,7 @@ namespace Logic.Decorators
         {
             _data = table;
             _argumentManager = new ArgumentsManager();
-            _names = table.GetParser().GetOperator().GetArguments();
+            _names = table.GetOperator().GetArguments();
             StartCalculating();
         }
 

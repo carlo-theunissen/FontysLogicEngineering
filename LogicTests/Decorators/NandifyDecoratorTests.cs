@@ -9,10 +9,8 @@ namespace LogicTests.Decorators
         private void CheckFullTable(string parse)
         {
             var parser = StringParser.Create(parse);
-            var table = new SimplifiedTruthTableCreator(parser);
-
-            var decorator = new NandifyDecorator(parser.GetOperator());
-            var processed = new SimplifiedTruthTableCreator(decorator);
+            var table = new SimplifiedTruthTableCreator(parser.GetOperator());
+            var processed = new SimplifiedTruthTableCreator(parser.GetOperator().ToNandify());
 
             var orginal = table.GetTable();
             var calculated = processed.GetTable();

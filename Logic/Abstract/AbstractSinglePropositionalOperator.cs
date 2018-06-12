@@ -50,5 +50,12 @@ namespace Logic.Abstract
         {
             return _A.HasResult();
         }
+        public override bool Equals(object obj)
+        {
+            var oper = obj as AbstractSinglePropositionalOperator;
+            var result =  oper != null && obj.GetType() == GetType() && GetChilds()[0].Equals(oper.GetChilds()[0]);
+            return result;
+        }
+
     }
 }

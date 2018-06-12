@@ -1,4 +1,5 @@
 ﻿using Logic.interfaces;
+using Logic.Operators;
 
 namespace Logic.Abstract
 {
@@ -27,11 +28,24 @@ namespace Logic.Abstract
         public abstract int GetOperatorNeededArguments();
         public abstract void Instantiate(IAsciiBasePropositionalOperator[] arguments);
         public abstract string ToLogicString();
-        
+        public abstract bool IsAdvanced();
+        public abstract IAsciiBasePropositionalOperator ToNandify();
+        public abstract IAsciiBasePropositionalOperator ToDeMorgen();
+        public abstract IAsciiBasePropositionalOperator ToAndOrNot();
 
-        public virtual bool Equals(IAsciiBasePropositionalOperator obj)
+
+        
+        protected IAsciiBasePropositionalOperator SurroundWithNot(IAsciiBasePropositionalOperator baseOperator)
         {
-            return Result().Equals(obj.Result());
+            if (baseOperator is NotPropositionalOperator baseNot)
+            {
+                return baseNot.GetChilds()[0];
+            }
+            var not = new NotPropositionalOperator(_argumentManager);
+            not.Instantiate(new []{baseOperator});
+            return not;
         }
+
+        public abstract override bool Equals(object obj);
     }
 }

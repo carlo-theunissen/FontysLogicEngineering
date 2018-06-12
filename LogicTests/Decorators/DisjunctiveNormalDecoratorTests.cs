@@ -12,13 +12,13 @@ namespace LogicTests.Decorators
             var parser = StringParser.Create("|(|(A,B), C)");
 
 
-            var table = new TruthTableCreator(parser);
+            var table = new TruthTableCreator(parser.GetOperator());
 
 
             var decorator = new DisjunctiveNormalDecorator(table);
 
 
-            var processed = new TruthTableCreator(decorator);
+            var processed = new TruthTableCreator(decorator.GetOperator());
 
             var dataOriginal = table.GetTable();
             var dataProcessed = processed.GetTable();

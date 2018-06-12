@@ -59,13 +59,28 @@ namespace Logic.Operators
             return Name.ToString();;
         }
 
+        public override IAsciiBasePropositionalOperator ToNandify()
+        {
+            return this;
+        }
+
+        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        {
+            return this;
+        }
+
+        public override IAsciiBasePropositionalOperator ToAndOrNot()
+        {
+            return this;
+        }
+
         public override string ToString()
         {
             if (Operators.Any())
             {
                 return Name.ToString() + '(' + Operators.Aggregate(" ", (current, baseOperator) => current + baseOperator.ToString() + " , ").TrimEnd(' ', ',') + " )";
             }
-            return Name.ToString();;
+            return Name.ToString();
         }
         
         public override IAsciiBasePropositionalOperator[] GetChilds()
@@ -76,6 +91,21 @@ namespace Logic.Operators
         public char GetName()
         {
             return Name;
+        }
+        public override bool IsAdvanced()
+        {
+            throw new System.NotImplementedException();
+        }
+        public override bool Equals(object obj)
+        {
+            throw new NotImplementedException();
+            var oper = obj as PredicateOperator;
+            return 
+                oper != null 
+                && obj.GetType() == GetType()
+                && (
+                    (GetChilds()[0].Equals(oper.GetChilds()[0]) && GetChilds()[1].Equals(oper.GetChilds()[1]))
+                    ||  (GetChilds()[1].Equals(oper.GetChilds()[0]) && GetChilds()[0].Equals(oper.GetChilds()[1])));
         }
     }
 }

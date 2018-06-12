@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Logic;
 using Logic.Decorators;
+using Logic.SemanticTableaux;
 
 namespace ConsoleApplication
 {
@@ -12,11 +13,13 @@ namespace ConsoleApplication
             Console.WriteLine("Hello World!");
             
             //Console CODE
-            var parser = StringParser.Create("P(|(a,b), c , d   )");
+            var parser = StringParser.Create(">( p, p)");
             var ope = parser.GetOperator();
-            Console.WriteLine(ope.ToLogicString());
-            Console.WriteLine(ope);
-            Console.WriteLine(ope.HasResult());
+            
+            var tableaux = new SemanticTableauxParser(ope);
+            
+            Console.WriteLine("Yep, it is a: "+ tableaux.IsTautology());
+
         }
     }
 }

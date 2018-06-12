@@ -41,5 +41,17 @@ namespace Logic.Abstract
         {
             return GetLogicSymbol().ToString();
         }
+        
+        public override bool Equals(object obj)
+        {
+            var oper = obj as AbstractConstantPropositionalOperator;
+            return oper != null && oper.Result() == Result();
+
+        }
+
+        public override bool IsAdvanced()
+        {
+            return false;
+        }
     }
 }

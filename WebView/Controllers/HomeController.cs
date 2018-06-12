@@ -30,16 +30,15 @@ namespace WebView.Controllers
                
             var parser = StringParser.Create(formula);
             var calculatedFormula = parser.GetOperator();
-            var nandify = new NandifyDecorator(calculatedFormula);
             model.OriginalFormula = calculatedFormula.ToString();
             model.Logic = calculatedFormula.ToLogicString();
-            model.Nandify = nandify.GetOperator().ToString();
+            model.Nandify = calculatedFormula.ToNandify().ToString();
             model.HasResult = calculatedFormula.HasResult();
             
             if (calculatedFormula.HasResult())
             {
-                var stable = new SimplifiedTruthTableCreator(parser);
-                var table = new TruthTableCreator(parser);
+                var stable = new SimplifiedTruthTableCreator(calculatedFormula);
+                var table = new TruthTableCreator(calculatedFormula);
                 var normal = new DisjunctiveNormalDecorator(table);
                 var simplifiedNormal = new DisjunctiveNormalDecorator(stable);
                 model.Normalize = normal.GetOperator().ToString();

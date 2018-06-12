@@ -5,6 +5,6 @@
         byte[][] GetTable();
         string ToHex();
 
-        IParser GetParser();
+        IAsciiBasePropositionalOperator GetOperator();
     }
 }

@@ -9,14 +9,12 @@ namespace Logic.Abstract
     public abstract class AbstractTrueTable : ITruthTable
     {
         protected IArgumentController _manager;
-        protected IAsciiBasePropositionalOperator PropositionalOperator;
-        protected IParser _parser;
+        protected IAsciiBasePropositionalOperator _operator;
 
-        public AbstractTrueTable(IParser parser)
+        public AbstractTrueTable(IAsciiBasePropositionalOperator oper)
         {
-            _manager = parser.GetArgumentController();
-            PropositionalOperator = parser.GetOperator();
-            _parser = parser;
+            _manager = oper.GetArgumentsManager();
+            _operator = oper;
         }
 
         public abstract byte[][] GetTable();
@@ -24,6 +22,11 @@ namespace Logic.Abstract
         public string ToHex()
         {
             return BinToDec(string.Join("", GetTable().Reverse().Select(x => x.Last())));
+        }
+
+        public IAsciiBasePropositionalOperator GetOperator()
+        {
+            return _operator;
         }
 
         private string BinToDec(string value)
@@ -39,17 +42,12 @@ namespace Logic.Abstract
             return res.ToString("X").Substring(1);
         }
 
-        public IParser GetParser()
-        {
-            return _parser;
-        }
-
         protected bool? GetResults(ref bool[] data)
         {
-            var names = PropositionalOperator.GetArguments();
+            var names = _operator.GetArguments();
             for (var i = 0; i < data.Length; i++)
                 _manager.SetArgumentValue(names[i], data[i]);
-            return PropositionalOperator.Result();
+            return _operator.Result();
         }
 
         protected bool[][] GetAllOptions(int length)

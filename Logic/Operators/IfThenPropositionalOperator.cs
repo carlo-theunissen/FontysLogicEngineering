@@ -1,4 +1,5 @@
 ﻿using Logic.Abstract;
+using Logic.interfaces;
 
 namespace Logic.Operators
 {
@@ -11,6 +12,27 @@ namespace Logic.Operators
         public override bool Result()
         {
             return !_A.Result() || _B.Result();
+        }
+
+        public override IAsciiBasePropositionalOperator ToNandify()
+        {
+            var nand = new NotAndPropositionalOperator(_argumentManager);
+            var not = new NotPropositionalOperator(_argumentManager);
+            not.Instantiate(new [] {GetChilds()[1]});
+            nand.Instantiate(new[] {GetChilds()[0].ToNandify(), not.ToNandify()});
+            return nand;
+        }
+
+        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        {
+            return ToAndOrNot().ToDeMorgen();
+        }
+
+        public override IAsciiBasePropositionalOperator ToAndOrNot()
+        {
+            var or = new OrPropositionalOperator(_argumentManager);
+            or.Instantiate(new [] { SurroundWithNot(GetChilds()[0]), GetChilds()[1]});
+            return or;
         }
 
         public override char GetAsciiSymbol()

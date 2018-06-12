@@ -8,7 +8,7 @@ namespace LogicTests
         private void CheckFullTable(string parse)
         {
             var parser = StringParser.Create(parse);
-            var table = new TruthTableCreator(parser);
+            var table = new TruthTableCreator(parser.GetOperator());
             var manager = parser.GetArgumentController();
 
             foreach (var data in table.GetTable())

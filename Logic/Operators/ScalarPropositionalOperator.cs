@@ -61,9 +61,37 @@ namespace Logic.Operators
             return ToString();
         }
 
+        public override bool IsAdvanced()
+        {
+            return false;
+        }
+
+        public override IAsciiBasePropositionalOperator ToNandify()
+        {
+            return this;
+        }
+
+        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        {
+            var not = new NotPropositionalOperator(_argumentManager);
+            not.Instantiate(new []{this});
+            return not;
+        }
+
+        public override IAsciiBasePropositionalOperator ToAndOrNot()
+        {
+            return this;
+        }
+
         public override string ToString()
         {
             return _name.ToString();
+        }
+        public override bool Equals(object obj)
+        {
+            var oper = obj as ScalarPropositionalOperator;
+            return
+                oper != null && _name == oper._name;
         }
         
     }

@@ -1,4 +1,5 @@
 ﻿using Logic.Abstract;
+using Logic.interfaces;
 
 namespace Logic.Operators
 {
@@ -28,5 +29,19 @@ namespace Logic.Operators
             return true;
         }
 
+        public override IAsciiBasePropositionalOperator ToNandify()
+        {
+            return this;
+        }
+
+        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override IAsciiBasePropositionalOperator ToAndOrNot()
+        {
+            return this;
+        }
     }
 }

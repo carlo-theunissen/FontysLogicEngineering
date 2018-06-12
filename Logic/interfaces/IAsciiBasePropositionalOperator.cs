@@ -17,5 +17,11 @@
         int GetOperatorNeededArguments();
         void Instantiate(IAsciiBasePropositionalOperator[] arguments);
         string ToLogicString();
+
+        bool IsAdvanced();
+        
+        IAsciiBasePropositionalOperator ToNandify();
+        IAsciiBasePropositionalOperator ToDeMorgen();
+        IAsciiBasePropositionalOperator ToAndOrNot();
     }
 }

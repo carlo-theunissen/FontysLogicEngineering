@@ -8,13 +8,13 @@ namespace Logic
 {
     public class TruthTableCreator : AbstractTrueTable
     {
-        public TruthTableCreator(IParser parser) : base(parser)
+        public TruthTableCreator(IAsciiBasePropositionalOperator oper) : base(oper)
         {
         }
 
         public override byte[][] GetTable()
         {
-            var names = PropositionalOperator.GetArguments();
+            var names = _operator.GetArguments();
 
             var result = new List<byte[]>();
             foreach (var data in GetAllOptions(names.Length))
@@ -25,7 +25,7 @@ namespace Logic
                     _manager.SetArgumentValue(names[i], data[i]);
                     array[i] = (byte) (data[i] ? 1 : 0);
                 }
-                array[data.Length] = (byte) (PropositionalOperator.Result() ? 1 : 0);
+                array[data.Length] = (byte) (_operator.Result() ? 1 : 0);
                 result.Add(array);
             }
             return result.ToArray();

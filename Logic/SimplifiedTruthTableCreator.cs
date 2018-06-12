@@ -10,7 +10,7 @@ namespace Logic
 {
     public class SimplifiedTruthTableCreator : AbstractTrueTable
     {
-        public SimplifiedTruthTableCreator(IParser parser) : base(parser)
+        public SimplifiedTruthTableCreator(IAsciiBasePropositionalOperator oper) : base(oper)
         {
         }
 
@@ -88,7 +88,7 @@ namespace Logic
             ICollection<bool[]> success;
             ICollection<bool[]> fail;
 
-            var data = GetAllOptions(PropositionalOperator.GetArguments().Length);
+            var data = GetAllOptions(_operator.GetArguments().Length);
 
             GetSuccessFailList(out success, out fail, ref data);
 

@@ -49,7 +49,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Decorators" t="Include">
           <e p="DisjunctiveNormalDecorator.cs" t="Include" />
-          <e p="NandifyDecorator.cs" t="Include" />
+          <e p="NotifyDecorator.cs" t="Include" />
         </e>
         <e p="Exception" t="Include">
           <e p="ScalarInvalidValue.cs" t="Include" />
@@ -84,6 +84,11 @@
           <e p="ScalarPropositionalOperator.cs" t="Include" />
           <e p="TruePropositionalOperator.cs" t="Include" />
           <e p="UniversalQuantifierOperator.cs" t="Include" />
+        </e>
+        <e p="SemanticTableaux" t="Include">
+          <e p="OperatorSplitter.cs" t="Include" />
+          <e p="SemanticTableauxParser.cs" t="Include" />
+          <e p="TableuaxStep.cs" t="Include" />
         </e>
         <e p="SimplifiedTruthTableCreator.cs" t="Include" />
         <e p="StringParser.cs" t="Include" />
