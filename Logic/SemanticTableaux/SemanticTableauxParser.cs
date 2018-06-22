@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Logic.interfaces;
 using Logic.Operators;
@@ -12,7 +13,7 @@ namespace Logic.SemanticTableaux
         public SemanticTableauxParser(IAsciiBasePropositionalOperator baseOperator)
         {
             var not = new NotPropositionalOperator(baseOperator.GetArgumentsManager());
-            not.Instantiate(new []{baseOperator});
+            not.Instantiate(new []{baseOperator.ToAndOrNot()});
             Step = new TableuaxStep(not);
             HandleSteps();
             
@@ -20,9 +21,11 @@ namespace Logic.SemanticTableaux
 
         private void HandleSteps()
         {
+           
             while (Step.HasNext() && !Step.IsClosed())
             {
                 Step.Step();
+                Console.Write(".");
             }
         }
 

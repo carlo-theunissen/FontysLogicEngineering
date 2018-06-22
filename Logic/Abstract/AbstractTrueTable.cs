@@ -39,7 +39,8 @@ namespace Logic.Abstract
                 res += c == '1' ? 1 : 0;
             }
 
-            return res.ToString("X").Substring(1);
+            var hex = res.ToString("X");
+            return hex[0] == '0' ? hex.Substring(1) : hex;
         }
 
         protected bool? GetResults(ref bool[] data)

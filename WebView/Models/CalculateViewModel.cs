@@ -14,5 +14,9 @@
         public byte[][] TruthTable;
         public byte[][] SimplifiedTruthTable;
         public char[] Arguments;
+        public string JsonData;
+        public string tableauxJsonData;
+        public bool isTautology;
+        public bool quantifiers;
     }
 }

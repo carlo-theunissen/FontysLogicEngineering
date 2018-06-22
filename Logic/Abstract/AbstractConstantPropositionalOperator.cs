@@ -53,5 +53,15 @@ namespace Logic.Abstract
         {
             return false;
         }
+
+        public override void ChangeArgument(char @from, char to)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override void UpdateChild(int index, IAsciiBasePropositionalOperator baseOperator)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

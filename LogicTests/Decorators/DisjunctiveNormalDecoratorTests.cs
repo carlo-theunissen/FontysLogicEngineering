@@ -9,7 +9,7 @@ namespace LogicTests.Decorators
         [Fact]
         public void CompleteDisjunctveDecoratorTest()
         {
-            var parser = StringParser.Create("|(|(A,B), C)");
+            var parser = StringParser.Create("|(|(a,b), c)");
 
 
             var table = new TruthTableCreator(parser.GetOperator());

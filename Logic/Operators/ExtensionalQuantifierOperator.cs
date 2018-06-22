@@ -1,4 +1,5 @@
-﻿using Logic.Abstract;
+﻿using System.Linq;
+using Logic.Abstract;
 using Logic.interfaces;
 
 namespace Logic.Operators
@@ -18,6 +19,12 @@ namespace Logic.Operators
         {
             return '∃';
         }
+
+        public override bool IsAdvanced()
+        {
+            return GetChilds().Any(x => x.IsAdvanced());
+        }
+
         public override IAsciiBasePropositionalOperator ToNandify()
         {
             var extensional = new ExtensionalQuantifierOperator(_argumentManager);
@@ -26,18 +33,20 @@ namespace Logic.Operators
             return extensional;
         }
 
-        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        public override IAsciiBasePropositionalOperator Negate()
         {
-            throw new System.NotImplementedException();
+            var extensional = new ExtensionalQuantifierOperator(_argumentManager);
+            extensional.SetVariable(GetVariable());
+            extensional.Instantiate(new []{GetChilds()[0].Negate()});
+            return extensional;
         }
 
         public override IAsciiBasePropositionalOperator ToAndOrNot()
         {
-            throw new System.NotImplementedException();
-        }
-        public override bool IsAdvanced()
-        {
-            throw new System.NotImplementedException();
+            var extensional = new ExtensionalQuantifierOperator(_argumentManager);
+            extensional.SetVariable(GetVariable());
+            extensional.Instantiate(new []{GetChilds()[0].ToAndOrNot()});
+            return extensional;
         }
     }
 }

@@ -27,18 +27,24 @@ namespace Logic.Operators
             return universal;
         }
 
-        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        public override IAsciiBasePropositionalOperator Negate()
         {
-            throw new System.NotImplementedException();
+            var universal = new UniversalQuantifierOperator(_argumentManager);
+            universal.SetVariable(GetVariable());
+            universal.Instantiate(new []{GetChilds()[0].Negate()});
+            return universal;
         }
 
         public override IAsciiBasePropositionalOperator ToAndOrNot()
         {
-            return this;
+            var universal = new UniversalQuantifierOperator(_argumentManager);
+            universal.SetVariable(GetVariable());
+            universal.Instantiate(new []{GetChilds()[0].ToAndOrNot()});
+            return universal;
         }
         public override bool IsAdvanced()
         {
-            throw new System.NotImplementedException();
+            return GetChilds()[0].IsAdvanced();
         }
     }
 }

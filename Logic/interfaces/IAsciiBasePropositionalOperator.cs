@@ -16,12 +16,15 @@
         ArgumentsManager GetArgumentsManager();
         int GetOperatorNeededArguments();
         void Instantiate(IAsciiBasePropositionalOperator[] arguments);
+        void UpdateChild(int index, IAsciiBasePropositionalOperator baseOperator);
         string ToLogicString();
-
+        string ToName();
         bool IsAdvanced();
         
         IAsciiBasePropositionalOperator ToNandify();
-        IAsciiBasePropositionalOperator ToDeMorgen();
+        IAsciiBasePropositionalOperator Negate();
         IAsciiBasePropositionalOperator ToAndOrNot();
+
+        void ChangeArgument(char from, char to);
     }
 }

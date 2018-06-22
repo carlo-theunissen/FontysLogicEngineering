@@ -1,4 +1,5 @@
-﻿using Logic.Abstract;
+﻿using System.Linq;
+using Logic.Abstract;
 using Logic.interfaces;
 
 namespace Logic.Operators
@@ -33,7 +34,7 @@ namespace Logic.Operators
             return not.ToNandify();
         }
 
-        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        public override IAsciiBasePropositionalOperator Negate()
         {
             var or = new OrPropositionalOperator(_argumentManager);
             or.Instantiate(new []{SurroundWithNot( GetChilds()[0]), SurroundWithNot(GetChilds()[1])});
@@ -42,7 +43,9 @@ namespace Logic.Operators
 
         public override IAsciiBasePropositionalOperator ToAndOrNot()
         {
-            return this;
+            var and = new AndPropositionalOperator(_argumentManager);
+            and.Instantiate(GetChilds().Select( x => x.ToAndOrNot()).ToArray());
+            return and;
         }
     }
 }

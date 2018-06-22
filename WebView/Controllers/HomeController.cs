@@ -4,8 +4,13 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Logic;
+using Logic.Abstract;
 using Logic.Decorators;
+using Logic.interfaces;
+using Logic.SemanticTableaux;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using WebView.json;
 using WebView.Models;
 
 namespace WebView.Controllers
@@ -34,7 +39,12 @@ namespace WebView.Controllers
             model.Logic = calculatedFormula.ToLogicString();
             model.Nandify = calculatedFormula.ToNandify().ToString();
             model.HasResult = calculatedFormula.HasResult();
-            
+
+            var json = JsonCreator.CreateFromBaseOpeator(calculatedFormula);
+            model.JsonData = JsonConvert.SerializeObject(json);
+
+
+            SemanticTableauxParser tableaux;
             if (calculatedFormula.HasResult())
             {
                 var stable = new SimplifiedTruthTableCreator(calculatedFormula);
@@ -52,7 +62,27 @@ namespace WebView.Controllers
 
                 model.Hex = table.ToHex();
             }
+
+            var quantifiers = CheckForQuantifers(calculatedFormula);
+
+            if (!quantifiers)
+            {
+                tableaux = new SemanticTableauxParser(calculatedFormula);
+                model.isTautology = tableaux.IsTautology();
+                model.tableauxJsonData =
+                    JsonConvert.SerializeObject(JsonCreator.CreateFromTableauxStep(tableaux.GetStep()));
+            }
+            model.quantifiers = quantifiers;
             return View(model);
+        }
+
+        private bool CheckForQuantifers(IAsciiBasePropositionalOperator baseOperator)
+        {
+            if (baseOperator is AbstractQuantifierOperator)
+            {
+                return true;
+            }
+            return baseOperator.GetChilds() != null && baseOperator.GetChilds().Any(CheckForQuantifers);
         }
 
     }

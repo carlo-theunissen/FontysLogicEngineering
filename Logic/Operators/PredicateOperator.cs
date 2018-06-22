@@ -61,17 +61,32 @@ namespace Logic.Operators
 
         public override IAsciiBasePropositionalOperator ToNandify()
         {
-            return this;
+            var predicate = new PredicateOperator(_argumentManager) {Name = Name};
+            foreach (var asciiBasePropositionalOperator in GetChilds())
+            {
+                predicate.AddChild(asciiBasePropositionalOperator.ToNandify());
+            }
+            return predicate;
         }
 
-        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        public override IAsciiBasePropositionalOperator Negate()
         {
-            return this;
+            var predicate = new PredicateOperator(_argumentManager) {Name = Name};
+            foreach (var asciiBasePropositionalOperator in GetChilds())
+            {
+                predicate.AddChild(asciiBasePropositionalOperator.ToAndOrNot().Negate());
+            }
+            return predicate;
         }
 
         public override IAsciiBasePropositionalOperator ToAndOrNot()
         {
-            return this;
+            var predicate = new PredicateOperator(_argumentManager) {Name = Name};
+            foreach (var asciiBasePropositionalOperator in GetChilds())
+            {
+                predicate.AddChild(asciiBasePropositionalOperator.ToAndOrNot());
+            }
+            return predicate;
         }
 
         public override string ToString()
@@ -94,18 +109,43 @@ namespace Logic.Operators
         }
         public override bool IsAdvanced()
         {
-            throw new System.NotImplementedException();
+            return false;
+        }
+        
+        public override string ToName()
+        {
+            return GetName()+"()";
         }
         public override bool Equals(object obj)
         {
-            throw new NotImplementedException();
-            var oper = obj as PredicateOperator;
-            return 
-                oper != null 
-                && obj.GetType() == GetType()
-                && (
-                    (GetChilds()[0].Equals(oper.GetChilds()[0]) && GetChilds()[1].Equals(oper.GetChilds()[1]))
-                    ||  (GetChilds()[1].Equals(oper.GetChilds()[0]) && GetChilds()[0].Equals(oper.GetChilds()[1])));
+            if (!(obj is PredicateOperator oper))
+            {
+                return false;
+            }
+            
+            if (oper == this)
+            {
+                return true;
+            }
+            
+            var childs = GetChilds();
+            var objChilds = oper.GetChilds();
+            
+            if (childs.Length != objChilds.Length)
+            {
+                return false;
+            }
+
+            return !childs.Where((t, i) => !t.Equals(objChilds[i])).Any();
+        }
+        
+        public override void UpdateChild(int index, IAsciiBasePropositionalOperator baseOperator)
+        {
+            if (index > Operators.Count)
+            {
+                throw new ArgumentException();
+            }
+            Operators[index] = baseOperator;
         }
     }
 }

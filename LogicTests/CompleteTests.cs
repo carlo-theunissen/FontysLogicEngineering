@@ -8,119 +8,119 @@ namespace LogicTests
         [Fact]
         public void NestedAndOr()
         {
-            var parser = StringParser.Create("&( |( A, B), A)");
+            var parser = StringParser.Create("&( |( a, b), a)");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', true);
-            manager.SetArgumentValue('B', false);
+            manager.SetArgumentValue('a', true);
+            manager.SetArgumentValue('b', false);
             Assert.True(parser.GetOperator().Result());
         }
 
         [Fact]
         public void NestedLarge()
         {
-            var parser = StringParser.Create("=( >(A,B), |(A ,B) ))");
+            var parser = StringParser.Create("=( >(a,b), |(a ,b) ))");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', true);
-            manager.SetArgumentValue('B', false);
+            manager.SetArgumentValue('a', true);
+            manager.SetArgumentValue('b', false);
             Assert.False(parser.GetOperator().Result());
         }
 
         [Fact]
         public void NestedLarge2()
         {
-            var parser = StringParser.Create("=( >(A,B), |( ~(A) ,B) )");
+            var parser = StringParser.Create("=( >(a,b), |( ~(a) ,b) )");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', true);
-            manager.SetArgumentValue('B', false);
+            manager.SetArgumentValue('a', true);
+            manager.SetArgumentValue('b', false);
             Assert.True(parser.GetOperator().Result());
         }
 
         [Fact]
         public void SimpleAndTestFail()
         {
-            var parser = StringParser.Create("&( A, B)");
+            var parser = StringParser.Create("&( a, b)");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', false);
-            manager.SetArgumentValue('B', false);
+            manager.SetArgumentValue('a', false);
+            manager.SetArgumentValue('b', false);
             Assert.False(parser.GetOperator().Result());
         }
 
         [Fact]
         public void SimpleAndTestSuccess()
         {
-            var parser = StringParser.Create("&( A, B)");
+            var parser = StringParser.Create("&( a, b)");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', true);
-            manager.SetArgumentValue('B', true);
+            manager.SetArgumentValue('a', true);
+            manager.SetArgumentValue('b', true);
             Assert.True(parser.GetOperator().Result());
         }
 
         [Fact]
         public void SimpleBiggerTestFail()
         {
-            var parser = StringParser.Create(">( A, B)");
+            var parser = StringParser.Create(">( a, b)");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', true);
-            manager.SetArgumentValue('B', false);
+            manager.SetArgumentValue('a', true);
+            manager.SetArgumentValue('b', false);
             Assert.False(parser.GetOperator().Result());
         }
 
         [Fact]
         public void SimpleBiggerTestSuccess()
         {
-            var parser = StringParser.Create(">( A, B)");
+            var parser = StringParser.Create(">( a, b)");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', false);
-            manager.SetArgumentValue('B', true);
+            manager.SetArgumentValue('a', false);
+            manager.SetArgumentValue('b', true);
             Assert.True(parser.GetOperator().Result());
         }
 
         [Fact]
         public void SimpleNotTestSuccess()
         {
-            var parser = StringParser.Create("~( A )");
+            var parser = StringParser.Create("~( a )");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', false);
+            manager.SetArgumentValue('a', false);
             Assert.True(parser.GetOperator().Result());
         }
 
         [Fact]
         public void SimpleOrTestFail()
         {
-            var parser = StringParser.Create("|( A, B)");
+            var parser = StringParser.Create("|( a, b)");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', false);
-            manager.SetArgumentValue('B', false);
+            manager.SetArgumentValue('a', false);
+            manager.SetArgumentValue('b', false);
             Assert.False(parser.GetOperator().Result());
         }
 
         [Fact]
         public void SimpleOrTestSuccess()
         {
-            var parser = StringParser.Create("|( A, B)");
+            var parser = StringParser.Create("|( a, b)");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', true);
-            manager.SetArgumentValue('B', false);
+            manager.SetArgumentValue('a', true);
+            manager.SetArgumentValue('b', false);
             Assert.True(parser.GetOperator().Result());
         }
 
         [Fact]
         public void SimpleSameTestFail()
         {
-            var parser = StringParser.Create("=( A, B)");
+            var parser = StringParser.Create("=( a, b)");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', true);
-            manager.SetArgumentValue('B', false);
+            manager.SetArgumentValue('a', true);
+            manager.SetArgumentValue('b', false);
             Assert.False(parser.GetOperator().Result());
         }
 
         [Fact]
         public void SimpleSameTestSuccess()
         {
-            var parser = StringParser.Create("=( A, B)");
+            var parser = StringParser.Create("=( a, b)");
             var manager = parser.GetOperator().GetArgumentsManager();
-            manager.SetArgumentValue('A', true);
-            manager.SetArgumentValue('B', true);
+            manager.SetArgumentValue('a', true);
+            manager.SetArgumentValue('b', true);
             Assert.True(parser.GetOperator().Result());
         }
     }

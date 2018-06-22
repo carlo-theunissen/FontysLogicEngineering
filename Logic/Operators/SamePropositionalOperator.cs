@@ -1,4 +1,5 @@
-﻿using Logic.Abstract;
+﻿using System.Linq;
+using Logic.Abstract;
 using Logic.interfaces;
 
 namespace Logic.Operators
@@ -22,28 +23,24 @@ namespace Logic.Operators
             return resultOr.ToNandify();
         }
 
-        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        public override IAsciiBasePropositionalOperator Negate()
         {
-            return ToAndOrNot().ToDeMorgen();
+            return ToAndOrNot().Negate();
         }
 
         public override IAsciiBasePropositionalOperator ToAndOrNot()
         {
-            var notA = new NotPropositionalOperator(_argumentManager);
-            notA.Instantiate(new []{GetChilds()[0]});
+            var impl1 = new IfThenPropositionalOperator(_argumentManager);
+            impl1.Instantiate(GetChilds().Select( x => x.ToAndOrNot()).ToArray());
             
-            var notB = new NotPropositionalOperator(_argumentManager);
-            notB.Instantiate(new []{GetChilds()[1]});
+            var impl2 = new IfThenPropositionalOperator(_argumentManager);
+            impl2.Instantiate(GetChilds().Select( x => x.ToAndOrNot()).Reverse().ToArray());
             
-            var notAnd = new AndPropositionalOperator(_argumentManager);
-            notAnd.Instantiate(new IAsciiBasePropositionalOperator[]{notA ,notB});
             
             var and = new AndPropositionalOperator(_argumentManager);
-            and.Instantiate(GetChilds());
-            
-            var or = new OrPropositionalOperator(_argumentManager);
-            or.Instantiate(new IAsciiBasePropositionalOperator[] {notAnd, and});
-            return or;
+            and.Instantiate(new []{impl1.ToAndOrNot(), impl2.ToAndOrNot()});
+
+            return and;
         }
 
         public override char GetAsciiSymbol()

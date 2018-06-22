@@ -29,6 +29,12 @@ namespace Logic.Abstract
         {
             return Variable;
         }
+
+        public void ChangeVariable(char newVariable)
+        {
+            _A.ChangeArgument(Variable, newVariable);
+            SetVariable(newVariable);
+        }
         public override string ToString()
         {
             return string.Format("{0}{1}.({2})", GetAsciiSymbol(), Variable , _A);

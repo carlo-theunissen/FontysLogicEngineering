@@ -125,3 +125,42 @@
         </form>
     </div>
 }
+<div class="formulaContainer Treant" id="simpleContainer"></div>
+@if (!Model.quantifiers)
+{
+    <div class="formulaContainer Treant" id="tableuaxContainer"></div>
+    <div class="formulaContainer">
+        @if (Model.isTautology)
+        {
+            <span>Is a tautology!</span>
+        }
+        else
+        {
+            <span>Is <b>not</b> a tautology</span>
+        }
+    </div>
+}
+<script>
+    window.onload = function() {
+        var simple = {
+            chart: {
+                container: "#simpleContainer"
+            },
+
+            nodeStructure: @Html.Raw(Model.JsonData)
+        };
+
+
+        var tableaux = {
+            chart: {
+                container: "#tableuaxContainer"
+            },
+
+            nodeStructure: @Html.Raw(Model.tableauxJsonData ?? "{}")
+        };
+        new Treant(simple);
+        new Treant(tableaux);
+    };
+
+</script>
+

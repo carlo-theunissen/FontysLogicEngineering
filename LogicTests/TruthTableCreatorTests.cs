@@ -23,13 +23,13 @@ namespace LogicTests
         [Fact]
         public void GetFullTableTest()
         {
-            CheckFullTable("|(|(A,B), ~(C))");
+            CheckFullTable("|(|(a,b), ~(c))");
         }
 
         [Fact]
         public void GetFullTableTest2()
         {
-            CheckFullTable("|(|(A,B), C)");
+            CheckFullTable("|(|(a,b), c)");
         }
     }
 }

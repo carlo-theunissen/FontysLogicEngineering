@@ -23,15 +23,15 @@ namespace Logic.Operators
             return nand;
         }
 
-        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        public override IAsciiBasePropositionalOperator Negate()
         {
-            return ToAndOrNot().ToDeMorgen();
+            return ToAndOrNot().Negate();
         }
 
         public override IAsciiBasePropositionalOperator ToAndOrNot()
         {
             var or = new OrPropositionalOperator(_argumentManager);
-            or.Instantiate(new [] { SurroundWithNot(GetChilds()[0]), GetChilds()[1]});
+            or.Instantiate(new [] { SurroundWithNot(GetChilds()[0].ToAndOrNot()), GetChilds()[1].ToAndOrNot()});
             return or;
         }
 

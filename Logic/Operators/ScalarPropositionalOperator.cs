@@ -71,7 +71,7 @@ namespace Logic.Operators
             return this;
         }
 
-        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        public override IAsciiBasePropositionalOperator Negate()
         {
             var not = new NotPropositionalOperator(_argumentManager);
             not.Instantiate(new []{this});
@@ -83,15 +83,28 @@ namespace Logic.Operators
             return this;
         }
 
+        public override void ChangeArgument(char @from, char to)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public override string ToString()
         {
             return _name.ToString();
+        }
+        public override string ToName()
+        {
+            return GetName().ToString();
         }
         public override bool Equals(object obj)
         {
             var oper = obj as ScalarPropositionalOperator;
             return
                 oper != null && _name == oper._name;
+        }
+        public override void UpdateChild(int index, IAsciiBasePropositionalOperator baseOperator)
+        {
+            throw new System.NotImplementedException();
         }
         
     }

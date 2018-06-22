@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Logic.interfaces;
 using Logic.Operators;
@@ -54,18 +55,30 @@ namespace Logic.Abstract
         }
         public override bool Equals(object obj)
         {
-            var oper = obj as AbstractDubblePropositionalOperator;
             var result =  
-                oper != null 
+                obj is AbstractDubblePropositionalOperator oper 
                 && obj.GetType() == GetType()
                 && (
                     (GetChilds()[0].Equals(oper.GetChilds()[0]) && GetChilds()[1].Equals(oper.GetChilds()[1]))
-                ||  (GetChilds()[1].Equals(oper.GetChilds()[0]) && GetChilds()[0].Equals(oper.GetChilds()[1])));
+                    ||  (GetChilds()[1].Equals(oper.GetChilds()[0]) && GetChilds()[0].Equals(oper.GetChilds()[1])));
             return result;
         }
         public override bool IsAdvanced()
         {
             return true;
+        }
+        public override void UpdateChild(int index, IAsciiBasePropositionalOperator baseOperator)
+        {
+            switch (index)
+            {
+                case 0:
+                    _A = baseOperator;
+                    return;
+                case 1:
+                    _B = baseOperator;
+                    return;
+            }
+            throw new NotImplementedException();
         }
         
     }

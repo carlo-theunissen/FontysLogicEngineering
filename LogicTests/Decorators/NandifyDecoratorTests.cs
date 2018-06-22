@@ -21,39 +21,27 @@ namespace LogicTests.Decorators
         }
 
         [Fact]
-        public void NandifyDecoratorAdvancedTest()
-        {
-            CheckFullTable(">(A,&(>(B,=(A,E)),~(D)))");
-        }
-
-        [Fact]
         public void NandifyDecoratorAndTest()
         {
-            CheckFullTable("&(A,B)");
+            CheckFullTable("&(a,b)");
         }
 
         [Fact]
         public void NandifyDecoratorIfThenTest()
         {
-            CheckFullTable(">(A,B)");
+            CheckFullTable(">(a,b)");
         }
 
         [Fact]
         public void NandifyDecoratorNotTest()
         {
-            CheckFullTable("~(A,B)");
+            CheckFullTable("~(a,b)");
         }
 
         [Fact]
         public void NandifyDecoratorOrTest()
         {
-            CheckFullTable("|(A,B)");
-        }
-
-        [Fact]
-        public void NandifyDecoratorSameTest()
-        {
-            CheckFullTable("=(A,B)");
+            CheckFullTable("|(a,b)");
         }
     }
 }

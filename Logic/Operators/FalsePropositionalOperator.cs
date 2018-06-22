@@ -34,14 +34,18 @@ namespace Logic.Operators
             return this;
         }
 
-        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        public override IAsciiBasePropositionalOperator Negate()
         {
-            return this;
+            return new TruePropositionalOperator(_argumentManager);
         }
 
         public override IAsciiBasePropositionalOperator ToAndOrNot()
         {
-            throw new System.NotImplementedException();
+            return this;
+        }
+        public override string ToName()
+        {
+            return "False";
         }
     }
 }

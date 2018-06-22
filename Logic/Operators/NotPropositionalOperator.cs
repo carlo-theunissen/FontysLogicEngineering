@@ -1,10 +1,12 @@
-﻿using Logic.Abstract;
+﻿using System.Linq;
+using Logic.Abstract;
 using Logic.interfaces;
 
 namespace Logic.Operators
 {
     public class NotPropositionalOperator : AbstractSinglePropositionalOperator
     {
+        private bool isAdvance;
         public NotPropositionalOperator(ArgumentsManager manager) : base(manager)
         {
         }
@@ -22,14 +24,16 @@ namespace Logic.Operators
             return nand;
         }
 
-        public override IAsciiBasePropositionalOperator ToDeMorgen()
+        public override IAsciiBasePropositionalOperator Negate()
         {
             return GetChilds()[0];
         }
 
         public override IAsciiBasePropositionalOperator ToAndOrNot()
         {
-            return this;
+            var not = new NotPropositionalOperator(_argumentManager);
+            not.Instantiate(GetChilds().Select( x => x.ToAndOrNot()).ToArray());
+            return not;
         }
 
         public override char GetAsciiSymbol()
@@ -41,9 +45,16 @@ namespace Logic.Operators
         {
             return '¬';
         }
+
+        public override void Instantiate(IAsciiBasePropositionalOperator[] arg)
+        {
+            base.Instantiate(arg);
+            isAdvance = _A.IsAdvanced() || (_A is FalsePropositionalOperator || _A is TruePropositionalOperator);
+        }
+
         public override bool IsAdvanced()
         {
-            return GetChilds()[0].IsAdvanced();
+            return isAdvance;
         }
     }
 }

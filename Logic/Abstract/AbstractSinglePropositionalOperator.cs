@@ -1,4 +1,6 @@
-﻿using Logic.interfaces;
+﻿using System;
+using System.Linq;
+using Logic.interfaces;
 using Logic.Operators;
 
 namespace Logic.Abstract
@@ -50,6 +52,12 @@ namespace Logic.Abstract
         {
             return _A.HasResult();
         }
+
+        public override string ToName()
+        {
+            return GetLogicSymbol().ToString();
+        }
+
         public override bool Equals(object obj)
         {
             var oper = obj as AbstractSinglePropositionalOperator;
@@ -57,5 +65,13 @@ namespace Logic.Abstract
             return result;
         }
 
+        public override void UpdateChild(int index, IAsciiBasePropositionalOperator baseOperator)
+        {
+            if (index != 0)
+            {
+                throw new NotImplementedException();
+            }
+            _A = baseOperator;
+        }
     }
 }
