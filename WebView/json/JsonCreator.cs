@@ -26,7 +26,7 @@ namespace WebView.json
             var text = new TextModel();
             text.title =  step.GetOperators().Aggregate("",
                 (current, asciiBasePropositionalOperator) =>
-                    current + " , " + asciiBasePropositionalOperator);
+                    current + " , " + asciiBasePropositionalOperator.ToLogicString());
             text.title = text.title.Substring(3, text.title.Length - 3);
           //  text.title = (step.HasNext() ? "[noNext]" : "[!NEXT!]") + " " + text.title;
             json.text = text;

@@ -31,5 +31,15 @@ namespace Logic
             _requestedArguments[name] = new ScalarPropositionalOperator(name, this);
             return _requestedArguments[name];
         }
+
+        public char GetUnusedOperator()
+        {
+            var start = 'a';
+            while (_requestedArguments.Keys.Contains(start))
+            {
+                start++;
+            }
+            return start;
+        }
     }
 }

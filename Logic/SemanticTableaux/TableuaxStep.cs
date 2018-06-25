@@ -15,6 +15,8 @@ namespace Logic.SemanticTableaux
         private IList<IAsciiBasePropositionalOperator> operatorsMadeIntoChilds = new List<IAsciiBasePropositionalOperator>();
         private IEnumerable<IAsciiBasePropositionalOperator> advancedOperatorsCached;
         private IEnumerator<IAsciiBasePropositionalOperator> operatorIEnumerable;
+        private IList<char> ExtensionalVariables = new List<char>();
+        
         private bool? cachedClosed;
 
         public IList<TableuaxStep> GetChilds()
@@ -32,8 +34,9 @@ namespace Logic.SemanticTableaux
             operatorIEnumerable = getNextParsingOperator();
         }
 
-        private TableuaxStep(IList<IAsciiBasePropositionalOperator> otherOperators)
+        private TableuaxStep(IList<IAsciiBasePropositionalOperator> otherOperators, IList<char> extensionalVariables)
         {
+            this.ExtensionalVariables = extensionalVariables;
             operators = otherOperators;
             var t = operators.Aggregate("", (current, asciiBasePropositionalOperator) => current + (" , " + asciiBasePropositionalOperator.ToLogicString()));
             Console.WriteLine("NEW: "+ t);
@@ -167,22 +170,20 @@ namespace Logic.SemanticTableaux
                 var second = work.GetChilds()[1];
                 if (!list.Contains(first))
                 {
-                    //Console.WriteLine(" ===== Skipped 2a :)");
                     list.Add(first);
                 }
                 
                 if (!list.Contains(second))
                 {
-                    //Console.WriteLine(" ===== Skipped 2b :)");
                     list.Add(second);
                 }
                 
-                var child = new TableuaxStep(list);
+                var child = new TableuaxStep(list, ExtensionalVariables);
                 
                 childs.Add(child);
                 return;
             }
-            /*
+            
             if (work is AbstractConstantPropositionalOperator)
             {
                 List<IAsciiBasePropositionalOperator> list = operators.Where(x => x != baseOperator).ToList();
@@ -191,12 +192,70 @@ namespace Logic.SemanticTableaux
                     list.Add(work);
                 }
                 
-                var child = new TableuaxStep(list); 
+                var child = new TableuaxStep(list, ExtensionalVariables); 
                 childs.Add(child);
                 return; 
             }
-            */
+            if (work is AbstractQuantifierOperator)
+            {
+                HandleQuantifierOperators();
+                return;
+            }
             throw new NotImplementedException();
+        }
+
+        private void HandleQuantifierOperators()
+        {
+            var list = operators.Where(x => !(x is AbstractQuantifierOperator) &&  !(x is NotPropositionalOperator && x.GetChilds()[0] is AbstractQuantifierOperator)).ToList();
+            foreach (var baseOperator in operators.Where(x => !list.Contains(x)).OrderBy(CalcScore))
+            {
+                IAsciiBasePropositionalOperator work;
+                if (baseOperator is NotPropositionalOperator)
+                {
+                    var temp = baseOperator.GetChilds()[0].Negate();
+                    work = temp;
+                }
+                else
+                {
+                    work = baseOperator;
+                }
+                
+                operatorsMadeIntoChilds.Add(work);
+                operatorsMadeIntoChilds.Add(baseOperator);
+                
+                if (!list.Contains(work))
+                {
+                    var q = work as AbstractQuantifierOperator;
+                    if (work is UniversalQuantifierOperator)
+                    {
+                        list.Add(work);
+                        foreach (var extensionalVariable in ExtensionalVariables)
+                        {
+                            var clone = StringParser.CloneOperator(work.GetChilds()[0]);
+                            clone.ChangeArgument(q.GetVariable(), extensionalVariable);
+                            if (!list.Contains(clone))
+                            {
+                                list.Add(clone);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        
+                        var clone = StringParser.CloneOperator(work.GetChilds()[0]);
+                        var variable = clone.GetArgumentsManager().GetUnusedOperator();
+                        ExtensionalVariables.Add(variable);
+                        clone.ChangeArgument(q.GetVariable(), variable);
+                        if (!list.Contains(clone))
+                        {
+                            list.Add(clone);
+                        }
+                    }
+                }
+            }
+            
+            var child = new TableuaxStep(list, ExtensionalVariables);
+            childs.Add(child);
         }
 
         private bool AddOrChild(IAsciiBasePropositionalOperator baseOperator, IAsciiBasePropositionalOperator workChild)
@@ -207,16 +266,16 @@ namespace Logic.SemanticTableaux
                 list1.Add(workChild);
             }
              
-            
+          
                 
-            var child1 = new TableuaxStep(list1);
+            var child1 = new TableuaxStep(list1, ExtensionalVariables);
             childs.Add(child1);
             return true;
         }
         
         public IEnumerator<IAsciiBasePropositionalOperator> getNextParsingOperator()
         {
-            foreach (var baseOperator in getAdvancedOperators().OrderByDescending( CalcScore))
+            foreach (var baseOperator in getAdvancedOperators().OrderBy( CalcScore))
             {
                 yield return baseOperator;
             }
@@ -227,30 +286,41 @@ namespace Logic.SemanticTableaux
             switch (baseOperator)
             {
                 case AndPropositionalOperator _:
-                    return 10;
+                    return 1;
                 case NotPropositionalOperator _:
-                    return NotScore(baseOperator, true);
+                    return NotCalcScore(baseOperator.GetChilds()[0]);
+                case OrPropositionalOperator _:
+                    return 3;
+                case ExtensionalQuantifierOperator _:
+                    return 4;
+                case UniversalQuantifierOperator _:
+                    return 5;
+                case AbstractConstantPropositionalOperator _:
+                    return 6;
+                    
+            }
+            throw new NotImplementedException();          
+        }
+        
+        
+        private int NotCalcScore(IAsciiBasePropositionalOperator baseOperator)
+        {
+            switch (baseOperator)
+            {
+                case AndPropositionalOperator _:
+                    return 3;
+                case NotPropositionalOperator _:
+                    return CalcScore(baseOperator.GetChilds()[0]);
                 case OrPropositionalOperator _:
                     return 1;
+                case ExtensionalQuantifierOperator _:
+                    return 5;
+                case UniversalQuantifierOperator _:
+                    return 4;
+                case AbstractConstantPropositionalOperator _:
+                    return 6;
             }
-            return 5;
-        }
-
-        private int NotScore(IAsciiBasePropositionalOperator baseOperator, bool first)
-        {
-            if (baseOperator is NotPropositionalOperator)
-            {
-                return NotScore(baseOperator.GetChilds()[0], false);
-            }
-            if (baseOperator is OrPropositionalOperator)
-            {
-                return 10;
-            }
-            if (baseOperator is AndPropositionalOperator)
-            {
-                return 1;
-            }
-            throw new NotImplementedException();
+            throw new NotImplementedException();          
         }
     }
 }

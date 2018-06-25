@@ -126,9 +126,7 @@
     </div>
 }
 <div class="formulaContainer Treant" id="simpleContainer"></div>
-@if (!Model.quantifiers)
-{
-    <div class="formulaContainer Treant" id="tableuaxContainer"></div>
+ <div class="formulaContainer Treant" id="tableuaxContainer"></div>
     <div class="formulaContainer">
         @if (Model.isTautology)
         {
@@ -139,7 +137,7 @@
             <span>Is <b>not</b> a tautology</span>
         }
     </div>
-}
+
 <script>
     window.onload = function() {
         var simple = {

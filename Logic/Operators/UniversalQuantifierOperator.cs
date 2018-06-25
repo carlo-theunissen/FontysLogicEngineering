@@ -29,10 +29,10 @@ namespace Logic.Operators
 
         public override IAsciiBasePropositionalOperator Negate()
         {
-            var universal = new UniversalQuantifierOperator(_argumentManager);
-            universal.SetVariable(GetVariable());
-            universal.Instantiate(new []{GetChilds()[0].Negate()});
-            return universal;
+            var extensional = new ExtensionalQuantifierOperator(_argumentManager);
+            extensional.SetVariable(GetVariable());
+            extensional.Instantiate(new []{GetChilds()[0].Negate()});
+            return extensional;
         }
 
         public override IAsciiBasePropositionalOperator ToAndOrNot()
@@ -44,7 +44,7 @@ namespace Logic.Operators
         }
         public override bool IsAdvanced()
         {
-            return GetChilds()[0].IsAdvanced();
+            return true;
         }
     }
 }

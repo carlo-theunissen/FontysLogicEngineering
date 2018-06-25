@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Logic.Abstract;
 using Logic.interfaces;
 
@@ -6,6 +7,18 @@ namespace Logic.Operators
 {
     public class ExtensionalQuantifierOperator : AbstractQuantifierOperator
     {
+        private IList<char> ExtensionalVariables = new List<char>();
+
+        public IList<char> GetExtensionalVariables()
+        {
+            return ExtensionalVariables;
+        }
+
+        public void AddExtensionalVariable(char variable)
+        {
+            ExtensionalVariables.Add(variable);
+        }
+        
         public ExtensionalQuantifierOperator(ArgumentsManager manager) : base(manager)
         {
         }
@@ -22,7 +35,7 @@ namespace Logic.Operators
 
         public override bool IsAdvanced()
         {
-            return GetChilds().Any(x => x.IsAdvanced());
+            return true;
         }
 
         public override IAsciiBasePropositionalOperator ToNandify()
@@ -35,10 +48,10 @@ namespace Logic.Operators
 
         public override IAsciiBasePropositionalOperator Negate()
         {
-            var extensional = new ExtensionalQuantifierOperator(_argumentManager);
-            extensional.SetVariable(GetVariable());
-            extensional.Instantiate(new []{GetChilds()[0].Negate()});
-            return extensional;
+            var universal = new UniversalQuantifierOperator(_argumentManager);
+            universal.SetVariable(GetVariable());
+            universal.Instantiate(new []{GetChilds()[0].Negate()});
+            return universal;
         }
 
         public override IAsciiBasePropositionalOperator ToAndOrNot()

@@ -39,6 +39,12 @@ namespace Logic
             StartParsing();
         }
 
+        public static IAsciiBasePropositionalOperator CloneOperator(IAsciiBasePropositionalOperator baseOperator)
+        {
+            var parser = new StringParser(baseOperator.ToString(), 0, baseOperator.GetArgumentsManager());
+            return parser.GetOperator();
+        }
+
         public override IArgumentController GetArgumentController()
         {
             return _argumentManager;

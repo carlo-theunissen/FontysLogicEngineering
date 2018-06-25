@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using Logic;
-using Logic.Abstract;
 using Logic.Decorators;
 using Logic.SemanticTableaux;
 
@@ -17,12 +16,17 @@ namespace ConsoleApplication
                 
 
                 //Console CODE
-                var parser = StringParser.Create("@x.(P(x,|(x,D(d,xgi)))");
+                var parser = StringParser.Create(
+                    ">(!x.(@y.(|(P(x),Q(y)))),|(!u.(P(u)),!v.(Q(v))))");
              
                 var ope = parser.GetOperator();
-                (ope as AbstractQuantifierOperator).ChangeVariable('z');
                 
-                Console.WriteLine(ope.ToLogicString());
+                
+             //   Console.WriteLine( ope.Equals(parser2.GetOperator()));
+                
+                var tableaux = new SemanticTableauxParser(ope);
+
+                Console.WriteLine("Yep, it is a: " + tableaux.IsTautology());
                 
             }
             catch (Exception e)

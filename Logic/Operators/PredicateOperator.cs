@@ -71,12 +71,9 @@ namespace Logic.Operators
 
         public override IAsciiBasePropositionalOperator Negate()
         {
-            var predicate = new PredicateOperator(_argumentManager) {Name = Name};
-            foreach (var asciiBasePropositionalOperator in GetChilds())
-            {
-                predicate.AddChild(asciiBasePropositionalOperator.ToAndOrNot().Negate());
-            }
-            return predicate;
+            var not = new NotPropositionalOperator(_argumentManager);
+            not.Instantiate(new []{this});
+            return not;
         }
 
         public override IAsciiBasePropositionalOperator ToAndOrNot()

@@ -63,26 +63,12 @@ namespace WebView.Controllers
                 model.Hex = table.ToHex();
             }
 
-            var quantifiers = CheckForQuantifers(calculatedFormula);
 
-            if (!quantifiers)
-            {
                 tableaux = new SemanticTableauxParser(calculatedFormula);
                 model.isTautology = tableaux.IsTautology();
                 model.tableauxJsonData =
                     JsonConvert.SerializeObject(JsonCreator.CreateFromTableauxStep(tableaux.GetStep()));
-            }
-            model.quantifiers = quantifiers;
             return View(model);
-        }
-
-        private bool CheckForQuantifers(IAsciiBasePropositionalOperator baseOperator)
-        {
-            if (baseOperator is AbstractQuantifierOperator)
-            {
-                return true;
-            }
-            return baseOperator.GetChilds() != null && baseOperator.GetChilds().Any(CheckForQuantifers);
         }
 
     }

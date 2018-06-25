@@ -17,6 +17,5 @@
         public string JsonData;
         public string tableauxJsonData;
         public bool isTautology;
-        public bool quantifiers;
     }
 }
