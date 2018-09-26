@@ -20,7 +20,7 @@ Into:
 ## Techniques
 The application is fully written in C# and uses the DotNet core framework to serve a web frontend to the end user. 
 
-
+## Screen shots
 
 <img width="358" alt="screen shot 2018-09-26 at 12 50 15" src="https://user-images.githubusercontent.com/7584025/46075448-ce902180-c18a-11e8-8d5c-e8745eeb53b8.png">
 <img width="358" alt="screen shot 2018-09-26 at 12 50 24" src="https://user-images.githubusercontent.com/7584025/46075449-ce902180-c18a-11e8-8cda-7b8cd9e5c3fe.png">
